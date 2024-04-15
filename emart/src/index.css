@@ -3,3 +3,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.dropdown-menu{
+    border: 0px;
+}
+.dropdown:hover{
+    display: block !important;
+}
+
+.dropdown-toggle::after {
+    display:none !important;
+}
+
+.drop:first-child:hover span svg.arrow{
+    animation-name: up;
+    animation-duration: 0.5s; 
+}
+@keyframes up {
+    from{ transform: rotate(0deg) }
+    to{ transform: rotate(-180deg) }
+}
+
