@@ -6,20 +6,54 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
 
+
 function Navbar1() {
 
-  const [show, setShow] = useState(false);
-  const showDropdown = (e)=>{
-      setShow(!show);
+  let [demo, setDemo] = useState(false);
+  let demoDropdown = (e)=>{
+      setDemo(true);
   }
-  const hideDropdown = (e) => {
-      setShow(false);
+  let DemoDropdown = (e) => {
+      setDemo(false);
   }
+
+  let [product, setProduct] = useState(false);
+  let productDropdown = (e)=>{
+      setProduct(true);
+  }
+  let ProductDropdown = (e) => {
+      setProduct(false);
+  }
+
+  let [shop, setShop] = useState(false);
+  let shopDropdown = (e)=>{
+      setShop(true);
+  }
+  let ShopDropdown = (e) => {
+      setShop(false);
+  }
+
+  let [blog, setBlog] = useState(false);
+  let blogDropdown = (e)=>{
+      setBlog(true);
+  }
+  let BlogDropdown = (e) => {
+      setBlog(false);
+  }
+  
+  let [contact, setContact] = useState(false);
+  let contactDropdown = (e)=>{
+      setContact(true);
+  }
+  let ContactDropdown = (e) => {
+      setContact(false);
+  }
+
 
   return (
     <>
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="bg-body-tertiary mb-3 fixed-top">
+        <Navbar key={expand} expand={expand} className=" mb-3 fixed-top">
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -36,136 +70,163 @@ function Navbar1() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-center  flex-grow-1 pe-3">
+                <Nav className="justify-content-center flex-grow-1 pe-5 m-0">
                   <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark'>
+                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-2'>
                       Demo
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-5 arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                       </svg>
                     </span>
                     </div>
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  show={show}
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
-
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action2"> Fashion Hub </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action3"> Kids Wear </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action4"> Women Fashion </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action5"> Big Fashion </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action6"> Handicraft </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action7"> Interior </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action8"> Plant Garden </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action10"> Kids Toys </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action11"> Electronic Gadget </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action12"> Bathroom </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action13"> Bicycle </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action14"> Shoes </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action15"> Bags </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action16"> Soap </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center text-[1rem] font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center text-[1rem] font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="demo" href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center text-[1rem] font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                  show={demo}
+                  onMouseEnter={demoDropdown} 
+                  onMouseLeave={DemoDropdown} >
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] max-xl:hidden'></div>
+                    <section className='flex items-center -ml-[500px] w-[1845px] max-xl:ml-0 max-xl:block max-xl:w-auto h-[500px] max-xl:h-auto'>
+                      <div className='flex max-xl:block py-[50px] max-xl:py-0'>
+                        <div className='ml-56 max-xl:hidden max-xl:ml-0'>
+                          <div className='py-[50px] max-xl:p-0'>
+                            <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
+                            <div className=''>
+                              <p className='mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]'>New Product on the market</p>
+                              <p className='font-bold text-[16px] text-slate-400'><a href="#">Shop Now</a></p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className='ml-[90px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action2"> Fashion Hub </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action3"> Kids Wear </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action5"> Big Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action6"> Handicraft </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[10px]"  href="#action7"> Interior </NavDropdown.Item>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
+                        <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action8"> Plant Garden </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action10"> Kids Toys </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action11"> Electronic Gadget </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action12"> Bathroom </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action13"> Bicycle </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action14"> Shoes </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action15"> Bags </NavDropdown.Item>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
+                        <div className=' py-[50px] pl-[60px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action16"> Soap </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px]"  href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium pt-[1px] pb-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                        </div>
+                      </div>
+                    </section>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] max-xl:hidden'></div>
+                    <section className=' border-t-0 border-b-2  -ml-[580px] max-xl:hidden'>
+                      <div className='flex justify-around items-center py-[15px] pl-96'>
+                        <p className='text-danger'>Summer Sale 65% Off <a href="#" className='text-muted'>Shop Now</a></p>
+                      </div>
+                    </section>
                     </NavDropdown>
                     <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark'>
+                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px]'>
                       Product
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-5 arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                       </svg>
                     </span>
                     </div>
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  show={show}
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action20"> Product Styles </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action21"> Style One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action21"> Style Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action22"> Style Three </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action23"> Style Four </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action24"> Product Gallery </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action25"> Vertical Carousel </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action26"> Carousel </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action27"> Horizontal Style </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action28"> Grid Style </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action29"> Product Style </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action30"> Simple Product </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action31"> Variable Product </NavDropdown.Item>
+                  show={product}
+                  onMouseEnter={productDropdown} 
+                  onMouseLeave={ProductDropdown}>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action20"> Product Styles </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action21"> Style One </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action21"> Style Two </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action22"> Style Three </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action23"> Style Four </NavDropdown.Item>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action24"> Product Gallery </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action25"> Vertical Carousel </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action26"> Carousel </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action27"> Horizontal Style </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action28"> Grid Style </NavDropdown.Item>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action29"> Product Style </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action30"> Simple Product </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action31"> Variable Product </NavDropdown.Item>
 
                   </NavDropdown>
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark'>
+                  <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px]'>
                       Shop
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-5 arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                       </svg>
                     </span>
                     </div>
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  show={show}
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
+                  show={shop}
+                  onMouseEnter={shopDropdown} 
+                  onMouseLeave={ShopDropdown}>
 
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action32"> Listing Layouts </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> 4 Column </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action34"> 4 Column + Side bar </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action35"> 5 Column </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action36"> 5 Column + Side bar </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action37"> Shop Pages </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action38"> Wishlist </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action39"> Cart </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action40"> Checkout </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action41"> Sidebar Widgets </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action42"> Product Filter at Top </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action43"> Product Filter at Left </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action44"> Product Filter at Right </NavDropdown.Item>  
-                    <NavDropdown.Item className="font-bold py-[8px]" id="product" href="#action45"> Shop Box Styles </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action46"> Shop Style One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action47"> Shop Style Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action48"> Shop Style Three </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action49"> Shop Style Four </NavDropdown.Item>
-                    <NavDropdown.Item className="text-danger py-[8px]" id="product" href="#action49"> Summer Sale 65% <span className='text-muted text-lg ml-4'>Shop Now</span>  </NavDropdown.Item>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> 4 Column </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action34"> 4 Column + Side bar </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action35"> 5 Column </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action36"> 5 Column + Side bar </NavDropdown.Item>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action37"> Shop Pages </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action38"> Wishlist </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action39"> Cart </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action40"> Checkout </NavDropdown.Item>
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action41"> Sidebar Widgets </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action42"> Product Filter at Top </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action43"> Product Filter at Left </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action44"> Product Filter at Right </NavDropdown.Item>  
+                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action45"> Shop Box Styles </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action46"> Shop Style One </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action47"> Shop Style Two </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action48"> Shop Style Three </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action49"> Shop Style Four </NavDropdown.Item>
+                    <NavDropdown.Item className="text-danger py-[8px]"  href="#action49"> Summer Sale 65% <span className='text-muted text-lg ml-4'>Shop Now</span>  </NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark'>
+                  <div className='flex justify-between items-center drop gap-2 text-dark px-[18px] py-[24px]'>
                       Blog
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-5 arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                       </svg>
                     </span>
                     </div>
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  show={show}
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Default Blog </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Blog One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Blog Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Blog Three </NavDropdown.Item>
+                  show={blog}
+                  onMouseEnter={blogDropdown} 
+                  onMouseLeave={BlogDropdown}>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Default Blog </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog One </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog Two </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog Three </NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark'>
+                  <div className='flex justify-between items-center gap-2 drop text-dark px-[18px] py-[24px]'>
                       Contact
                     <span>
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-4 h-5 arrow">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
                         <path strokeLinecap="round" strokeLinejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                       </svg>
                     </span>
                     </div>
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
-                  show={show}
-                  onMouseEnter={showDropdown} 
-                  onMouseLeave={hideDropdown}>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Contact One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]" id="product" href="#action33"> Contact Two </NavDropdown.Item>
+                  show={contact}
+                  onMouseEnter={contactDropdown} 
+                  onMouseLeave={ContactDropdown}>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Contact One </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Contact Two </NavDropdown.Item>
                   </NavDropdown>                  
                 </Nav>
                 
@@ -200,4 +261,6 @@ function Navbar1() {
 }
 
 export default Navbar1;
+
+
 
