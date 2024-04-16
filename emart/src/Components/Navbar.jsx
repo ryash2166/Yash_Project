@@ -92,34 +92,34 @@ function Navbar1() {
                             <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
                             <div className=''>
                               <p className='mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]'>New Product on the market</p>
-                              <p className='font-bold text-[16px] text-slate-400'><a href="#">Shop Now</a></p>
+                              <p className='font-bold text-[16px] text-muted'><a href="#">Shop Now</a></p>
                             </div>
                           </div>
                         </div>
                         <div className='ml-[90px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action2"> Fashion Hub </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action3"> Kids Wear </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action5"> Big Fashion </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action6"> Handicraft </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action7"> Interior </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action2"> Fashion Hub </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action3"> Kids Wear </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action5"> Big Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action6"> Handicraft </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action7"> Interior </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
                         <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action8"> Plant Garden </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action10"> Kids Toys </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action11"> Electronic Gadget </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action12"> Bathroom </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action13"> Bicycle </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action14"> Shoes </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action15"> Bags </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action8"> Plant Garden </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action10"> Kids Toys </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action11"> Electronic Gadget </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action12"> Bathroom </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action13"> Bicycle </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action14"> Shoes </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action15"> Bags </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
                         <div className=' py-[50px] pl-[60px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action16"> Soap </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px]"  href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action16"> Soap </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                         </div>
                       </div>
                     </section>

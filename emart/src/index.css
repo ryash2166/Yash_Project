@@ -127,6 +127,7 @@
     display:none !important;
 }
 
+
 .drop:first-child:hover span svg.arrow{
 
     transform: rotate(-180deg);
@@ -134,9 +135,13 @@
 }
 
 .dropdown-menu{
-    animation: slideDown 300ms ease-in-out forwards
+    animation: slideDown 400ms ease-in-out forwards
 }
-     
+
+.add:hover{
+  color: black !important;
+  background-color: white;
+}   
          
 @keyframes slideDown {
   0% { 
