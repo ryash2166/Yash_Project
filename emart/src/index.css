@@ -141,8 +141,13 @@
 .add:hover{
   color: black !important;
   background-color: white;
+  margin-left: 12px;
 }   
-         
+
+.add{
+  transition: margin-left 250ms ease-out;
+}
+
 @keyframes slideDown {
   0% { 
     opacity: 0;

@@ -72,7 +72,7 @@ function Navbar1() {
               <Offcanvas.Body>
                 <Nav className="justify-content-center flex-grow-1 pe-5 m-0">
                   <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-2'>
+                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
                       Demo
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -92,19 +92,19 @@ function Navbar1() {
                             <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
                             <div className=''>
                               <p className='mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]'>New Product on the market</p>
-                              <p className='font-bold text-[16px] text-muted'><a href="#">Shop Now</a></p>
+                              <p className='font-bold text-[16px] text-muted add'><a href="#">Shop Now</a></p>
                             </div>
                           </div>
                         </div>
-                        <div className='ml-[90px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action2"> Fashion Hub </NavDropdown.Item>
+                        <div className='ml-[60px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add animated-text"  href="#action2"> Fashion Hub </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action3"> Kids Wear </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action5"> Big Fashion </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action6"> Handicraft </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action7"> Interior </NavDropdown.Item>
                         </div>
-                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
+                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
                         <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action8"> Plant Garden </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action10"> Kids Toys </NavDropdown.Item>
@@ -114,8 +114,8 @@ function Navbar1() {
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action14"> Shoes </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action15"> Bags </NavDropdown.Item>
                         </div>
-                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] mx-2 max-xl:hidden'></div>
-                        <div className=' py-[50px] pl-[60px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
+                        <div className=' py-[50px] pl-[50px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action16"> Soap </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
@@ -126,7 +126,11 @@ function Navbar1() {
                     <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] max-xl:hidden'></div>
                     <section className='mr-[200px] max-xl:hidden'>
                       <div className='flex justify-around items-center py-[15px] pl-96'>
-                        <p className='text-danger'>Summer Sale 65% Off <a href="#" className='text-muted ml-2'>Shop Now</a></p>
+                        <p className='text-danger flex'>Summer Sale 65% Off 
+                          <span>
+                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                          </span>
+                        </p>
                       </div>
                     <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] -mx-[120px] max-xl:hidden'></div>
 
@@ -134,7 +138,7 @@ function Navbar1() {
                     
                     </NavDropdown>
                     <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px]'>
+                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
                       Product
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -146,23 +150,72 @@ function Navbar1() {
                   show={product}
                   onMouseEnter={productDropdown} 
                   onMouseLeave={ProductDropdown}>
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action20"> Product Styles </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action21"> Style One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action21"> Style Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action22"> Style Three </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action23"> Style Four </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action24"> Product Gallery </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action25"> Vertical Carousel </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action26"> Carousel </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action27"> Horizontal Style </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action28"> Grid Style </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action29"> Product Style </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action30"> Simple Product </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action31"> Variable Product </NavDropdown.Item>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[780px] -mr-[120px] max-xl:hidden'></div>
+                    <section className='w-[1500px] -ml-[400px] max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                      <section className='w-[100%] flex max-xl:block'>
+                        <div className='max-xl:hidden'>
+                          <div className='pt-[50px] pb-[40px] pr-[10px] '>
+                            <img width="242px" height="340px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-3rd.webp" alt="hover-image-3rd" loading="lazy" />
+                            <div className='pt-[20px] leading-6'>
+                              <p className='text-[14px]'>Each product has a number for <br /> easy indentification.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className='max-xl:hidden'>
+                          <div className='pt-[50px] pb-[40px] pl-[10px]'>
+                            <img width="242px" height="340px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp" alt="hover-image-3rd" loading="lazy" />
+                            <div className='pt-[20px] leading-6'>
+                              <p className='text-[14px] pb-[20px]'>It's just a product of your fevered <br /> imagination!</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className='py-[50px] pl-[70px] pr-[1px] max-xl:p-0'>
+                          <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
+                            <img width="43px" height="43px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/dress-02.png" alt="" />
+                          </div>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action20"> Product Styles </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action21"> Style One </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action21"> Style Two </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action22"> Style Three </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action23"> Style Four </NavDropdown.Item>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
+                        <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0'>
+                          <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
+                            <img width="48px" height="48px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/school-bag.png" alt="" />
+                          </div>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action24"> Product Gallery </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action25"> Vertical Carousel </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action26"> Carousel </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action27"> Horizontal Style </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action28"> Grid Style </NavDropdown.Item>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
+                        <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0'>
+                          <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
+                            <img width="48px" height="48px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/chair-1.png" alt="" />
+                          </div>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action29"> Product Style </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action30"> Simple Product </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action31"> Variable Product </NavDropdown.Item>
+                        </div>
+                        </section>
+                    </section>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[120px] max-xl:hidden'></div>
+                    <section className='mr-[200px] max-xl:hidden'>
+                      <div className='flex justify-around items-center py-[15px] pl-96'>
+                        <p className='text-danger flex'>Summer Sale 65% Off 
+                          <span>
+                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                          </span>
+                        </p>
+                      </div>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[1200px] max-xl:hidden'></div>
+                    </section>
 
                   </NavDropdown>
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px]'>
+                  <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
                       Shop
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -174,30 +227,63 @@ function Navbar1() {
                   show={shop}
                   onMouseEnter={shopDropdown} 
                   onMouseLeave={ShopDropdown}>
-
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> 4 Column </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action34"> 4 Column + Side bar </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action35"> 5 Column </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action36"> 5 Column + Side bar </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action37"> Shop Pages </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action38"> Wishlist </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action39"> Cart </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action40"> Checkout </NavDropdown.Item>
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action41"> Sidebar Widgets </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action42"> Product Filter at Top </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action43"> Product Filter at Left </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action44"> Product Filter at Right </NavDropdown.Item>  
-                    <NavDropdown.Item className="font-bold py-[8px]"  href="#action45"> Shop Box Styles </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action46"> Shop Style One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action47"> Shop Style Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action48"> Shop Style Three </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action49"> Shop Style Four </NavDropdown.Item>
-                    <NavDropdown.Item className="text-danger py-[8px]"  href="#action49"> Summer Sale 65% <span className='text-muted text-lg ml-4'>Shop Now</span>  </NavDropdown.Item>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[850px] -mr-[120px] max-xl:hidden'></div>
+                    <section className='w-[1440px] -ml-[600px] max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                      <section className='px-[15px] w-[1440px] flex max-xl:block max-xl:p-0'>
+                        <div className='pl-[90px] pt-[60px] pb-[50px] max-xl:p-0'>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> 4 Column </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action34"> 4 Column + Side bar </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action35"> 5 Column </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action36"> 5 Column + Side bar </NavDropdown.Item>
+                        <div className='mt-[20px]'>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action37"> Shop Pages </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action38"> Wishlist </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action39"> Cart </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action40"> Checkout </NavDropdown.Item>
+                        </div>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
+                        <div className='pl-[40px] pt-[60px] pb-[50px] max-xl:p-0'>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action41"> Sidebar Widgets </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action42"> Product Filter at Top </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action43"> Product Filter at Left </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action44"> Product Filter at Right </NavDropdown.Item>  
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
+                        <div className='pl-[40px] pt-[60px] pb-[50px] max-xl:p-0'>
+                          <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action45"> Shop Box Styles </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add"  href="#action46"> Shop Style One </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add"  href="#action47"> Shop Style Two </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add"  href="#action48"> Shop Style Three </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add"  href="#action49"> Shop Style Four </NavDropdown.Item>
+                        </div>
+                        <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
+                        <div className='max-xl:hidden ml-[50px] my-[60px] '>
+                          <div className='relative'>
+                            <img width="356px" height="450px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/New-Project.webp" alt=""/>
+                            <div className='text-[30px] absolute text-white -my-[225px] ml-[40px] tracking-wider'>
+                              <p>On The Weekend</p>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                    </section>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[120px] max-xl:hidden'></div>
+                    <section className='mr-[200px] max-xl:hidden'>
+                      <div className='flex  items-center py-[15px]'>
+                        <p className='text-danger flex'>Summer Sale 65% Off 
+                          <span>
+                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                          </span>
+                        </p>
+                      </div>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[1200px] max-xl:hidden'></div>
+                    </section>
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center drop gap-2 text-dark px-[18px] py-[24px]'>
+                  <div className='flex justify-between items-center drop gap-2 text-dark px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
                       Blog
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -209,14 +295,14 @@ function Navbar1() {
                   show={blog}
                   onMouseEnter={blogDropdown} 
                   onMouseLeave={BlogDropdown}>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Default Blog </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog Two </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Blog Three </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Default Blog </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog One </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Two </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Three </NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark px-[18px] py-[24px]'>
+                  <div className='flex justify-between items-center gap-2 drop text-dark px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
                       Contact
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -228,8 +314,8 @@ function Navbar1() {
                   show={contact}
                   onMouseEnter={contactDropdown} 
                   onMouseLeave={ContactDropdown}>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Contact One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted py-[8px]"  href="#action33"> Contact Two </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact One </NavDropdown.Item>
+                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
                   </NavDropdown>                  
                 </Nav>
                 
