@@ -131,7 +131,7 @@
 .drop:first-child:hover span svg.arrow{
 
     transform: rotate(-180deg);
-    transition:transform 100ms ease-out;
+    transition:transform 200ms ease-out;
 }
 
 .dropdown-menu{
