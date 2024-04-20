@@ -114,11 +114,28 @@
 
 *{
     font-family: "Poppins";
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.navbar-toggler-icon{
+  width: 1.1em;
+  height: 1.1em;
+}
+
+h1 {
+  font-family: 'Jost';
+  font-weight: 400 !important;
+  text-transform: none;
+  letter-spacing: -.2rem;
+  color: #000a12;
 }
 
 .dropdown-menu{
     border: 0;
+    background-color: white;    
 }
+
 .dropdown:hover{
     display: block !important;
 }
@@ -135,12 +152,12 @@
 }
 
 .dropdown-menu{
-    animation: slideDown 400ms ease-in-out forwards
+    animation: slideDown 400ms ease-in-out forwards;
 }
 
 .add:hover{
   color: black !important;
-  background-color: white;
+  background-color: transparent;
   margin-left: 12px;
 }   
 

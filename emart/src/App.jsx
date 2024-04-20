@@ -1,12 +1,13 @@
 import './App.css'
-import Example from './Components/Navbar'
-// import Navbar from './Components/Navbar'
+import Navbar1 from './Components/Navbar';
+import Banner from './Components/Banner';
 
 function App() {
 
   return (
     <>
-      <Example/>
+      <Navbar1 />
+      <Banner />
     </>
   )
 }

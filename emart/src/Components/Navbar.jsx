@@ -53,7 +53,7 @@ function Navbar1() {
   return (
     <>
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className=" mb-3 fixed-top">
+        <Navbar key={expand} expand={expand} className="block">
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -69,10 +69,10 @@ function Navbar1() {
                   Offcanvas
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
-                <Nav className="justify-content-center flex-grow-1 pe-5 m-0">
+              <Offcanvas.Body className='bg-white'>
+                <Nav className="justify-content-center flex-grow-1 pe-5 m-0 bg-white">
                   <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
+                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
                       Demo
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -83,11 +83,11 @@ function Navbar1() {
                   } id={`offcanvasNavbarDropdown-expand-${expand}`}
                   show={demo}
                   onMouseEnter={demoDropdown} 
-                  onMouseLeave={DemoDropdown} >
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] max-xl:hidden'></div>
-                    <section className='flex items-center -ml-[500px] w-[1845px] max-xl:ml-0 max-xl:block max-xl:w-auto h-[500px] max-xl:h-auto'>
+                  onMouseLeave={DemoDropdown}>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    <section className='flex items-center justify-center w-screen h-[500px] max-xl:ml-0 max-xl:block max-xl:w-auto  max-xl:h-auto'>
                       <div className='flex max-xl:block py-[50px] max-xl:py-0'>
-                        <div className='ml-56 max-xl:hidden max-xl:ml-0'>
+                        <div className=' max-xl:hidden max-xl:ml-0'>
                           <div className='py-[50px] max-xl:p-0'>
                             <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
                             <div className=''>
@@ -123,22 +123,22 @@ function Navbar1() {
                         </div>
                       </div>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] max-xl:hidden'></div>
-                    <section className='mr-[200px] max-xl:hidden'>
-                      <div className='flex justify-around items-center py-[15px] pl-96'>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+
+                    <section className=' max-xl:hidden'>
+                      <div className='flex  items-center justify-center py-[15px] pl-[800px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
                             <a href="#" className='text-muted ml-2 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[580px] -mx-[120px] max-xl:hidden'></div>
-
                     </section>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
                     
                     </NavDropdown>
                     <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
+                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
                       Product
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -150,9 +150,9 @@ function Navbar1() {
                   show={product}
                   onMouseEnter={productDropdown} 
                   onMouseLeave={ProductDropdown}>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[780px] -mr-[120px] max-xl:hidden'></div>
-                    <section className='w-[1500px] -ml-[400px] max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
-                      <section className='w-[100%] flex max-xl:block'>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    <section className='w-screen justify-around item-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                      <section className='flex max-xl:block'>
                         <div className='max-xl:hidden'>
                           <div className='pt-[50px] pb-[40px] pr-[10px] '>
                             <img width="242px" height="340px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-3rd.webp" alt="hover-image-3rd" loading="lazy" />
@@ -201,21 +201,21 @@ function Navbar1() {
                         </div>
                         </section>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[120px] max-xl:hidden'></div>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
                     <section className='mr-[200px] max-xl:hidden'>
-                      <div className='flex justify-around items-center py-[15px] pl-96'>
+                      <div className='flex justify-center items-center py-[15px] pl-[1000px] '>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
                             <a href="#" className='text-muted ml-2 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[1200px] max-xl:hidden'></div>
                     </section>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
 
                   </NavDropdown>
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark  px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
                       Shop
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -227,10 +227,10 @@ function Navbar1() {
                   show={shop}
                   onMouseEnter={shopDropdown} 
                   onMouseLeave={ShopDropdown}>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[850px] -mr-[120px] max-xl:hidden'></div>
-                    <section className='w-[1440px] -ml-[600px] max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
-                      <section className='px-[15px] w-[1440px] flex max-xl:block max-xl:p-0'>
-                        <div className='pl-[90px] pt-[60px] pb-[50px] max-xl:p-0'>
+                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb max-xl:hidden'></div>
+                    <section className='w-screen justify-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                      <section className='flex max-xl:block max-xl:p-0'>
+                        <div className='pt-[60px] pb-[50px] max-xl:p-0'>
                           <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> 4 Column </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action34"> 4 Column + Side bar </NavDropdown.Item>
@@ -269,21 +269,23 @@ function Navbar1() {
                         </div>
                       </section>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[120px] max-xl:hidden'></div>
+                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb  max-xl:hidden'></div>
                     <section className='mr-[200px] max-xl:hidden'>
-                      <div className='flex  items-center py-[15px]'>
+                      <div className='flex justify-center items-center py-[15px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
                             <a href="#" className='text-muted ml-2 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
-                    <div className='h-[1px] bg-[#e5e7eb] -ml-[1000px] -mr-[1200px] max-xl:hidden'></div>
                     </section>
+                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb max-xl:hidden'></div>
                   </NavDropdown>
 
+                <div className='hello flex max-xl:block'>
+
                   <NavDropdown title={
-                  <div className='flex justify-between items-center drop gap-2 text-dark px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:border-b-[1px] max-xl:px-0'>
                       Blog
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -302,7 +304,7 @@ function Navbar1() {
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 drop text-dark px-[18px] py-[24px] max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:border-b-[1px] max-xl:px-0'>
                       Contact
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -317,6 +319,8 @@ function Navbar1() {
                     <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact One </NavDropdown.Item>
                     <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
                   </NavDropdown>                  
+                </div>
+
                 </Nav>
                 
               </Offcanvas.Body>
