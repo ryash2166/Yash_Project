@@ -4,8 +4,8 @@ function Banner() {
   return (
     <div className="">
       <section className=" pt-[20px] py-[15px] pb-[109px] text-center ">
-        <div className="mx-[75px]  flex max-md:block text-center max-xl:mx-[15px]">
-          <div className=" flex items-center justify-center text-wrap text-center max-lg:text-start">
+        <div className="mx-[75px]  flex max-md:block text-center max-2xl:mx-[15px]">
+          <div className=" flex items-center justify-center text-wrap text-center max-lg:text-start pr-[100px] max-lg:pr-0">
             <div className="pr-[30px]  max-md:p-0">
               <div className="">
                 <div className="">
@@ -78,18 +78,11 @@ function Banner() {
                 data-element_type="widget"
                 data-widget_type="image.default"
               >
-                <div className="w-[80%]">
+                <div className="">
                   <img
                     decoding="async"
-                    width="800"
-                    height="1500"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
-                    className="attachment-full size-full wp-image-65"
-                    alt="plants-banner-2nd"
-                    loading="lazy"
-                    srcSet="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp 986w, https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd-197x300.webp 197w, https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd-673x1024.webp 673w, https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd-768x1168.webp 768w, https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd-600x913.webp 600w"
-                    sizes="(max-width: 986px) 100vw, 986px"
-                  />
+                    className="w-[900px] max-xl:w-auto"/>
                 </div>
               </div>
             </div>

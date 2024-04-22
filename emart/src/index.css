@@ -133,7 +133,7 @@ h1 {
 
 .dropdown-menu{
     border: 0;
-    background-color: white;    
+    background-color: white;   
 }
 
 .dropdown:hover{
@@ -160,6 +160,16 @@ h1 {
   background-color: transparent;
   margin-left: 12px;
 }   
+
+
+@media (min-width:1440px) {
+  .center{
+    inset: 0px auto auto 0px;
+    transform: translate3d(-500px, 10px, 0px);
+    width: max-content;
+  }
+  
+}
 
 .add{
   transition: margin-left 250ms ease-out;

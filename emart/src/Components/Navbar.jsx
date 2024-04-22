@@ -5,6 +5,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useState } from 'react';
+import { transform } from 'framer-motion';
 
 
 function Navbar1() {
@@ -52,6 +53,7 @@ function Navbar1() {
 
   return (
     <>
+    <div className=' bg-black h-10'></div>
       {['xl'].map((expand) => (
         <Navbar key={expand} expand={expand} className="block">
           <Container fluid>
@@ -84,8 +86,9 @@ function Navbar1() {
                   show={demo}
                   onMouseEnter={demoDropdown} 
                   onMouseLeave={DemoDropdown}>
-                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
-                    <section className='flex items-center justify-center w-screen h-[500px] max-xl:ml-0 max-xl:block max-xl:w-auto  max-xl:h-auto'>
+                    <div className='center -ml-[102px] absolute bg-white  max-xl:p-0 max-xl:ms-0  max-xl:relative'>
+                    <div className='h-[1px] bg-[#e5e7eb] w-[1800px]  max-xl:hidden'></div>
+                    <section className='flex items-center ms-[300px] h-[500px]  max-xl:block max-xl:h-auto'>
                       <div className='flex max-xl:block py-[50px] max-xl:py-0'>
                         <div className=' max-xl:hidden max-xl:ml-0'>
                           <div className='py-[50px] max-xl:p-0'>
@@ -96,7 +99,7 @@ function Navbar1() {
                             </div>
                           </div>
                         </div>
-                        <div className='ml-[60px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className='pl-[60px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add animated-text"  href="#action2"> Fashion Hub </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action3"> Kids Wear </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
@@ -115,18 +118,18 @@ function Navbar1() {
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action15"> Bags </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
-                        <div className=' py-[50px] pl-[50px] pr-[10px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className=' py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action16"> Soap </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                         </div>
                       </div>
+        
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
-
-                    <section className=' max-xl:hidden'>
-                      <div className='flex  items-center justify-center py-[15px] pl-[800px]'>
+                    <div className='h-[1px] bg-[#e5e7eb] -ml-[20px] max-xl:hidden'></div>
+                    <section className='max-xl:hidden '>
+                      <div className='flex items-center  py-[15px] pl-[1100px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
                             <a href="#" className='text-muted ml-2 add'>Shop Now</a>
@@ -134,7 +137,8 @@ function Navbar1() {
                         </p>
                       </div>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    <div className='h-[1px] bg-[#e5e7eb]  -ml-[20px]  max-xl:hidden'></div>
+                    </div>
                     
                     </NavDropdown>
                     <NavDropdown title={
@@ -150,8 +154,9 @@ function Navbar1() {
                   show={product}
                   onMouseEnter={productDropdown} 
                   onMouseLeave={ProductDropdown}>
+                    <div className='center -ml-[300px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative'>
                     <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
-                    <section className='w-screen justify-around item-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                    <section className=' ms-[400px] pr-[230px] justify-center  item-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
                       <section className='flex max-xl:block'>
                         <div className='max-xl:hidden'>
                           <div className='pt-[50px] pb-[40px] pr-[10px] '>
@@ -212,6 +217,7 @@ function Navbar1() {
                       </div>
                     </section>
                     <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    </div>
 
                   </NavDropdown>
                   <NavDropdown title={
@@ -227,8 +233,9 @@ function Navbar1() {
                   show={shop}
                   onMouseEnter={shopDropdown} 
                   onMouseLeave={ShopDropdown}>
-                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb max-xl:hidden'></div>
-                    <section className='w-screen justify-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                    <div className='center -ml-[300px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative'>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    <section className='ms-[400px] pr-[180px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
                       <section className='flex max-xl:block max-xl:p-0'>
                         <div className='pt-[60px] pb-[50px] max-xl:p-0'>
                           <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
@@ -269,7 +276,7 @@ function Navbar1() {
                         </div>
                       </section>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb  max-xl:hidden'></div>
+                    <div className='h-[1px] bg-[#e5e7eb]   max-xl:hidden'></div>
                     <section className='mr-[200px] max-xl:hidden'>
                       <div className='flex justify-center items-center py-[15px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
@@ -279,7 +286,8 @@ function Navbar1() {
                         </p>
                       </div>
                     </section>
-                    <div className='h-[1px] bg-[#e5e7eb] -mr-[120px] bb max-xl:hidden'></div>
+                    <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
+                    </div>
                   </NavDropdown>
 
                 <div className='hello flex max-xl:block'>
