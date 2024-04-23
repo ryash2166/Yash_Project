@@ -55,7 +55,7 @@ function Navbar1() {
     <>
     <div className=' bg-black h-10'></div>
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="block">
+        <Navbar key={expand} expand={expand} className="block mx-[30px] max-lg:mx-0 ">
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -233,7 +233,7 @@ function Navbar1() {
                   show={shop}
                   onMouseEnter={shopDropdown} 
                   onMouseLeave={ShopDropdown}>
-                    <div className='center -ml-[300px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative'>
+                    <div className='center -ml-[350px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative'>
                     <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
                     <section className='ms-[400px] pr-[180px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
                       <section className='flex max-xl:block max-xl:p-0'>
