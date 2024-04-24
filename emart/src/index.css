@@ -118,6 +118,10 @@
     margin: 0;
     padding: 0;
 }
+body{
+  margin: 0;
+  padding: 0;
+}
 .navbar-toggler-icon{
   width: 1.1em;
   height: 1.1em;
@@ -127,7 +131,6 @@ h1 {
   font-family: 'Jost';
   font-weight: 400 !important;
   text-transform: none;
-  letter-spacing: -.2rem;
   color: #000a12;
 }
 
@@ -165,7 +168,7 @@ h1 {
 @media (min-width:1440px) {
   .center{
     inset: 0px auto auto 0px;
-    transform: translate3d(-500px, 10px, 0px);
+    transform: translate3d(-500px, 9px, 0px);
     width: max-content;
   }
   
@@ -185,4 +188,61 @@ h1 {
     opacity: 1;
     transform: translateY(0)
   }
+}
+
+/* Categories Css */
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 15%;
+  opacity: 0;
+  bottom: 0px; 
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: opacity 0.1s ease-in-out;
+}
+
+
+.image-container:hover .overlay {
+  opacity: 1;
+}
+
+.overlay p {
+  color: black;
+  text-align: center;
+}
+
+.up{
+  transition: margin-top 200ms ease-in-out;
+
+}
+.up:hover{
+  margin-top: -10px;
+}
+
+.side{
+  transition: margin-right 200ms ease-in-out;
+}
+
+.side:hover{
+  margin-right: -5px;
+}
+
+.elementor img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+}
+.icon-moving-left-right img {
+  transition: all .35s cubic-bezier(.38,3,.57,1.6);
 }

@@ -44,15 +44,9 @@ function Banner() {
               </div>
             </div>
           </div>
-          <div
-            className="mr-5 mt-20  elementor-column elementor-col-33 elementor-top-column elementor-element elementor-element-143634d animated-slow animated fadeIn" >
-            <div className="elementor-widget-wrap elementor-element-populated max-md:hidden ">
-              <div
-                className=" elementor-element elementor-element-628e450 icon-moving-left-right elementor-hidden-mobile elementor-widget elementor-widget-image"
-                data-id="628e450"
-                data-element_type="widget"
-                data-widget_type="image.default"
-              >
+          <div className="mr-5 mt-20  " >
+            <div className=" max-md:hidden  ">
+              <div className="">
                 <div className="">
                   <img
                     decoding="async"
@@ -60,7 +54,7 @@ function Banner() {
                     height="1500"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-first.webp"
                     className="attachment-full size-full wp-image-66"
-                    alt="plants-banner-first"/>
+                    alt="plants-banner-first "/>
                 </div>
               </div>
             </div>
@@ -72,17 +66,12 @@ function Banner() {
             data-settings='{"animation":"fadeIn","animation_delay":600}'
           >
             <div className="elementor-widget-wrap elementor-element-populated">
-              <div
-                className="elementor-element elementor-element-bb22252 icon-moving-left-right elementor-widget elementor-widget-image"
-                data-id="bb22252"
-                data-element_type="widget"
-                data-widget_type="image.default"
-              >
+              <div className="">
                 <div className="">
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
-                    className="w-[900px] max-xl:w-auto"/>
+                    className="w-[900px] max-xl:w-auto "/>
                 </div>
               </div>
             </div>

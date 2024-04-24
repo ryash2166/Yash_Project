@@ -50,12 +50,11 @@ function Navbar1() {
       setContact(false);
   }
 
-
   return (
     <>
     <div className=' bg-black h-10'></div>
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="block mx-[30px] max-lg:mx-0 ">
+        <Navbar key={expand} expand={expand} className="block relative z-50 bg-white mx-[30px] max-lg:mx-0 ">
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -235,7 +234,7 @@ function Navbar1() {
                   onMouseLeave={ShopDropdown}>
                     <div className='center -ml-[350px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative'>
                     <div className='h-[1px] bg-[#e5e7eb]  max-xl:hidden'></div>
-                    <section className='ms-[400px] pr-[180px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
+                    <section className='ms-[400px] pr-[235px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
                       <section className='flex max-xl:block max-xl:p-0'>
                         <div className='pt-[60px] pb-[50px] max-xl:p-0'>
                           <NavDropdown.Item className="font-bold text-[18px] py-[8px]"  href="#action32"> Listing Layouts </NavDropdown.Item>
