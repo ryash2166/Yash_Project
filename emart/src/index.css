@@ -118,6 +118,18 @@
     margin: 0;
     padding: 0;
 }
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
 body{
   margin: 0;
   padding: 0;
@@ -127,10 +139,11 @@ body{
   height: 1.1em;
 }
 
+
 h1 {
   font-family: 'Jost';
-  font-weight: 400 !important;
-  text-transform: none;
+  /* font-weight: 400 !important; */
+  /* text-transform: none; */
   color: #000a12;
 }
 
@@ -225,7 +238,7 @@ h1 {
 
 }
 .up:hover{
-  margin-top: -10px;
+  margin-top: -20px;
 }
 
 .side{
@@ -236,13 +249,38 @@ h1 {
   margin-right: -5px;
 }
 
-.elementor img {
-  height: auto;
-  max-width: 100%;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
+/* .side1 {
+  transition: margin-left 250ms ease-in-out;
 }
-.icon-moving-left-right img {
-  transition: all .35s cubic-bezier(.38,3,.57,1.6);
+
+.side1:hover{
+  margin-left: 25px;
+  margin-right: 15px;
+} */
+
+.shop{ 
+  transition: scale 250ms ease-in-out;
+}
+
+.shop:hover {
+
+  scale: 1.1;
+
+}
+.shop:hover a {
+  background-color: #000a12;
+  color: white;
+}
+
+.icon-effect{
+  opacity: 0;
+}
+.icon-effect:hover{
+  opacity: 1;
+}
+.icon:hover{
+  background-color: #000a12 !important;
+}
+.img:hover {
+  filter: invert(100%) sepia(1) saturate(10%) hue-rotate(174deg);
 }

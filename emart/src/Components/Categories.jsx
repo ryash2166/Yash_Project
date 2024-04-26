@@ -10,9 +10,9 @@ const Categories = () => {
       <div className="flex justify-end text-[45px] font-[Jost] px-[15px] pb-[19px] max-xl:justify-start max-md:justify-center max-md:text-[30px] ">
         <h1 className="tracking-normal">Shop by categories</h1>
       </div>
-      <div className=" pb-[108px]">
+      <div className=" pb-[108px] max-md:pb-[50px]">
         <div className="flex gap-4 max-xl:block overflow-hidden ">
-          <div className="row  max-md:block max-xl:mb-2 ">
+          <div className="row  max-md:block max-xl:mb-6 max-md:mb-0">
             <div className="col image-container max-md:mb-2 up">
               <img src={img1} alt="Your Image" />
               <div className="overlay pr-[25px] max-lg:px-0 max-lg:pr-[25px]">

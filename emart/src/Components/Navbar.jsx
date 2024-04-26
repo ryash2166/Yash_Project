@@ -52,9 +52,9 @@ function Navbar1() {
 
   return (
     <>
-    <div className=' bg-black h-10'></div>
+    {/* <div className=' bg-black h-10'></div> */}
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="block relative z-50 bg-white mx-[30px] max-lg:mx-0 ">
+        <Navbar key={expand} expand={expand} className="block w-full fixed z-50 bg-white px-[20px] pr-[7px] max-lg:pr-0 max-lg:px-0">
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -85,9 +85,9 @@ function Navbar1() {
                   show={demo}
                   onMouseEnter={demoDropdown} 
                   onMouseLeave={DemoDropdown}>
-                    <div className='center -ml-[102px] absolute bg-white  max-xl:p-0 max-xl:ms-0  max-xl:relative'>
+                    <div className='center -ml-[137px] absolute bg-white px-[20px]  max-2xl:p-0 max-xl:ms-0  max-xl:relative'>
                     <div className='h-[1px] bg-[#e5e7eb] w-[1800px]  max-xl:hidden'></div>
-                    <section className='flex items-center ms-[300px] h-[500px]  max-xl:block max-xl:h-auto'>
+                    <section className='flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto'>
                       <div className='flex max-xl:block py-[50px] max-xl:py-0'>
                         <div className=' max-xl:hidden max-xl:ml-0'>
                           <div className='py-[50px] max-xl:p-0'>
