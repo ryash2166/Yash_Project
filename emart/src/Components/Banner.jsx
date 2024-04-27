@@ -5,7 +5,7 @@ function Banner() {
     <div className="overflow-hidden">
       <section className=" pt-[90px] py-[15px] pb-[109px] max-md:pb-[40px] text-center overflow-hidden ">
         <div className="mx-[55px] flex max-md:block text-center max-xl:text-start max-2xl:mx-[15px]">
-          <div className=" flex items-center justify-center text-wrap text-center max-lg:text-start pr-[100px] max-lg:pr-0">
+          <div className=" flex  items-center justify-center text-wrap text-center max-lg:text-start pr-[100px] max-lg:pr-0">
             <div className="">
               <div className="">
                 <div className="">
@@ -14,7 +14,7 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <div className="mb-[56px] max-md:mb-[45px]">
+              <div className="mb-[56px]  max-md:mb-[45px]">
                 <div className="text-[16px] font-light max-md:text-[15px] text-muted">
                   Rectangle follower distribute device layer. Library hand ellipse device strikethrough.
                 </div>
@@ -30,7 +30,7 @@ function Banner() {
               </div>
             </div>
           </div>
-          <div className="mr-5 mt-20  ml-2 ">
+          <div className="w-[50%] mr-5 mt-20  ml-2 ">
             <div className=" max-md:hidden ">
               <div className="">
                 <div className="">
@@ -39,7 +39,7 @@ function Banner() {
                     width="800"
                     height="1500"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-first.webp"
-                    className="hover:-ms-[15px] duration-[200ms] ease-out"
+                    className="hover:-ms-[15px] duration-300 ease-in-out"
                     loading="lazy"
                     alt="plants-banner-first "
                   />
@@ -50,11 +50,11 @@ function Banner() {
           <div className="">
             <div className="">
               <div className="">
-                <div className="">
+                <div className="ml-[15px]">
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
-                    className="w-[750px] max-md:w-auto hover:-ml-[15px] duration-[200ms] ease-out"
+                    className="w-[750px] max-md:w-auto hover:-ms-[15px] duration-300 ease-in-out"
                     loading="lazy"
                   />
                 </div>
