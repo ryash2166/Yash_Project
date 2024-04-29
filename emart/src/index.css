@@ -163,8 +163,8 @@ h1 {
 
 .drop:first-child:hover span svg.arrow{
 
-    transform: rotate(-180deg);
-    transition:transform 400ms ease-out;
+  transform: rotate(0.50turn);
+    transition:transform 300ms ease-out;
 }
 
 .dropdown-menu{
