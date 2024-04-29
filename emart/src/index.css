@@ -284,3 +284,20 @@ h1 {
 .img:hover {
   filter: invert(100%) sepia(1) saturate(10%) hue-rotate(174deg);
 }
+
+.now a { 
+  background-color: white;
+}
+.Shop{
+  transition: margin-top 250ms ease-in-out;
+
+}
+.Shop:hover {
+
+  margin-top: -10px;
+
+}
+.Shop:hover a {
+  background-color: #000a12;
+  color: white;
+}
