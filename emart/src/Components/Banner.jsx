@@ -30,16 +30,14 @@ function Banner() {
               </div>
             </div>
           </div>
-          <div className="w-[50%] mr-5 mt-20  ml-2 ">
+          <div className="w-[55%] mr-5 mt-20 max-xl:mr-2">
             <div className=" max-md:hidden ">
               <div className="">
                 <div className="">
                   <img
                     decoding="async"
-                    width="800"
-                    height="1500"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-first.webp"
-                    className="hover:-ms-[15px] duration-300 ease-in-out"
+                    className="hover:ms-[15px] duration-300 ease-in-out "
                     loading="lazy"
                     alt="plants-banner-first "
                   />
@@ -50,11 +48,11 @@ function Banner() {
           <div className="">
             <div className="">
               <div className="">
-                <div className="ml-[15px]">
+                <div className="ml-[15px] max-lg:ml-0 max-xl:ml-2 ">
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
-                    className="w-[750px] max-md:w-auto hover:-ms-[15px] duration-300 ease-in-out"
+                    className="w-[950px] max-lg:w-[450px] max-xl:w-[600px] max-md:w-auto hover:pl-[10px] duration-300 ease-in-out"
                     loading="lazy"
                   />
                 </div>
