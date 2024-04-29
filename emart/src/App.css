@@ -164,11 +164,42 @@ h1 {
 .dropdown-menu{
     animation: slideDown 400ms ease-in-out forwards;
 }
+.add {
 
+    &:before { 
+      content: '-';
+      font: inherit;
+      vertical-align: 0.1em;
+      display: inline-block;
+      text-align: center;
+      transform: scaleY(0) translateX(-1em);
+      margin-right: 0.2em;
+    }
+  
+    &:before,
+    .char {
+      transition: transform 0.4s ease-in-out, margin-left 0.4s ease-in-out;
+      transition-delay: calc( 0.015s * var(--char-index) );
+    }
+  
+    .char {
+      transform: translateX(-0.15em);
+    }
+  
+    &:hover:before {
+      transform: scaleX(2) scaleY(1) translateX(-0.1em);
+      margin-left: 0.45em;
+    }
+  
+    &:hover .char {
+      transform: translateX(1em);
+      transform: translateX(0.5em) ;
+    }
+  
+  }
 .add:hover{
   color: black !important;
   background-color: transparent;
-  margin-left: 12px;
 }   
 
 
@@ -179,10 +210,6 @@ h1 {
     width: max-content;
   }
   
-}
-
-.add{
-  transition: margin-left 250ms ease-out;
 }
 
 @keyframes slideDown {

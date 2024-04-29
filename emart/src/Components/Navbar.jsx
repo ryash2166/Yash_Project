@@ -50,6 +50,7 @@ function Navbar1() {
       setContact(false);
   }
 
+
   return (
     <>
     {/* <div className=' bg-black h-10'></div> */}
@@ -99,9 +100,9 @@ function Navbar1() {
                           </div>
                         </div>
                         <div className='pl-[60px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add animated-text"  href="#action2"> Fashion Hub </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add animated-text"   href="#action2" data-splitting> Fashion Hub </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action3"> Kids Wear </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women <br className='max-xl:hidden' /> Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women Fashion </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action5"> Big Fashion </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action6"> Handicraft </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action7"> Interior </NavDropdown.Item>
@@ -131,7 +132,7 @@ function Navbar1() {
                       <div className='flex items-center  py-[15px] pl-[1100px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
-                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                            <a href="#" className='text-muted ml-3 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
@@ -210,7 +211,7 @@ function Navbar1() {
                       <div className='flex justify-center items-center py-[15px] pl-[1000px] '>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
-                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                            <a href="#" className='text-muted ml-3 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
@@ -280,7 +281,7 @@ function Navbar1() {
                       <div className='flex justify-center items-center py-[15px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span>
-                            <a href="#" className='text-muted ml-2 add'>Shop Now</a>
+                            <a href="#" className='text-muted ml-3 add'>Shop Now</a>
                           </span>
                         </p>
                       </div>
@@ -292,7 +293,7 @@ function Navbar1() {
                 <div className='hello flex max-xl:block'>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:border-b-[1px] max-xl:px-0 '>
                       Blog
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -304,10 +305,14 @@ function Navbar1() {
                   show={blog}
                   onMouseEnter={blogDropdown} 
                   onMouseLeave={BlogDropdown}>
+                    <div className='overflow-hidden pr-[100px] py-[10px]'>
+                      <div className='overflow-hidden'>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Default Blog </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog One </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Two </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Three </NavDropdown.Item>
+                      </div>
+                    </div>
                   </NavDropdown>
 
                   <NavDropdown title={
@@ -323,8 +328,12 @@ function Navbar1() {
                   show={contact}
                   onMouseEnter={contactDropdown} 
                   onMouseLeave={ContactDropdown}>
-                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact One </NavDropdown.Item>
+                    <div className='overflow-hidden pr-[50px] py-[10px]'>
+                      <div className='overflow-hidden'>
+                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add "  href="#action33"> Contact One </NavDropdown.Item>
                     <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
+                      </div>
+                    </div>
                   </NavDropdown>                  
                 </div>
 
