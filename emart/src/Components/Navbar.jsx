@@ -74,7 +74,7 @@ function Navbar1() {
               <Offcanvas.Body className='bg-white'>
                 <Nav className="justify-content-center flex-grow-1 pe-5 m-0 bg-white">
                   <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
+                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2  max-xl:border-b-[1px] max-xl:px-0'>
                       Demo
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -86,11 +86,11 @@ function Navbar1() {
                   show={demo}
                   onMouseEnter={demoDropdown} 
                   onMouseLeave={DemoDropdown}>
-                    <div className='center -ml-[137px] absolute bg-white px-[20px]  max-2xl:p-0 max-xl:ms-0  max-xl:relative'>
+                    <div className='center -ml-[137px] absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative'>
                     <div className='h-[1px] bg-[#e5e7eb] w-[1800px]  max-xl:hidden'></div>
                     <section className='flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto'>
                       <div className='flex max-xl:block py-[50px] max-xl:py-0'>
-                        <div className=' max-xl:hidden max-xl:ml-0'>
+                        <div className='max-xl:hidden max-xl:ml-0'>
                           <div className='py-[50px] max-xl:p-0'>
                             <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
                             <div className=''>
@@ -142,7 +142,7 @@ function Navbar1() {
                     
                     </NavDropdown>
                     <NavDropdown title={
-                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
+                    <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0'>
                       Product
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -221,7 +221,7 @@ function Navbar1() {
 
                   </NavDropdown>
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark  max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2  max-xl:border-b-[1px] max-xl:px-0'>
                       Shop
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -293,7 +293,7 @@ function Navbar1() {
                 <div className='hello flex max-xl:block'>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:border-b-[1px] max-xl:px-0 '>
+                  <div className='flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0 '>
                       Blog
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -305,7 +305,7 @@ function Navbar1() {
                   show={blog}
                   onMouseEnter={blogDropdown} 
                   onMouseLeave={BlogDropdown}>
-                    <div className='overflow-hidden pr-[100px] py-[10px]'>
+                    <div className='overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6'>
                       <div className='overflow-hidden'>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Default Blog </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog One </NavDropdown.Item>
@@ -316,7 +316,7 @@ function Navbar1() {
                   </NavDropdown>
 
                   <NavDropdown title={
-                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:border-b-[1px] max-xl:px-0'>
+                  <div className='flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0'>
                       Contact
                     <span>
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-3 h-5 arrow">
@@ -328,7 +328,7 @@ function Navbar1() {
                   show={contact}
                   onMouseEnter={contactDropdown} 
                   onMouseLeave={ContactDropdown}>
-                    <div className='overflow-hidden pr-[50px] py-[10px]'>
+                    <div className='overflow-hidden pr-[50px] py-[10px] max-xl:-ml-6'>
                       <div className='overflow-hidden'>
                     <NavDropdown.Item className="text-muted text-[17px] py-[8px] add "  href="#action33"> Contact One </NavDropdown.Item>
                     <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
