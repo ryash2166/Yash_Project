@@ -97,7 +97,7 @@ const ContactTwo = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="pl-[80px] pr-[155px] max-xl:pl-[20px] max-md:pr-[20px]">
+                      <div className="pl-[80px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
                         <div>
                           <div className="col-lg-12 col-md-12 col-xs-12">
                             <div className="form-row">
@@ -165,7 +165,7 @@ const ContactTwo = () => {
                             <p className="bg-black mb-[20px]">
                               <span className="text-[#fff]">
                                 <input
-                                  className="w-[100%] h-[50px]  border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px]  placeholder-black"
+                                  className="w-[100%] h-[50px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px]  placeholder-black"
                                   type="submit"
                                   value="Send Massage"
                                 />
