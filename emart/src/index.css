@@ -184,7 +184,7 @@ h1 {
   
     &:before,
     .char {
-      transition: transform 0.4s ease-in-out, margin-left 0.4s ease-in-out;
+      transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out;
       transition-delay: calc( 0.015s * var(--char-index) );
     }
   
@@ -206,6 +206,7 @@ h1 {
 .add:hover{
   color: black !important;
   background-color: transparent;
+  outline: none;
 }   
 
 
@@ -327,4 +328,8 @@ h1 {
 .Shop:hover a {
   background-color: #000a12;
   color: white;
+}
+
+#navbar{
+  transition: top 0.2s ease-in-out;
 }

@@ -48,7 +48,7 @@ function Banner() {
           <div className="">
             <div className="">
               <div className="">
-                <div className="ml-[15px] max-lg:ml-0 max-xl:ml-2 ">
+                <div className="ml-[15px] max-lg:ml-[20px] max-md:ml-0 max-xl:ml-2 ">
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"

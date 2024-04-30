@@ -7,7 +7,7 @@ const Arrival = () => {
   return (
     <div>
       <section className="pt-[110px] px-[15px] pb-[20px] max-lg:pt-[50px] max-lg:pb-[37px]">
-        <div className="mx-[42px] max-lg:mx-0 max-sm:flex max-sm:justify-center">
+        <div className="mx-[42px] max-lg:mx-0 max-lg:flex max-lg:justify-center">
           <div className="mb-[8px]">
             <h1 className="font-[Jost] text-[45px] max-md:text-[32px]">
               New arrivals

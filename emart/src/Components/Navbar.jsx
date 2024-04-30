@@ -4,8 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { useState } from 'react';
 import { transform } from 'framer-motion';
+import { useEffect, useState } from "react";
 
 
 function Navbar1() {
@@ -50,12 +50,23 @@ function Navbar1() {
       setContact(false);
   }
 
+  window.onscroll = function() {scrollFunction()};
+
+  function scrollFunction() {
+    if (document.body.scrollTop > 10 || document.documentElement.scrollTop < 10) {
+      document.getElementById("navbar").style.top = "0px";
+    } else if (document.body.scrollTop > 200 || document.documentElement.scrollTop < 200) {
+      document.getElementById("navbar").style.top = "-150px";
+    } else if(document.body.scrollTop > 700 || document.documentElement.scrollTop < 700) {
+      document.getElementById("navbar").style.top = "0px";
+    } 
+  }
 
   return (
     <>
     {/* <div className=' bg-black h-10'></div> */}
       {['xl'].map((expand) => (
-        <Navbar key={expand} expand={expand} className="block w-full fixed z-50 bg-white px-[20px] pr-[7px] max-lg:pr-0 max-lg:px-0">
+        <Navbar key={expand} expand={expand} className='z-10 w-full fixed block bg-white px-[20px] pr-[7px] max-lg:pr-0 max-lg:px-0' id='navbar'>
           <Container fluid>
             <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
@@ -99,7 +110,7 @@ function Navbar1() {
                             </div>
                           </div>
                         </div>
-                        <div className='pl-[60px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className='pl-[50px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add animated-text"   href="#action2" data-splitting> Fashion Hub </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action3"> Kids Wear </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action4"> Women Fashion </NavDropdown.Item>
@@ -108,7 +119,7 @@ function Navbar1() {
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action7"> Interior </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
-                        <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action8"> Plant Garden </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action10"> Kids Toys </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action11"> Electronic Gadget </NavDropdown.Item>
@@ -118,7 +129,7 @@ function Navbar1() {
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action15"> Bags </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
-                        <div className=' py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6'>
+                        <div className=' py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden'>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action16"> Soap </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted py-[8px] text-[17px] add"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>

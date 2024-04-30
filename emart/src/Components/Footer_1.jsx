@@ -12,7 +12,7 @@ const Footer_1 = () => {
     <div>
       <section className=' pt-[25px] pb-[22px]'>
         <div className='max-md:flex max-md:justify-center max-md:items-center'>
-            <div className='flex justify-around items-center max-md:block'>
+            <div className='flex justify-between mx-4 max-lg:mx-0 items-center max-md:block'>
                 <div className='flex gap-2 items-center justify-center pb-3 w-[200px] max-lg:w-auto'>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
