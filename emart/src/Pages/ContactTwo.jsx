@@ -29,13 +29,13 @@ const ContactTwo = () => {
                 <div>
                   <section>
                     <div>
-                      <div className="pl-[80px] pr-[15px] max-xl:pl-[20px] max-xl:pt-[30px]">
+                      <div className="pl-[80px] pr-[15px] max-xl:pl-[20px] max-xl:pt-[30px] ">
                         <div className="">
                           <p className="text-[#d87f7f] font-[Jost] text-[18px]">
                             We Are Happy To Answer You
                           </p>
                         </div>
-                        <div className="pt-[23px] pb-[30px]">
+                        <div className="pt-[23px] pb-[30px] max-md:pb-[15px]">
                           <p className="font-[Jost] text-[45px] max-md:text-[30px] font-[400]">
                             Contact
                           </p>
@@ -53,7 +53,7 @@ const ContactTwo = () => {
                             </div>
                           </div>
                           <div className="">
-                            <div className="pr-[25px] pb-[20px] text-[18px] font-[Jost] text-[#666]">
+                            <div className="pr-[25px] pb-[20px] text-[17px] font-[Jost] text-[#666]">
                               121 King St, Melbourne VIC 3000, Australia
                             </div>
                           </div>
