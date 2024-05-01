@@ -9,8 +9,8 @@ function App() {
   return (
     <>
       <Main/>
-      {/* <ContactTwo/> */}
-      {/* <BlogThree/> */}
+      <ContactTwo/>
+      <BlogThree/>
     </>
   )
 }

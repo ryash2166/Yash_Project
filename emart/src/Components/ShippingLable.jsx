@@ -3,7 +3,7 @@ import React from 'react'
 const ShippingLable = () => {
   return (
     <div>
-      <section className='py-[40px] border-1 bg-[#e7e2dd] '>
+      <section className='py-[40px] border-1 bg-[#e7e2dd]'>
         <div className='row mx-[42px] max-lg:gap-y-10 max-xl:m-0'>
             <div className='col-12 col-md-6 col-xl-3'>
                 <div className='flex items-center justify-center max-md:block '>

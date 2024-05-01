@@ -6,8 +6,8 @@ import cart from '../assets/shopping-bag-woocommerce01.svg'
 const Interior = () => {
   return (
     <>
-      <div className="px-[15px] pb-[73px] max-lg:pb-0">
-        <div className="px-[15px] pb-[36px]">
+      <div className="px-[15px] pb-[73px] max-md:pb-0">
+        <div className="px-[15px] pb-[36px] max-md:pb-0 ">
           <div className="text-center text-[45px] font-[Jost] max-md:text-[32px] pb-[11px]">
             <h1 className="mb-[8px]">Best Interior Plants</h1>
           </div>
@@ -15,7 +15,7 @@ const Interior = () => {
             <p>Rectangle follower library hand ellipse device strikethrough.</p>
           </div>
         </div>
-        <section className="py-[50px] flex max-md:block mb-[50px] overflow-hidden">
+        <section className="py-[50px] flex max-md:block mb-[50px] max-md:mb-0 overflow-hidden">
           <section className="w-[43%] max-md:w-[100%] mb-3 px-[30px] max-xl:px-0 overflow-hidden">
             <img
               decoding="async"

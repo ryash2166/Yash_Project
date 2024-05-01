@@ -15,9 +15,9 @@ const Arrival = () => {
           </div>
         </div>
       </section>
-      <section className="px-[15px] pb-[65px]">
+      <section className="px-[15px] max-md:px-0 pb-[65px]">
         <div className="max-lg:ml-0">
-          <div className="row flex flex-wrap max-lg:justify-evenly justify-around ">
+          <div className="row  justify-around g-0">
             <div className="col-5 col-lg-2">
               <div className="relative flex justify-end ">
                 <div className="absolute z-1 bg-black text-white text-[13px] mr-[25px] mt-[20px] px-[12px] py-[4px]  max-md:hidden">
@@ -147,7 +147,7 @@ const Arrival = () => {
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                       <a href="" className="img p-[12px]">
-                        <img src={wish} alt="" />
+                        <img src={wish} alt="" className="" />
                       </a>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
