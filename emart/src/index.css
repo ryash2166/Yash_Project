@@ -171,7 +171,6 @@ h1 {
     animation: slideDown 400ms ease-in-out forwards;
 }
 .add {
-
     &:before { 
       content: '-';
       font: inherit;
@@ -298,6 +297,7 @@ h1 {
 .shop:hover a {
   background-color: #000a12;
   color: white;
+  font-weight: 500;
 }
 
 .icon-effect{

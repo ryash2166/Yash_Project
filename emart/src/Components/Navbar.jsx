@@ -317,7 +317,7 @@ function Navbar1() {
                   onMouseEnter={blogDropdown} 
                   onMouseLeave={BlogDropdown}>
                     <div className='overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6'>
-                      <div className='overflow-hidden'>
+                      <div className='w-36 max-2xl:w-auto'>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Default Blog </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog One </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Two </NavDropdown.Item>
@@ -340,9 +340,9 @@ function Navbar1() {
                   onMouseEnter={contactDropdown} 
                   onMouseLeave={ContactDropdown}>
                     <div className='overflow-hidden pr-[50px] py-[10px] max-xl:-ml-6'>
-                      <div className='overflow-hidden'>
-                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add "  href="#action33"> Contact One </NavDropdown.Item>
-                    <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
+                      <div className='w-56 max-2xl:w-auto'>
+                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact One </NavDropdown.Item>
+                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Contact Two </NavDropdown.Item>
                       </div>
                     </div>
                   </NavDropdown>                  
