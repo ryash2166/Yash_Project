@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <Main/>
-      <ContactTwo/>
+      {/* <Main/> */}
+      {/* <ContactTwo/> */}
       <BlogThree/>
     </>
   )

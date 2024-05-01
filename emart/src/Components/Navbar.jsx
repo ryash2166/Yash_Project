@@ -55,7 +55,7 @@ function Navbar1() {
   function scrollFunction() {
     if (document.body.scrollTop > 10 || document.documentElement.scrollTop < 10) {
       document.getElementById("navbar").style.top = "0px";
-    } else if (document.body.scrollTop > 200 || document.documentElement.scrollTop < 200) {
+    } else if (document.body.scrollTop > 300 || document.documentElement.scrollTop < 300) {
       document.getElementById("navbar").style.top = "-150px";
     } else if(document.body.scrollTop > 700 || document.documentElement.scrollTop < 700) {
       document.getElementById("navbar").style.top = "0px";
