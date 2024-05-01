@@ -3,6 +3,9 @@ import Navbar1 from "../Components/Navbar";
 import Footer_2 from "../Components/Footer_2";
 
 const ContactTwo = () => {
+
+  
+
   return (
     <div>
       <Navbar1 />
@@ -35,7 +38,7 @@ const ContactTwo = () => {
                             We Are Happy To Answer You
                           </p>
                         </div>
-                        <div className="pt-[23px] pb-[30px] max-md:pb-[15px]">
+                        <div className="pt-[23px] pb-[30px] max-md:pb-[15px] max-md:pt-[15px]">
                           <p className="font-[Jost] text-[45px] max-md:text-[30px] font-[400]">
                             Contact
                           </p>
@@ -140,7 +143,6 @@ const ContactTwo = () => {
                                   aria-required="true"
                                   aria-invalid="false"
                                   placeholder="Phone"
-                                
                                   type="text"
                                 />
                               </span>
@@ -182,7 +184,7 @@ const ContactTwo = () => {
           </section>
         </div>
       </div>
-      {/* <Footer_2/> */}
+      <Footer_2/>
     </div>
   );
 };

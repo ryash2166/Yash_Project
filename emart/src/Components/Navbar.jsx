@@ -4,11 +4,11 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
-import { transform } from 'framer-motion';
 import { useEffect, useState } from "react";
 
-
 function Navbar1() {
+
+  const [selectedItem, setSelectedItem] = useState("BlogThree");
 
   let [demo, setDemo] = useState(false);
   let demoDropdown = (e)=>{
@@ -321,7 +321,7 @@ function Navbar1() {
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Default Blog </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog One </NavDropdown.Item>
                       <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Two </NavDropdown.Item>
-                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href="#action33"> Blog Three </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add"  href='#action34'>Blog Three</NavDropdown.Item>
                       </div>
                     </div>
                   </NavDropdown>

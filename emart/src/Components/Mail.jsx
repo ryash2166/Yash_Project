@@ -25,10 +25,10 @@ const Mail = () => {
                                 <div className='px-[258px] max-xl:px-0'>
                                     <div className='flex justify-center items-center gap-2 max-md:block'>
                                         <div className='max-md:mb-3'>
-                                        <input className="bg-[#f2f2f2] text-[#666] py-3 pr-32 pl-3 max-sm:pr-0 max-sm:w-[290px] outline-none " placeholder="Your email address..." type="email" name="email-579"  />
+                                        <input size="34" className="bg-[#f2f2f2] text-[#666] py-3  pl-3 max-md:w-full outline-none " placeholder="Your email address..." type="email" name="email-579"  />
                                         </div>
                                         <div className='flex justify-center items-center'>
-                                            <input className="bg-black text-white py-3 px-10 max-md:px-[170px] max-sm:px-0 max-sm:w-[290px]" type="submit" value="Subscribe Now"/>
+                                            <input size="40" className="bg-black text-white py-3 px-10  max-sm:px-0 max-md:w-full" type="submit" value="Subscribe Now"/>
                                         </div>
                                     </div>
                                 </div>
