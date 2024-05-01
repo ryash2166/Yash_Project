@@ -3,7 +3,7 @@ import React from "react";
 function Banner() {
   return (
     <div className="overflow-hidden">
-      <section className=" pt-[90px] py-[15px] pb-[109px] max-md:pb-[40px] text-center overflow-hidden ">
+      <section className=" pt-[70px] py-[15px] pb-[109px] max-md:pb-[40px] text-center overflow-hidden ">
         <div className="mx-[50px] flex max-md:block text-center max-2xl:mx-[15px]">
           <div className=" flex  items-center justify-center text-wrap text-center pr-[100px] max-lg:pr-0">
             <div className="">
