@@ -20,7 +20,7 @@ const Interior = () => {
             <img
               decoding="async"
               src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp"
-              className="hover:ml-[15px] duration-[200ms] ease-out"
+              className="hover:translate-x-7 duration-[400ms] ease-in-out"
               alt="plant-gallery-left-img"
               loading="lazy"
             />

@@ -3,7 +3,7 @@ import React from "react";
 function Banner() {
   return (
     <div className="overflow-hidden">
-      <section className=" pt-[70px] py-[15px] pb-[109px] max-md:pb-[40px] text-center overflow-hidden ">
+      <section className=" pt-[90px] py-[15px] pb-[109px] max-md:pb-[40px] text-center overflow-hidden ">
         <div className="mx-[50px] flex max-md:block text-center max-2xl:mx-[15px]">
           <div className=" flex  items-center justify-center text-wrap text-center pr-[100px] max-lg:pr-0">
             <div className="">
@@ -22,8 +22,8 @@ function Banner() {
               <div className="">
                 <div className="max-lg:text-left max-md:text-center">
                   <div className="shop">
-                    <a href="/" className="border-1 border-black px-[40px] py-[12px]" role="button">
-                        <span className="font-normal">shop now</span>
+                    <a href="/" className="" role="button">
+                      <button className='font-[Poppins] font-[500] text-[17px] py-[12px] px-[40px] border-1 border-black  hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
                     </a>
                   </div>
                 </div>
@@ -37,7 +37,7 @@ function Banner() {
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-first.webp"
-                    className="hover:ms-[15px] duration-300 ease-in-out "
+                    className="hover:translate-x-5 duration-400 ease-in-out "
                     loading="lazy"
                     alt="plants-banner-first "
                   />
@@ -52,7 +52,7 @@ function Banner() {
                   <img
                     decoding="async"
                     src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
-                    className="w-[850px] max-lg:w-[450px] max-xl:w-[600px] max-md:w-auto hover:pl-[10px] duration-300 ease-in-out"
+                    className="w-[850px] max-lg:w-[450px] max-xl:w-[600px] max-md:w-auto hover:translate-x-5 duration-400 ease-in-out"
                     loading="lazy"
                   />
                 </div>

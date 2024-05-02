@@ -149,7 +149,7 @@ h1 {
 
 .dropdown-menu{
     border: 0;
-    background-color: white;   
+    background-color: transparent;   
 }
 
 .dropdown:hover{
@@ -183,7 +183,7 @@ h1 {
   
     &:before,
     .char {
-      transition: transform 0.3s ease-in-out, margin-left 0.3s ease-in-out;
+      transition: transform 0.3s ease-in-out, translate 0.3s ease-in-out;
       transition-delay: calc( 0.015s * var(--char-index) );
     }
   
@@ -193,7 +193,7 @@ h1 {
   
     &:hover:before {
       transform: scaleX(2) scaleY(1) translateX(-0.1em);
-      margin-left: 0.45em;
+      translate: 1px;
     }
   
     &:hover .char {
@@ -209,15 +209,20 @@ h1 {
 }   
 
 
+@media (max-width:1440px) {
+  .center{
+    inset: 0px auto auto 0px;
+    transform: translate3d(-500px, 10px, 0px);
+    width: max-content;
+  }
+}
 @media (min-width:1440px) {
   .center{
     inset: 0px auto auto 0px;
-    transform: translate3d(-500px, -1px, 0px);
+    transform: translate3d(-500px, 10px, 0px);
     width: max-content;
   }
-  
 }
-
 @keyframes slideDown {
   0% { 
     opacity: 0;
@@ -269,11 +274,11 @@ h1 {
 }
 
 .side{
-  transition: margin-right 200ms ease-in-out;
+  transition: translate 300ms ease-in-out;
 }
 
 .side:hover{
-  margin-right: -5px;
+  translate: 5px;
 }
 
 /* .side1 {
@@ -285,7 +290,7 @@ h1 {
   margin-right: 15px;
 } */
 
-.shop{ 
+/* .shop{ 
   transition: scale 250ms ease-in-out;
 }
 
@@ -298,7 +303,7 @@ h1 {
   background-color: #000a12;
   color: white;
   font-weight: 500;
-}
+} */
 
 .icon-effect{
   opacity: 0;
@@ -310,7 +315,7 @@ h1 {
   background-color: #000a12 !important;
 }
 .img:hover {
-  filter: invert(100%) sepia(1);
+  filter: invert(100%) sepia(1) saturate(0%) hue-rotate(170deg);
 }
 
 .now a { 
