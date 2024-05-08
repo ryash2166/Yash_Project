@@ -128,7 +128,6 @@ const ContactTwo = () => {
                                   aria-required="true"
                                   aria-invalid="false"
                                   placeholder="Email Address"
-                                
                                   type="email"
                                 />
                               </span>

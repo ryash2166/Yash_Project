@@ -170,6 +170,7 @@ h1 {
 .dropdown-menu{
     animation: slideDown 400ms ease-in-out forwards;
 }
+
 .add {
     &:before { 
       content: '-';

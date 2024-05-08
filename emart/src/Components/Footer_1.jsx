@@ -1,10 +1,10 @@
 import React from 'react'
 import pin from '../assets/pin.svg'
-import visa from '../assets/visa.svg'
 import web from '../assets/web.svg'
-import maestro from '../assets/maestro.svg'
 import jcb from '../assets/jcb.svg'
 import discover from '../assets/discover.svg'
+import visa from '../assets/visa.svg'
+import maestro from '../assets/maestro.svg'
 import american from '../assets/american.svg'
 
 const Footer_1 = () => {
