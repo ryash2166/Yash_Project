@@ -6,7 +6,6 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useEffect, useState } from "react";
 import { Link, NavLink } from 'react-router-dom';
-import Profile from './Profile';
 
 
 
@@ -406,7 +405,6 @@ function Navbar1() {
                 <p>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                 </p>            
-                {/* <Profile/> */}
               </div>
               <div className="max-xl:hidden" >
                 <NavLink to="wishlist">

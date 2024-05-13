@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar1 from '../Components/Navbar'
-import Footer_3 from '../Components/Footer_3'
-
+import Mail from '../Components/Mail'
+import Footer_1 from '../Components/Footer_1'
 const Wishlist = () => {
   return (
     <div>
@@ -20,7 +20,8 @@ const Wishlist = () => {
             </div>
         </section>
       </div>
-      <Footer_3/>
+      <Mail/>
+     <Footer_1/>
     </div>
   )
 }

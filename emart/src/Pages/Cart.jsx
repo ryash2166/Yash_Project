@@ -1,8 +1,8 @@
 import React from 'react'
-import Footer_2 from '../Components/Footer_2'
 import Navbar1 from '../Components/Navbar'
 import { NavLink } from 'react-router-dom'
-
+import Mail from '../Components/Mail'
+import Footer_1 from '../Components/Footer_1'
 
 const Cart = () => {
   return (
@@ -22,7 +22,8 @@ const Cart = () => {
             </div>
         </section>
       </div>
-      <Footer_2 />
+      <Mail/>
+     <Footer_1/>
     </div>
   )
 }

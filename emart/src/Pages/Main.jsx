@@ -6,8 +6,8 @@ import Interior from '../Components/Interior'
 import ShippingLable from '../Components/ShippingLable'
 import Tools from '../Components/Tools'
 import Mail from '../Components/Mail'
-import Arrival from '../Components/Arrival'
 import Footer_1 from '../Components/Footer_1'
+import Arrival from '../Components/Arrival'
 import { Link , NavLink } from 'react-router-dom'
 
 

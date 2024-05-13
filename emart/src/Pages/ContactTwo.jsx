@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar1 from "../Components/Navbar";
-import Footer_2 from "../Components/Footer_2";
-
+import Mail from '../Components/Mail'
+import Footer_1 from '../Components/Footer_1'
 const ContactTwo = () => {
 
   
@@ -183,7 +183,8 @@ const ContactTwo = () => {
           </section>
         </div>
       </div>
-      <Footer_2/>
+      <Mail/>
+     <Footer_1/>
     </div>
   );
 };
