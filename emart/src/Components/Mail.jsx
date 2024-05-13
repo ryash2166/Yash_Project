@@ -3,7 +3,7 @@ import React from 'react'
 const Mail = () => {
   return (
     <div className='border-t-2 border-b-2'>
-      <div className='px-[15px] pt-[112px] pb-[105px] max-md:pt-[50px] max-md:pb-[45px]'>
+      <div className='px-[15px] pt-[110px] pb-[100px] max-md:pt-[50px] max-md:pb-[45px]'>
         <div className='mx-[272px] max-lg:mx-0'>
             <div className='mx-[15px]'>
                 <section className='flex justify-center items-center text-center'>

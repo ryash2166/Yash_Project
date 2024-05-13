@@ -5,7 +5,10 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { useEffect, useState } from "react";
-import MyModal from './Profile';
+import { Link, NavLink } from 'react-router-dom';
+import Profile from './Profile';
+
+
 
 function Navbar1() {
 
@@ -67,9 +70,9 @@ function Navbar1() {
       {['xl'].map((expand) => (
         <Navbar key={expand} expand={expand} className='z-10 w-full fixed block bg-white px-[20px] pr-[7px] max-lg:pr-0 max-lg:px-0 border-b-[1px]' id='navbar'>
           <Container fluid>
-            <Navbar.Brand href="/" className='max-xl:order-2 max-md:ml-6'>
+            <Link to="/" className='max-xl:order-2 max-md:ml-6'>
             <img alt="logo" className='h-9 w-auto max-md:h-7' src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp" width="147" height="31"></img>
-            </Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} className='max-xl:order-1 border-0' />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
@@ -105,34 +108,36 @@ function Navbar1() {
                             <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp" alt="" />
                             <div className=''>
                               <p className='mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]'>New Product on the market</p>
-                              <p className='font-bold text-[16px] text-muted add hover:translate-x-2 duration-300 ease-in-out'><a href="#">Shop Now</a></p>
+                              <p className='font-bold text-[16px] text-muted add hover:translate-x-2 duration-300 ease-in-out'>
+                                <NavLink to="/">Shop Now</NavLink>
+                              </p>
                             </div>
                           </div>
                         </div>
-                        <div className='pl-[50px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0 leading-8 max-xl:leading-6'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out animated-text"   href="#action2" data-splitting> Fashion Hub </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action3"> Kids Wear </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action4"> Women Fashion </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action5"> Big Fashion </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action6"> Handicraft </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action7"> Interior </NavDropdown.Item>
+                        <div className='pl-[50px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0  leading-8 max-xl:leading-6'>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Fashion Hub </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Kids Wear </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Women Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Big Fashion </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Handicraft </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Interior </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
                         <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action8"> Plant Garden </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action10"> Kids Toys </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action11"> Electronic Gadget </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action12"> Bathroom </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action13"> Bicycle </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action14"> Shoes </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action15"> Bags </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Plant Garden </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Kids Toys </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Electronic Gadget </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Bathroom </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Bicycle </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Shoes </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Bags </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden'></div>
                         <div className=' py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden'>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action16"> Soap </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action17"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action18"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action19"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Soap </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Grocery Outlet <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Hiking Heaven <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"> Exotic Fragrance <Badge className='ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]' pill bg=''>new</Badge> </NavDropdown.Item>
                         </div>
                       </div>
         
@@ -142,7 +147,7 @@ function Navbar1() {
                       <div className='flex items-center  py-[15px] pl-[1100px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span className='hover:translate-x-2 duration-300 ease-in-out'>
-                            <a href="#" className='text-muted ml-3 add '>Shop Now</a>
+                            <NavLink to="/" className='text-muted ml-3 add '>Shop Now</NavLink>
                           </span>
                         </p>
                       </div>
@@ -188,31 +193,41 @@ function Navbar1() {
                           <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
                             <img width="43px" height="43px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/dress-02.png" alt="" />
                           </div>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action20"> Product Styles </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action21"> Style One </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action21"> Style Two </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action22"> Style Three </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action23"> Style Four </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"> Product Styles </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Style One </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Style Two </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Style Three </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='stylefour'>
+                              Style Four
+                            </NavLink>
+                          </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
                         <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0'>
                           <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
                             <img width="48px" height="48px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/school-bag.png" alt="" />
                           </div>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action24"> Product Gallery </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action25"> Vertical Carousel </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action26"> Carousel </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action27"> Horizontal Style </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action28"> Grid Style </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"> Product Gallery </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Vertical Carousel </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='carousel'>
+                              Carousel
+                            </NavLink> 
+                          </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Horizontal Style </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='gridstyle'>Grid Style</NavLink>
+                          </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
                         <div className='py-[50px] pl-[50px] pr-[1px] max-xl:p-0'>
                           <div className='pt-[3px] pb-[32px] ml-2 max-xl:hidden'>
                             <img width="48px" height="48px" src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/chair-1.png" alt="" />
                           </div>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action29"> Product Style </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action30"> Simple Product </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action31"> Variable Product </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"> Product Style </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Simple Product </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Variable Product </NavDropdown.Item>
                         </div>
                         </section>
                     </section>
@@ -221,7 +236,7 @@ function Navbar1() {
                       <div className='flex justify-center items-center py-[15px] pl-[1000px] '>
                         <p className='text-danger flex '>Summer Sale 65% Off 
                           <span className='hover:translate-x-2 duration-300 ease-in-out '>
-                            <a href="#" className='text-muted ml-3 add text-center'>Shop Now</a>
+                            <NavLink to="/" className='text-muted ml-3 add text-center'>Shop Now</NavLink>
                           </span>
                         </p>
                       </div>
@@ -248,32 +263,50 @@ function Navbar1() {
                     <section className='ms-[400px] pr-[235px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6'>
                       <section className='flex max-xl:block max-xl:p-0'>
                         <div className='pt-[60px] pb-[50px] max-xl:p-0'>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action32"> Listing Layouts </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> 4 Column </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action34"> 4 Column + Side bar </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action35"> 5 Column </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action36"> 5 Column + Side bar </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"> Listing Layouts </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> 4 Column </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> 
+                          <NavLink to='4colside'>
+                            4 Column + Side bar 
+                          </NavLink>
+                          </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> 5 Column </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> 5 Column + Side bar </NavDropdown.Item>
                         <div className='mt-[20px]'>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action37"> Shop Pages </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action38"> Wishlist </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action39"> Cart </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action40"> Checkout </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"> Shop Pages </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='wishlist'>
+                              Wishlist
+                            </NavLink>
+                          </NavDropdown.Item>
+                          <NavLink to='cart'>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='cart'>
+                              Cart
+                            </NavLink>
+                          </NavDropdown.Item>
+                          </NavLink>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavLink to='checkout'>
+                              Checkout
+                            </NavLink>
+                          </NavDropdown.Item>
                         </div>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
                         <div className='pl-[40px] pt-[60px] pb-[50px] max-xl:p-0'>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action41"> Sidebar Widgets </p>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action42"> Product Filter at Top </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action43"> Product Filter at Left </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action44"> Product Filter at Right </NavDropdown.Item>  
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  > Sidebar Widgets </p>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Product Filter at Top </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Product Filter at Left </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Product Filter at Right </NavDropdown.Item>  
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
                         <div className='pl-[40px] pt-[60px] pb-[50px] max-xl:p-0'>
-                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  href="#action45"> Shop Box Styles </p>
-                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action46"> Shop Style One </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action47"> Shop Style Two </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action48"> Shop Style Three </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action49"> Shop Style Four </NavDropdown.Item>
+                          <p className="font-bold text-[18px] py-[8px] bg-transparent"  > Shop Box Styles </p>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Shop Style One </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Shop Style Two </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Shop Style Three </NavDropdown.Item>
+                          <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Shop Style Four </NavDropdown.Item>
                         </div>
                         <div className='bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden'></div>
                         <div className='max-xl:hidden ml-[50px] my-[60px] '>
@@ -291,7 +324,7 @@ function Navbar1() {
                       <div className='flex justify-center items-center py-[15px]'>
                         <p className='text-danger flex'>Summer Sale 65% Off 
                           <span className='hover:translate-x-2 duration-300 ease-in-out'>
-                            <a href="#" className='text-muted ml-3 add text-center'>Shop Now</a>
+                            <NavLink to="/" className='text-muted ml-3 add text-center'>Shop Now</NavLink>
                           </span>
                         </p>
                       </div>
@@ -317,10 +350,18 @@ function Navbar1() {
                   onMouseLeave={BlogDropdown}>
                     <div className='overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white'>
                       <div className='w-36 max-2xl:w-auto'>
-                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> Default Blog </NavDropdown.Item>
-                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> Blog One </NavDropdown.Item>
-                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> Blog Two </NavDropdown.Item>
-                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href='#action34'>Blog Three</NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                        <NavLink to='defaultblog'>
+                          Default Blog
+                        </NavLink>
+                      </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Blog One </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Blog Two </NavDropdown.Item>
+                      <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                        <NavLink to='blogthree'>
+                          Blog Three
+                        </NavLink>
+                      </NavDropdown.Item>
                       </div>
                     </div>
                   </NavDropdown>
@@ -340,8 +381,12 @@ function Navbar1() {
                   onMouseLeave={ContactDropdown}>
                     <div className='overflow-hidden pr-[50px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white'>
                       <div className='w-56 max-2xl:w-auto'>
-                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> Contact One </NavDropdown.Item>
-                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"  href="#action33"> Contact Two </NavDropdown.Item>
+                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"> Contact One </NavDropdown.Item>
+                        <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <NavLink to='contacttwo'>
+                            Contact Two
+                          </NavLink>
+                        </NavDropdown.Item>
                       </div>
                     </div>
                   </NavDropdown>                  
@@ -358,22 +403,28 @@ function Navbar1() {
                 </a>
               </div>
               <div className="menu-mobile-icon cart-icon flex pr-[20px] max-md:pr-3 max-lg:block">
-                <a href="/">
+                <p>
                   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-user"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                </a>            
-                {/* <MyModal/> */}
+                </p>            
+                {/* <Profile/> */}
               </div>
               <div className="max-xl:hidden" >
-                <a href="/" className="flex pr-[20px]">
-                  <span className="wishlist_products_counter_text"><img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg"/> </span>
-                  <span className="-mt-3">0</span>
-                </a>
+                <NavLink to="wishlist">
+                  <div className="flex pr-[20px]">
+                    <span className="wishlist_products_counter_text">
+                      <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg"/>
+                    </span>
+                    <span className="-mt-3">0</span>
+                  </div>
+                </NavLink>
               </div>
               <div className="menu-mobile-icon cart-icon flex max-md:-mr-4">
-                <a href="/" className='flex'>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                  <span className="-mt-3">0</span>
-                </a>
+                <NavLink to="cart" >
+                  <div className='flex'>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="feather feather-shopping-bag"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                    <span className="-mt-3">0</span>
+                  </div>
+                </NavLink>
               </div>
             </nav>
           </Container>
@@ -385,6 +436,3 @@ function Navbar1() {
 }
 
 export default Navbar1;
-
-
-

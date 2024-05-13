@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Banner() {
   return (
@@ -22,9 +23,9 @@ function Banner() {
               <div className="">
                 <div className="max-lg:text-left max-md:text-center">
                   <div className="shop">
-                    <a href="/" className="" role="button">
+                    <NavLink to="/" className="" role="button">
                       <button className='font-[Poppins] font-[500] text-[17px] py-[12px] px-[40px] border-1 border-black  hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
-                    </a>
+                    </NavLink>
                   </div>
                 </div>
               </div>

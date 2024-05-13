@@ -8,6 +8,8 @@ import Tools from '../Components/Tools'
 import Mail from '../Components/Mail'
 import Arrival from '../Components/Arrival'
 import Footer_1 from '../Components/Footer_1'
+import { Link , NavLink } from 'react-router-dom'
+
 
 const Main = () => {
   return (

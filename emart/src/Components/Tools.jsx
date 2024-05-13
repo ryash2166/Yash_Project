@@ -1,4 +1,5 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 // import url from '../assets/Tools.webp'
 
 const Tools = () => {
@@ -18,9 +19,9 @@ const Tools = () => {
             <div className='ml-[74px] max-xl:ml-0 max-md:flex max-md:justify-center'>
               <div className='text-[17px] mt-[40px] now'>
                 <div className="Shop">
-                    <a href="/" className="px-[40px] py-[12px]" role="button">
+                    <NavLink to="/" className="px-[40px] py-[12px]" role="button">
                         <span className="font-normal">shop now</span>
-                    </a>
+                    </NavLink>
                 </div>
               </div>
             </div>
