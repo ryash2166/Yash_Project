@@ -1,14 +1,11 @@
 import React from "react";
 import Navbar1 from "../Components/Navbar";
-import Mail from '../Components/Mail'
-import Footer_1 from '../Components/Footer_1'
+import Mail from "../Components/Mail";
+import Footer_1 from "../Components/Footer_1";
 const ContactTwo = () => {
-
-  
-
   return (
     <div>
-      <Navbar1 />
+      {/* <Navbar1 /> */}
       <div className="pt-[70px]">
         <div>
           <section>
@@ -112,7 +109,6 @@ const ContactTwo = () => {
                                     aria-required="true"
                                     aria-invalid="false"
                                     placeholder="Name"
-                                
                                     type="text"
                                   />
                                 </span>
@@ -183,8 +179,8 @@ const ContactTwo = () => {
           </section>
         </div>
       </div>
-      <Mail/>
-     <Footer_1/>
+      {/* <Mail />
+      <Footer_1 /> */}
     </div>
   );
 };

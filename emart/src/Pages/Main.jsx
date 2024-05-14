@@ -14,15 +14,15 @@ import { Link , NavLink } from 'react-router-dom'
 const Main = () => {
   return (
     <div>
-      <Navbar1/>
+      {/* <Navbar1/> */}
       <Banner/>
       <Categories/>
       <Interior/>
       <ShippingLable/>
       <Tools/>
       <Arrival/>
-      <Mail/>
-      <Footer_1/>
+      {/* <Mail/>
+      <Footer_1/> */}
     </div>
   )
 }

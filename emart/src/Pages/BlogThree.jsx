@@ -7,7 +7,7 @@ const BlogThree = () => {
     
   return (
     <div>
-      <Navbar1/>
+      {/* <Navbar1/> */}
       <div className=''>
         <div>
             <section className='bg-[#fbf4f0] pt-[104px] pb-[114px] px-[15px]'>
@@ -238,8 +238,8 @@ const BlogThree = () => {
             </section>
         </div>
       </div>
-     <Mail/>
-     <Footer_1/>
+     {/* <Mail/>
+     <Footer_1/> */}
     </div>
   )
 }

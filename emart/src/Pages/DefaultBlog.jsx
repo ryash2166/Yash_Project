@@ -4,7 +4,7 @@ import Navbar1 from '../Components/Navbar'
 const DefaultBlog = () => {
   return (
     <div className='container-fluid'>
-      <Navbar1/>
+      {/* <Navbar1/> */}
     </div>
   )
 }

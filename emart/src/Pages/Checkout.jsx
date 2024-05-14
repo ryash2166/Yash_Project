@@ -6,7 +6,7 @@ import Navbar1 from '../Components/Navbar'
 const Checkout = () => {
   return (
     <div>
-      <Navbar1/>
+      {/* <Navbar1/> */}
       <div className=''>
         <section className='py-[180px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
             <div className='mx-[272px] max-2xl:mx-[50px] max-lg:mx-2'>
@@ -20,8 +20,8 @@ const Checkout = () => {
                 </div>
             </div>
         </section>
-        <Mail/>
-        <Footer_1/>
+        {/* <Mail/>
+        <Footer_1/> */}
       </div>
     </div>
   )
