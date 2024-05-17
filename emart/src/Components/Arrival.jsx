@@ -1,10 +1,12 @@
 import React from "react";
-import wish from "../assets/heart-woocommerce.svg";
-import eye from "../assets/eye-woocommerce1.svg";
-import cart from "../assets/shopping-bag-woocommerce01.svg";
+import heart from '../assets/heart.svg'
+import eye from '../assets/Eyes.svg'
+import cart from '../assets/Cart.svg'
 import { NavLink } from "react-router-dom";
 
 const Arrival = () => {
+  
+
   return (
     <div>
       <section className="pt-[110px] px-[15px] pb-[20px] max-lg:pt-[50px] max-lg:pb-[37px]">
@@ -27,8 +29,8 @@ const Arrival = () => {
                 <div className="overflow-hidden">
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="wishlist" className="img p-[12px]">
-                        <img src={wish} alt="" />
+                      <NavLink to="shopnow" className="img p-[12px]">
+                        <img src={heart} alt="" />
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
@@ -37,7 +39,7 @@ const Arrival = () => {
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="cart" className="img p-[12px]">
+                      <NavLink to='shopnow' className="img p-[12px]">
                         <img src={cart} alt="" />
                       </NavLink>
                     </div>
@@ -67,8 +69,8 @@ const Arrival = () => {
                 <div className="overflow-hidden">
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="wishlist" className="img p-[12px]">
-                        <img src={wish} alt="" />
+                      <NavLink to='shopnow' className="img p-[12px]">
+                        <img src={heart} alt="" />
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
@@ -77,7 +79,7 @@ const Arrival = () => {
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="cart" className="img p-[12px]">
+                      <NavLink to='shopnow' className="img p-[12px]">
                         <img src={cart} alt="" />
                       </NavLink>
                     </div>
@@ -107,8 +109,8 @@ const Arrival = () => {
                 <div className="overflow-hidden">
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="wishlist" className="img p-[12px]">
-                        <img src={wish} alt="" />
+                      <NavLink to='shopnow' className="img p-[12px]">
+                        <img src={heart} alt="" />
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
@@ -117,7 +119,7 @@ const Arrival = () => {
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="cart" className="img p-[12px]">
+                      <NavLink to='shopnow' className="img p-[12px]">
                         <img src={cart} alt="" />
                       </NavLink>
                     </div>
@@ -147,8 +149,8 @@ const Arrival = () => {
                 <div className="overflow-hidden">
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="wishlist" className="img p-[12px]">
-                        <img src={wish} alt="" className="" />
+                      <NavLink to='shopnow' className="img p-[12px]">
+                        <img src={heart} alt="" className="" />
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
@@ -157,7 +159,7 @@ const Arrival = () => {
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="cart" className="img p-[12px]">
+                      <NavLink to='shopnow' className="img p-[12px]">
                         <img src={cart} alt="" />
                       </NavLink>
                     </div>
@@ -187,8 +189,8 @@ const Arrival = () => {
                 <div className="overflow-hidden">
                   <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="wishlist" className="img p-[12px]">
-                        <img src={wish} alt="" />
+                      <NavLink to='shopnow' className="img p-[12px]">
+                        <img src={heart} alt="" />
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
@@ -197,7 +199,7 @@ const Arrival = () => {
                       </NavLink>
                     </div>
                     <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                      <NavLink to="cart" className="img p-[12px]">
+                      <NavLink  className="img p-[12px]">
                         <img src={cart} alt="" />
                       </NavLink>
                     </div>

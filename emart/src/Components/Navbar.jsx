@@ -6,8 +6,14 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { useSelector } from 'react-redux';
 
 function Navbar1() {
+
+
+  const result = useSelector((state) => state.Reducer);
+  console.warn("HeaderData called", result);
+
   let [demo, setDemo] = useState(false);
   let demoDropdown = (e) => {
     setDemo(true);
@@ -70,6 +76,8 @@ function Navbar1() {
       document.getElementById("navbar").style.top = "0px";
     }
   }
+
+
 
   return (
     <>
@@ -149,7 +157,7 @@ function Navbar1() {
                                   New Product on the market
                                 </p>
                                 <p className="font-bold text-[16px] text-muted add hover:translate-x-2 duration-300 ease-in-out">
-                                  <NavLink to="">Shop Now</NavLink>
+                                  <NavLink to="shopnow">Shop Now</NavLink>
                                 </p>
                               </div>
                             </div>
@@ -183,8 +191,10 @@ function Navbar1() {
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              {" "}
-                              Plant Garden{" "}
+                              <Link to='/'>
+
+                                Plant Garden
+                              </Link>
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
                               {" "}
@@ -259,7 +269,7 @@ function Navbar1() {
                           <p className="text-danger flex">
                             Summer Sale 65% Off
                             <span className="hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="" className="text-muted ml-3 add ">
+                              <NavLink to="shopnow" className="text-muted ml-3 add ">
                                 Shop Now
                               </NavLink>
                             </span>
@@ -424,7 +434,7 @@ function Navbar1() {
                             Summer Sale 65% Off
                             <span className="hover:translate-x-2 duration-300 ease-in-out ">
                               <NavLink
-                                to=""
+                                to="shopnow"
                                 className="text-muted ml-3 add text-center"
                               >
                                 Shop Now
@@ -570,7 +580,7 @@ function Navbar1() {
                             Summer Sale 65% Off
                             <span className="hover:translate-x-2 duration-300 ease-in-out">
                               <NavLink
-                                to=""
+                                to="shopnow"
                                 className="text-muted ml-3 add text-center"
                               >
                                 Shop Now
@@ -583,7 +593,7 @@ function Navbar1() {
                     </div>
                   </NavDropdown>
 
-                  <div className="hello flex max-[1024px]:block">
+                  <div className="flex max-[1024px]:block">
                     <NavDropdown
                       title={
                         <div className="flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0 ">
@@ -676,7 +686,7 @@ function Navbar1() {
             </Navbar.Offcanvas>
             <nav className="flex items-center pr-[20px] order-3">
               <div className="max-xl:hidden">
-                <a href="" className="flex pr-[20px]">
+                <NavLink to="" className="flex pr-[20px]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -692,10 +702,10 @@ function Navbar1() {
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                   </svg>
-                </a>
+                </NavLink>
               </div>
               <div className="menu-mobile-icon cart-icon flex pr-[20px] max-md:pr-3 max-lg:block">
-                <p>
+                <NavLink to='profile'>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -711,7 +721,7 @@ function Navbar1() {
                     <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                     <circle cx="12" cy="7" r="4"></circle>
                   </svg>
-                </p>
+                </NavLink>
               </div>
               <div className="max-xl:hidden">
                 <NavLink to="wishlist">
@@ -719,10 +729,11 @@ function Navbar1() {
                     <span className="wishlist_products_counter_text">
                       <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" />
                     </span>
-                    <span className="-mt-3">0</span>
+                    <span className="-mt-3 text-black">0</span>
                   </div>
                 </NavLink>
               </div>
+                
               <div className="menu-mobile-icon cart-icon flex max-md:-mr-4">
                 <NavLink to="cart">
                   <div className="flex">
@@ -742,7 +753,7 @@ function Navbar1() {
                       <line x1="3" y1="6" x2="21" y2="6"></line>
                       <path d="M16 10a4 4 0 0 1-8 0"></path>
                     </svg>
-                    <span className="-mt-3">0</span>
+                    <span className="-mt-3">{result.length}</span>
                   </div>
                 </NavLink>
               </div>

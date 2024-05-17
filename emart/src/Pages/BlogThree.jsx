@@ -238,8 +238,8 @@ const BlogThree = () => {
             </section>
         </div>
       </div>
-     {/* <Mail/>
-     <Footer_1/> */}
+     <Mail/>
+     <Footer_1/>
     </div>
   )
 }

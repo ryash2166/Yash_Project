@@ -23,7 +23,7 @@ function Banner() {
               <div className="">
                 <div className="max-lg:text-left max-md:text-center">
                   <div className="shop">
-                    <NavLink to="/" className="" role="button">
+                    <NavLink to="shopnow" className="" role="button">
                       <button className='font-[Poppins] font-[500] text-[17px] py-[12px] px-[40px] border-1 border-black  hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
                     </NavLink>
                   </div>

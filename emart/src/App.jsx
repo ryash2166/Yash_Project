@@ -1,41 +1,43 @@
 import './App.css'
-import Footer_1 from './Components/Footer_1'
-import Mail from './Components/Mail'
-import Navbar1 from './Components/Navbar'
 import BlogThree from './Pages/BlogThree'
 import Cart from './Pages/Cart'
 import Checkout from './Pages/Checkout'
 import ContactTwo from './Pages/ContactTwo'
 import DefaultBlog from './Pages/DefaultBlog'
 import Main from './Pages/Main'
-import FullWidthTabs from './Pages/Profile'
-
-// import Profile from './Pages/Profile'
 import Wishlist from './Pages/Wishlist'
-// import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Router from './Router/Router'
+import ShopNow from './Pages/ShopNow'
+import Style_Four from './Pages/StyleFour'
+import GridStyle from './Pages/GridStyle'
+// import Profile from './Pages/Profile'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
-//  const router = createBrowserRouter([
-//   {
-//     path:'/',element:<Main/>,
-//     children:[
-//       {path:'/',element:<Main/>},
-//       {path:'cart' , element:<Cart/>},
-//       {path:'wishlist',element:<Wishlist/>}
-//       {path:'defaultblog',element:<DefaultBlog/>}
-//       {path:'contacttwo',element:<ContactTwo/>}
-//       {path:'checkout',element:<Checkoute/>}
-//       {path:'blogthree',element:<BlogThree/>}
-//     ]
+ const router = createBrowserRouter([
+  {
+    path:'/',element:<Router/>,
+    children:[
+      {path:'/',element:<Main/>},
+      {path:'cart' , element:<Cart/>},
+      {path:'wishlist',element:<Wishlist/>},
+      {path:'defaultblog',element:<DefaultBlog/>},
+      {path:'contacttwo',element:<ContactTwo/>},
+      {path:'checkout',element:<Checkout/>},
+      {path:'blogthree',element:<BlogThree/>},
+      {path:'stylefour',element:<Style_Four/>},
+      {path:'shopnow',element:<ShopNow/>},
+      {path:'gridstyle',element:<GridStyle/>},
+      // {path:'profile',element:<RequireAuth><Profile/></RequireAuth>},
+    ]
 
-//   }
-//  ])
+  }
+ ])
   return (
     <>
-    {/* <RouterProvider router={router}> </RouterProvider> */}
-
-    <BrowserRouter>
+    <RouterProvider router={router}> </RouterProvider>
+{/* <Style_Four/> */}
+    {/* <BrowserRouter>
     <Navbar1/>
       <Routes>
         <Route path='/' element={<Main/>}></Route>
@@ -48,8 +50,7 @@ function App() {
       </Routes>
       <Mail/>
       <Footer_1/>
-      <FullWidthTabs/>
-    </BrowserRouter>
+    </BrowserRouter> */}
 
       {/* <Main/> */}
       {/* <ContactTwo/> */}

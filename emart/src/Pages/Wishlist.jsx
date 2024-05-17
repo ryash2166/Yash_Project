@@ -2,6 +2,8 @@ import React from 'react'
 import Navbar1 from '../Components/Navbar'
 import Mail from '../Components/Mail'
 import Footer_1 from '../Components/Footer_1'
+import { NavLink } from 'react-router-dom'
+
 const Wishlist = () => {
   return (
     <div>
@@ -13,15 +15,15 @@ const Wishlist = () => {
                     <div className=''>
                         <p className='px-[20px] text-[16px] text-[#515151] py-[15px] mb-[35px] bg-[#fff] shadow-lg shadow-slate-100'>Your Wishlist is currently empty.</p>
                         <p className='mb-[40px] hover:-translate-y-1 duration-300 ease-in-out'>
-                            <a href="" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</a>
+                            <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</NavLink>
                         </p>
                     </div>
                 </div>
             </div>
         </section>
       </div>
-      {/* <Mail/>
-     <Footer_1/> */}
+      <Mail/>
+     <Footer_1/>
     </div>
   )
 }

@@ -21,8 +21,8 @@ const Main = () => {
       <ShippingLable/>
       <Tools/>
       <Arrival/>
-      {/* <Mail/>
-      <Footer_1/> */}
+      <Mail/>
+      <Footer_1/>
     </div>
   )
 }

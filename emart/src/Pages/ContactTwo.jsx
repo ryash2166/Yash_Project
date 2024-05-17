@@ -6,7 +6,7 @@ const ContactTwo = () => {
   return (
     <div>
       {/* <Navbar1 /> */}
-      <div className="pt-[70px]">
+      <div className="pt-[70px] pb-3">
         <div>
           <section>
             <div className="flex max-xl:block">
@@ -29,7 +29,7 @@ const ContactTwo = () => {
                 <div>
                   <section>
                     <div>
-                      <div className="pl-[80px] pr-[15px] max-xl:pl-[20px] max-xl:pt-[30px] ">
+                      <div className="pl-[50px] pr-[15px] max-xl:pl-[20px] max-xl:pt-[30px] ">
                         <div className="">
                           <p className="text-[#d87f7f] font-[Jost] text-[18px]">
                             We Are Happy To Answer You
@@ -46,7 +46,7 @@ const ContactTwo = () => {
                   <section className="pb-[10px]">
                     <div className="flex max-md:block">
                       <div>
-                        <div className="pl-[80px] pr-[15px] max-xl:pl-[20px]">
+                        <div className="pl-[50px] pr-[15px] max-xl:pl-[20px]">
                           <div className="pb-[14px]">
                             <div className="text-[18px] font-[Jost] font-[500]">
                               Address:
@@ -85,7 +85,7 @@ const ContactTwo = () => {
                   </section>
                   <section className="">
                     <div>
-                      <div className="pl-[80px] pr-[15px] mr-[47px] max-xl:pl-[20px]">
+                      <div className="pl-[50px] pr-[15px] mr-[47px] max-xl:pl-[20px]">
                         <div>
                           <p className="text-[#d87f7f] text-[18px] font-[Jost]">
                             Need Help
@@ -97,7 +97,7 @@ const ContactTwo = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="pl-[80px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
+                      <div className="pl-[50px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
                         <div>
                           <div className="col-lg-12 col-md-12 col-xs-12">
                             <div className="form-row">
@@ -179,8 +179,8 @@ const ContactTwo = () => {
           </section>
         </div>
       </div>
-      {/* <Mail />
-      <Footer_1 /> */}
+      <Mail />
+      <Footer_1 />
     </div>
   );
 };

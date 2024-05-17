@@ -2,6 +2,7 @@ import React from 'react'
 import visa from '../assets/visa.svg'
 import maestro from '../assets/maestro.svg'
 import american from '../assets/american.svg'
+import { NavLink } from 'react-router-dom'
 
 const Footer_3 = () => {
   return (
@@ -62,7 +63,7 @@ const Footer_3 = () => {
                                                 </div>
                                                 <div className='col-lg-12 col-md-12 col-xs-12'>
                                                     <div className=''>
-                                                        <a href="/" role='button' className='border-[1px] rounded-full inline-block px-[25px] py-[10px] border-[#8581ac] tracking-[0.1em] leading-[30px] '>
+                                                        <NavLink to="" role='button' className='border-[1px] rounded-full inline-block px-[25px] py-[10px] border-[#8581ac] tracking-[0.1em] leading-[30px] '>
                                                             <span className='flex items-center justify-center'>
                                                                 <span className='mr-3'>
                                                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 23 23" fill="none">
@@ -75,7 +76,7 @@ const Footer_3 = () => {
                                                                     (888) 123 4567
                                                                 </span>
                                                             </span>
-                                                        </a>
+                                                        </NavLink>
                                                     </div>
                                                 </div>
                                             </div>

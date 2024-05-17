@@ -1,7 +1,7 @@
 import React from "react";
-import wish from '../assets/heart-woocommerce.svg'
-import eye from '../assets/eye-woocommerce1.svg'
-import cart from '../assets/shopping-bag-woocommerce01.svg'
+import heart from '../assets/heart.svg'
+import eye from '../assets/Eyes.svg'
+import cart from '../assets/Cart.svg'
 import { NavLink } from "react-router-dom";
 
 const Interior = () => {
@@ -31,14 +31,14 @@ const Interior = () => {
             <div className="flex flex-wrap row">
               <div className="col-6 col-md-4 px-2">
                 <div className="relative">  
-                  <div className="flex justify-end">
+                  <div className="flex p justify-end">
                   <div className="absolute z-1 bg-black text-white text-[13px] mr-[25px] mt-[20px] px-[12px] py-[4px]  max-md:hidden">
                       <span >-20%</span>
                     </div>
                     <div className="overflow-hidden">
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
@@ -75,7 +75,7 @@ const Interior = () => {
                     <div className="overflow-hidden">
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
@@ -112,7 +112,7 @@ const Interior = () => {
                     <div className="overflow-hidden">
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
@@ -149,7 +149,7 @@ const Interior = () => {
                     <div className="overflow-hidden">  
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
@@ -186,7 +186,7 @@ const Interior = () => {
                     <div className="overflow-hidden">
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
@@ -221,7 +221,7 @@ const Interior = () => {
                     <div className="overflow-hidden">
                     <div className="absolute icon-effect items-center z-1 ml-[25px] mt-[20px] max-lg:hidden">
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
-                          <NavLink to="wishlist" className="img p-[12px]"><img src={wish} alt=""/></NavLink>
+                          <NavLink to="wishlist" className="img p-[12px]"><img src={heart} alt=""/></NavLink>
                         </div>
                         <div className="bg-white icon rounded-full justify-center flex items-center mb-3">
                           <NavLink to="/" className="img p-[12px]"><img src={eye} alt=""/></NavLink>
