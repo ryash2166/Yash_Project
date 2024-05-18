@@ -7,12 +7,19 @@ import Offcanvas from "react-bootstrap/Offcanvas";
 import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
+import Demo from '../assets/demo.webp'
+import Product1 from '../assets/product1.webp'
+import Product2 from '../assets/product2.webp'
+import Shop from '../assets/shop.webp'
+import SchoolBag from '../assets/school-bag.png'
+import Dress from '../assets/dress.png'
+import Chair from '../assets/chair-1.png'
+
+
 
 function Navbar1() {
 
-
   const result = useSelector((state) => state.Reducer);
-  console.warn("HeaderData called", result);
 
   let [demo, setDemo] = useState(false);
   let demoDropdown = (e) => {
@@ -78,8 +85,8 @@ function Navbar1() {
   }
 
 
-
   return (
+    
     <>
       {/* <div className=' bg-black h-10'></div> */}
       {["xl"].map((expand) => (
@@ -114,7 +121,7 @@ function Navbar1() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="bg-white">
-                <Nav className="justify-content-center flex-grow-1 pe-5 m-0 bg-white">
+                <Nav className=" justify-content-center flex-grow-1 pe-5 m-0 bg-white">
                   <NavDropdown
                     title={
                       <div className="flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2  max-xl:border-b-[1px] max-xl:px-0">
@@ -148,10 +155,7 @@ function Navbar1() {
                         <div className="flex max-xl:block py-[50px] max-xl:py-0">
                           <div className="max-xl:hidden max-xl:ml-0">
                             <div className="py-[50px] max-xl:p-0">
-                              <img
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/01/Plant-and-garden-menu.webp"
-                                alt=""
-                              />
+                              <img src={Demo} alt="" />
                               <div className="">
                                 <p className="mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]">
                                   New Product on the market
@@ -315,7 +319,7 @@ function Navbar1() {
                               <img
                                 width="242px"
                                 height="340px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/hover-image-3rd.webp"
+                                src={Product1}
                                 alt="hover-image-3rd"
                                 loading="lazy"
                               />
@@ -332,7 +336,7 @@ function Navbar1() {
                               <img
                                 width="242px"
                                 height="340px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/peace-lily-02.webp"
+                                src={Product2}
                                 alt="hover-image-3rd"
                                 loading="lazy"
                               />
@@ -349,7 +353,7 @@ function Navbar1() {
                               <img
                                 width="43px"
                                 height="43px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/dress-02.png"
+                                src={Dress}
                                 alt=""
                               />
                             </div>
@@ -379,7 +383,7 @@ function Navbar1() {
                               <img
                                 width="48px"
                                 height="48px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/school-bag.png"
+                                src={SchoolBag}
                                 alt=""
                               />
                             </div>
@@ -408,7 +412,7 @@ function Navbar1() {
                               <img
                                 width="48px"
                                 height="48px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/chair-1.png"
+                                src={Chair}
                                 alt=""
                               />
                             </div>
@@ -563,7 +567,7 @@ function Navbar1() {
                               <img
                                 width="356px"
                                 height="450px"
-                                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2023/03/New-Project.webp"
+                                src={Shop}
                                 alt=""
                               />
                               <div className="text-[30px] absolute text-white -my-[225px] ml-[40px] tracking-wider">

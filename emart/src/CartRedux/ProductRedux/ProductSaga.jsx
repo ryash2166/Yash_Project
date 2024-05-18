@@ -1,12 +1,18 @@
-import{put , takeEvery} from  'redux-saga/effects'
-import { PRODUCT_LIST } from '../Redux/Constant'
-import { PRODUCT_SET } from '../Redux/Constant'
+import { put, takeEvery } from "redux-saga/effects";
+import { PRODUCT_LIST, PRODUCT_SET } from "../Redux/Constant";
+import axios from "axios";
+
 
 function* getProduct(){
-    let data =yield fetch('http://localhost:3000/Plant')
-    data = yield data.json()
-    console.warn(data);
-    yield put({type:PRODUCT_SET ,data})
+    try{
+        let response = yield axios.get('http://localhost:3000/Plant')
+        yield put({
+            type: PRODUCT_SET , 
+            data: response.data
+        })
+    }catch(error){
+        console.log(error);
+    }
 }
 
 function* ProductSaga(){

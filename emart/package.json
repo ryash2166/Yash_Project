@@ -24,6 +24,7 @@
     "@nextui-org/theme": "^2.2.3",
     "@popperjs/core": "^2.11.8",
     "@reduxjs/toolkit": "^2.2.4",
+    "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "framer-motion": "^11.1.7",
     "lozad": "^1.16.0",

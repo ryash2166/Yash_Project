@@ -358,13 +358,101 @@ h1 {
 
 }
 
-.primary-img:hover img{
-  transform: scale(1.1);
-}
-.primary-img img{
-   transition: transform 1.5s ease-in-out;
-}
-
 .primary-img:hover .shop-icon{
   opacity: 1;
+  
+}
+.shop-icon{
+  transition: opacity 350ms ease-in-out;
+}
+
+.BannerText {
+  animation: side 2s ease-in-out forwards;
+}
+
+@keyframes side {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.BannerImg1 {
+  animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BannerImg2 {
+  animation: fade 2s ease-in-out forwards;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.BannerSub {
+  animation: sideup 2.5s ease-in-out forwards;
+}
+
+@keyframes sideup {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.BannerShop {
+  animation: sideup 2.7s ease-in-out forwards;
+}
+
+@keyframes sideup {
+  0% {
+    opacity: 0;
+    transform: translateY(300px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
