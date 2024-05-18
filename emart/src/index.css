@@ -367,7 +367,7 @@ h1 {
 }
 
 .BannerText {
-  animation: side 2s ease-in-out forwards;
+  animation: side 1s ease-in-out forwards;
 }
 
 @keyframes side {
@@ -426,7 +426,7 @@ h1 {
 }
 
 .BannerSub {
-  animation: sideup 2.5s ease-in-out forwards;
+  animation: sideup 1.75s ease-in-out forwards;
 }
 
 @keyframes sideup {
@@ -442,7 +442,7 @@ h1 {
 }
 
 .BannerShop {
-  animation: sideup 2.7s ease-in-out forwards;
+  animation: sideup 2s ease-in-out forwards;
 }
 
 @keyframes sideup {
