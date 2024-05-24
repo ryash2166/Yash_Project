@@ -57,7 +57,7 @@ const Interior = () => {
 
           <section className="w-[57%] pl-5 max-md:px-1 max-md:block max-md:w-[100%] max-md:p-0">
             <div className="flex flex-wrap row">
-                {data.flat().slice(5 , 11).map((item) => {
+                {data.flat().slice(2 , 8).map((item) => {
                     return(
                         <div className="col-6 col-md-4 px-2 relative" key={item.id}>
                             <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
