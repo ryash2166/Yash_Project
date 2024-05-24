@@ -197,12 +197,12 @@ function Navbar1() {
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <div className="text-muted py-[8px] pl-[15px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
                               <Link to='/'>
 
                                 Plant Garden
                               </Link>
-                            </NavDropdown.Item>
+                            </div>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
                               
                               Kids Toys
@@ -376,9 +376,9 @@ function Navbar1() {
                               
                               Style Three
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               <NavLink to="stylefour">Style Four</NavLink>
-                            </NavDropdown.Item>
+                            </div>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0">
@@ -494,9 +494,7 @@ function Navbar1() {
                               4 Column
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="4colside">
-                                4 Column + Side bar
-                              </NavLink>
+                              4 Column + Side bar
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               
@@ -511,15 +509,15 @@ function Navbar1() {
                                 
                                 Shop Pages
                               </p>
-                              <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                                 <NavLink to="/wishlist">Wishlist</NavLink>
-                              </NavDropdown.Item>
-                              <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              </div>
+                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                                 <NavLink to="/cart">Cart</NavLink>
-                              </NavDropdown.Item>
-                              <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              </div>
+                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                                 <NavLink to="/checkout">Checkout</NavLink>
-                              </NavDropdown.Item>
+                              </div>
                             </div>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
@@ -631,19 +629,17 @@ function Navbar1() {
                       <div className="overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-36 max-2xl:w-auto">
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                            <NavLink to="defaultblog">Default Blog</NavLink>
+                            Default Blog
                           </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                            
                             Blog One
                           </NavDropdown.Item>
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                            
                             Blog Two
                           </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <div className="text-muted  text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                             <NavLink to="blogthree">Blog Three</NavLink>
-                          </NavDropdown.Item>
+                          </div>
                         </div>
                       </div>
                     </NavDropdown>
@@ -681,9 +677,9 @@ function Navbar1() {
                             
                             Contact One
                           </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                             <NavLink to="contacttwo">Contact Two</NavLink>
-                          </NavDropdown.Item>
+                          </div>
                         </div>
                       </div>
                     </NavDropdown>

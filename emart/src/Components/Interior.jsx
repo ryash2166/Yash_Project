@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import heart from '../assets/heart.svg'
 import eye from '../assets/Eyes.svg'
 import cart from '../assets/Cart.svg'
-import { NavLink } from "react-router-dom";
 import { showSuccessMessage } from "../Components/Alerts";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Zoom } from "react-toastify";
@@ -13,7 +12,7 @@ import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
 const Interior = () => {
     const dispatch = useDispatch();
     const data = useSelector((state) => state.ProductReducer);
-    console.log("maindata", data);
+
   
     const Cart_Data = (item) => {
       dispatch(addToCart(item));
@@ -60,7 +59,7 @@ const Interior = () => {
             <div className="flex flex-wrap row">
                 {data.flat().slice(5 , 11).map((item) => {
                     return(
-                        <div className="col-6 col-md-4 px-2 relative">
+                        <div className="col-6 col-md-4 px-2 relative" key={item.id}>
                             <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
                                 <span className='text-white bg-black px-2'>{item.discount}</span>
                             </div>

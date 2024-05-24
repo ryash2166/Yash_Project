@@ -12,7 +12,6 @@ import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
 const Arrival = () => {
   const dispatch = useDispatch();
   const data = useSelector((state) => state.ProductReducer);
-  console.log("maindata", data);
 
   const Cart_Data = (item) => {
     dispatch(addToCart(item));
@@ -46,15 +45,13 @@ const Arrival = () => {
         </div>
       </section>
       <section className="px-[15px] max-md:px-0 pb-[65px]">
-        <div className="max-lg:ml-0">
           <div className="flex flex-wrap row justify-evenly g-0">
             {data
               .flat()
               .slice(0, 5)
               .map((item) => {
                 return (
-                  <>
-                    <div className="col-5 col-lg-2 relative">
+                    <div className="col-5 col-lg-2 relative" key={item.id}>
                       <div className="absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden">
                         <span className="text-white bg-black px-2">{item.discount}</span>
                       </div>
@@ -82,7 +79,10 @@ const Arrival = () => {
                               </button>
                             </div>
                             <div className=" flex justify-center bg-white rounded-full icon-1 mb-3">
-                              <button onClick={() => Cart_Data(item)} className="p-[12px]">
+                              <button
+                                onClick={() => Cart_Data(item)}
+                                className="p-[12px]"
+                              >
                                 <img src={cart} alt="" loading="lazy" />
                               </button>
                             </div>
@@ -97,10 +97,8 @@ const Arrival = () => {
                         </div>
                       </div>
                     </div>
-                  </>
                 );
               })}
-          </div>
         </div>
       </section>
       <ToastContainer transition={Zoom} />

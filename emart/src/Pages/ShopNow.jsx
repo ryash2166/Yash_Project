@@ -15,7 +15,6 @@ import { ToastContainer , Zoom } from 'react-toastify';
 const ShopNow = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
-  console.log('maindata' ,data);
   
   const Cart_Data = (item) =>{
     dispatch(addToCart(item))
