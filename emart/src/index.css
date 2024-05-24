@@ -149,7 +149,8 @@ h1 {
 
 .dropdown-menu{
     border: 0;
-    background-color: transparent;   
+    background-color: transparent; 
+    margin-left: 10px;  
 }
 
 .dropdown:hover{
@@ -455,4 +456,20 @@ h1 {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+input[type="checkbox"] {
+  clear: none;
+  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  width: 16px;
+  height: 16px;
+  accent-color: black;  
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }

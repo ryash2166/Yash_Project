@@ -1,11 +1,16 @@
-import React from "react";
-import Navbar1 from "../Components/Navbar";
+import React, { useRef } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
+
 const ContactTwo = () => {
+  const ContactTwo = useRef()
+  window.onbeforeunload = () => {
+    for(const form of document.getElementsByTagName('form')) {
+      form.reset();
+    }
+  }
   return (
     <div>
-      {/* <Navbar1 /> */}
       <div className="pt-[70px] pb-3">
         <div>
           <section>
@@ -98,6 +103,7 @@ const ContactTwo = () => {
                         </div>
                       </div>
                       <div className="pl-[50px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
+                      <form action="https://formspree.io/f/xzbnqbzw" method="POST" ref={ContactTwo}>
                         <div>
                           <div className="col-lg-12 col-md-12 col-xs-12">
                             <div className="form-row">
@@ -109,6 +115,7 @@ const ContactTwo = () => {
                                     aria-required="true"
                                     aria-invalid="false"
                                     placeholder="Name"
+                                    name="name"
                                     type="text"
                                   />
                                 </span>
@@ -125,6 +132,7 @@ const ContactTwo = () => {
                                   aria-invalid="false"
                                   placeholder="Email Address"
                                   type="email"
+                                  name="email"
                                 />
                               </span>
                             </p>
@@ -139,6 +147,7 @@ const ContactTwo = () => {
                                   aria-invalid="false"
                                   placeholder="Phone"
                                   type="text"
+                                  name="phone"
                                 />
                               </span>
                             </p>
@@ -153,7 +162,7 @@ const ContactTwo = () => {
                                   aria-required="true"
                                   aria-invalid="false"
                                   placeholder="Massage"
-                                  name="textarea-456"
+                                  name="message"
                                 ></textarea>
                               </span>
                             </p>
@@ -170,6 +179,7 @@ const ContactTwo = () => {
                             </p>
                           </div>
                         </div>
+                        </form>
                       </div>
                     </div>
                   </section>

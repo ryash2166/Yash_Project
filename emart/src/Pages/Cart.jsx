@@ -1,19 +1,26 @@
 import React from 'react'
-import Navbar1 from '../Components/Navbar'
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import Mail from '../Components/Mail'
 import Footer_1 from '../Components/Footer_1'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { DecreaseCartCount, IncreaseCartCount, removeToCart } from '../CartRedux/Redux/Action'
+import { FaTruck } from "react-icons/fa";
+import { showErrorMessage } from '../Components/Alerts'
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer , Zoom } from 'react-toastify';
 
 const Cart = () => {
-  
+
   const CartData = useSelector((state) => state.Reducer)
-  console.log(CartData,'hello');
-  const amount = CartData.length && CartData.map((item) => item.d_price).reduce((prev, next) => prev += next)
+  const dispatch = useDispatch()
+  const amount = CartData.length && CartData.map((item) => item.d_price * item.quantity).reduce((prev, next) => prev += next)
+  const Remove_cart = (item) => {
+    dispatch(removeToCart(item.id))
+    showErrorMessage('a quick reminder that you have an item that removed from the list','bottom-right')
+  }
 
   return (
     <div className=''>
-      {/* <Navbar1/> */}
       {CartData.length === 0 ? (
         <div className=''>
           <section className='py-[185px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
@@ -30,66 +37,128 @@ const Cart = () => {
           </section>
         </div>
       ) : (
-        <div style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}} >
-          <div className="flex container p-[150px] mx-auto justify-between max-lg:block max-lg:p-0 max-lg:pt-[80px] max-lg:mb-4 max-lg:px-2">
-        <table className="w-[65%] text-center table-fix bg-white max-lg:w-full max-lg:mb-4 shadow-2xl">
-              <thead>
-                <tr className="flex row justify-evenly pb-[20px] pt-[30px] px-[20px] max-lg:hidden">
-                  <th className="col-6 font-normal">Products</th>
-                  <th className="col-2 font-normal">Price</th>
-                  <th className="col-2 font-normal">Quantity</th>
-                  <th className="col-2 font-normal">Total</th>
-                </tr>
-              </thead>
-            {
-             CartData.map((item) => {
-              return( 
-                <tbody key={item.id} className=''>
-                <tr className="flex justify-between pt-[30px] items-center py-[30px] max-lg:block">
-                  <td className="flex col-6 items-center ps-3 max-lg:block max-lg:ps-0">
-                    <img
-                      className="h-28 w-28 object-cover "
-                      src={item.img}
-                      alt=""
-                    />
-                    <p className="col-6 max-lg:block">{item.name}</p>
-                  </td>
-                  <td className="col-2 max-lg:block">$ {item.d_price}</td>
-                  <td className="col-2 max-lg:block">{1}</td>
-                  <td className="col-2 max-lg:block">$ {item.d_price}</td>
-                </tr>
-              </tbody>
-              )
-             })
-            } 
-            </table>
-            <div className="w-[32.5%] bg-white shadow-xl  max-lg:w-auto">
-            <div className="p-[25px]">
-                <h4 className="my-[8px]">Cart Totals</h4>
-                <hr />
-                <div className="flex justify-between mt-[30px] mb-[20px]">
-                  <span>Subtotal</span>
-                  <span>$ {amount}</span>
-                </div>
-                <hr />
-                <div className="leading-10 my-[15px]">
-                  <h1>Shipping</h1>
-                  <div className="flex justify-between">
-                    <span>Flat Rate:</span>
-                    <span>$ 10</span>
+        <div className='py-[120px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
+          <div className='mx-[272px] max-xl:mx-0'>
+            <div className='flex max-lg:block'>
+              <div className='col-lg-8 col-md-12 col-sm-12 col-xs-12 bg-white shadow-lg shadow-slate-100 p-[30px] mr-[15px] max-lg:mr-0'>
+                <div className='p-[20px] mb-[50px] border-dashed border-[2px] border-[#e9e9e9]'>
+                  <span>
+                    Buy <span className='text-red-600'>$ 1,451</span> more for get <strong>Free Shipping!!</strong> 
+                  </span>
+                  <div className=''>
+                    <span className='bg-red-500 h-3 w-full'></span>
                   </div>
-                  <div>
-                    Shipping to <span className="font-bold">CA</span>
-                  </div>
-                  <h4>Change address </h4>
                 </div>
-                <hr/>
+                <form  className='max-lg:pb-10 max-md:pb-28 max-sm:pb-28'>
+                  <table className='mb-[24px] -mr-[1px] text-left w-full'>
+                    <thead>
+                      <tr className='max-md:hidden'>
+                        <th className='font-[500] align-middle pr-[12px] pb-[9px]'>&nbsp;</th>
+                        <th className='font-[500] align-middle pr-[12px] pb-[9px]  min-w-[32px]'>&nbsp;</th>
+                        <th className='font-[400] align-middle pr-[12px] pb-[9px] !pl-0 text-[#000a12] text-[16px] !leading-[28px]'>Products</th>
+                        <th className='font-[400] align-middle pr-[12px] pb-[9px] !pl-0 text-[#000a12] text-[16px] !leading-[28px]'>Price</th>
+                        <th className='font-[400] align-middle pr-[12px] text-center pb-[9px]  text-[#000a12] text-[16px] !leading-[28px]'>Quantity</th>
+                        <th className='font-[400] align-middle pr-0 pb-[9px] !pl-0 text-[#000a12] text-[16px] !leading-[28px] text-right'>Total</th>
+                      </tr>
+                    </thead>
+                    {CartData.map((item) => {
+                      return(
+                        <tbody key={item.id}>
+                          <tr className=''>
+                            <td className='border-t-[1px] py-[25px] pr-[8px] max-md:block'>
+                              <button onClick={() => Remove_cart(item)}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                  <circle cx="12" cy="12" r="10"></circle>
+                                  <line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>
+                                </svg>
+                              </button>
+                            </td>
+                            <td className='border-t-[1px] py-[25px] pr-[10px] max-md:block'>
+                              <div className=''>
+                                <img src={item.img} alt="" className='max-w-[102px] h-[102px] w-[102px] object-cover'/>
+                              </div>
+                            </td>
+                            <td className='border-t-[1px] py-[25px] pr-[50px] max-md:block'>
+                              <div className=''>
+                                {item.name}
+                              </div>
+                            </td>
+                            <td className='border-t-[1px] py-[25px] pr-[15px] max-md:block'>
+                              <div className=''>
+                                $ {item.d_price}
+                              </div>
+                            </td>
+                            <td className='border-t-[1px] py-[25px] pr-[20px]  max-md:block'>
+                              <div className='flex items-center border-[1px] justify-between p-2 '>
+                               <button onClick={() => dispatch(DecreaseCartCount(item.id))}>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                 <line x1="5" y1="12" x2="19" y2="12"></line>
+                                </svg>
+                                </button> <p>{item.quantity}</p>
+                                <button onClick={() => dispatch(IncreaseCartCount(item.id))}>
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                  </svg>
+                                </button>
+                              </div>
+                            </td>
+                            <td className='border-t-[1px] py-[25px] max-md:block'>
+                              <div className='text-right max-md:text-left'>
+                                $ {item.quantity * item.d_price}
+                              </div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      )
+                    })}
+                  </table>
+                    <div className=''>
+                      <div colSpan={6} className='border-t-[1px] pt-[25px]'>
+                        <div className='float-left text-center flex items-center max-md:block'>
+                          <input type="text" placeholder='Coupon Code' size={15} className='text-[18px] outline-none placeholder-black border-[1px] border-[#d3ced2] py-[11px] pl-[30px] pr-[15px] max-md:w-full' />
+                          <button type='submit' className='px-[33px] py-[11px] border-black border-[1px] bg-black text-white text-[18px] font-[500] font-[Jost] hover:!bg-white hover:!text-black duration-200 max-md:w-full max-md:mt-3'>Apply Coupon</button>
+                        </div>
+                      </div>
+                    </div>
+                </form>
               </div>
-              <div className='flex justify-center pb-3'>
-                <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</NavLink>
+              <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12 p-[30px] ml-[15px] max-lg:ml-0 max-lg:mt-5 bg-white shadow-lg shadow-slate-100'>
+                <div className="">
+                  <h4 className="py-[10px] font-[Jost] ">Cart Totals</h4>
+                  <div className="flex justify-between items-center pt-[30px] pb-[20px] border-t-[1px] border-[#d3ced2]">
+                    <span>Subtotal</span>
+                    <span>$ {amount}</span>
+                  </div>
+                  
+                  <div className="leading-10 py-[15px] border-t-[1px] border-[#d3ced2]">
+                    <h1>Shipping</h1>
+                    <div className="flex justify-between">
+                      <span>Flat Rate :</span>
+                      <span>$ 10</span>
+                    </div>
+                    <div>
+                      Shipping to <span className="font-bold">CA</span>
+                    </div>
+                    <h4 className='flex'>Change address <FaTruck className='flex items-center justify-center mt-1 w-10' /></h4>
+                  </div>
+                </div>
+                <div className="flex justify-between py-[15px] border-t-[1px] border-[#d3ced2] leading-10 items-center">
+                  <span className='text-[18px] font-[500]'>Total </span>
+                  <span>$ {amount + 10}</span>
+                </div>
+                <div className='flex justify-center pb-2 mt-4'> 
+                  <NavLink to="/checkout" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Proceed To Checkout</NavLink>
+                </div>
+                <div className='flex justify-center mt-2'> 
+                  <NavLink to="/shopnow" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Return to shop</NavLink>
+                </div>
+                
               </div>
             </div>
-        </div>
+          </div>
+          <ToastContainer transition={Zoom} />
+
         </div>
       )}
       <Mail />

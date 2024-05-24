@@ -3,7 +3,6 @@ import BlogThree from './Pages/BlogThree'
 import Cart from './Pages/Cart'
 import Checkout from './Pages/Checkout'
 import ContactTwo from './Pages/ContactTwo'
-import DefaultBlog from './Pages/DefaultBlog'
 import Main from './Pages/Main'
 import Wishlist from './Pages/Wishlist'
 import Router from './Router/Router'
@@ -21,7 +20,6 @@ function App() {
       {path:'/',element:<Main/>},
       {path:'cart' , element:<Cart/>},
       {path:'wishlist',element:<Wishlist/>},
-      {path:'defaultblog',element:<DefaultBlog/>},
       {path:'contacttwo',element:<ContactTwo/>},
       {path:'checkout',element:<Checkout/>},
       {path:'blogthree',element:<BlogThree/>},

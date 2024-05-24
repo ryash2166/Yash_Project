@@ -1,5 +1,4 @@
 import React from 'react'
-import Navbar1 from '../Components/Navbar'
 import Mail from '../Components/Mail'
 import Footer_1 from '../Components/Footer_1'
 
@@ -7,7 +6,6 @@ const BlogThree = () => {
     
   return (
     <div>
-      {/* <Navbar1/> */}
       <div className=''>
         <div>
             <section className='bg-[#fbf4f0] pt-[104px] pb-[114px] px-[15px]'>

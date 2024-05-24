@@ -2,17 +2,30 @@ import React, { useEffect } from 'react'
 import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form';
 import {useDispatch , useSelector} from 'react-redux'
-import {addToCart, removeToCart , EmptyCart} from '../CartRedux/Redux/Action'
+import {addToCart, addToWishList} from '../CartRedux/Redux/Action'
 import {ProductData} from '../CartRedux/ProductRedux/ProductAction'
 import heart from '../assets/heart.svg'
 import eye from '../assets/Eyes.svg'
 import cart from '../assets/Cart.svg'
 import { NavLink } from 'react-router-dom';
+import { showSuccessMessage } from '../Components/Alerts';
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer , Zoom } from 'react-toastify';
 
 const ShopNow = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
   console.log('maindata' ,data);
+  
+  const Cart_Data = (item) =>{
+    dispatch(addToCart(item))
+    showSuccessMessage("Your item has been added to the Cart list!","bottom-right")
+}
+
+const Wish_Data = (item) =>{
+    dispatch(addToWishList(item))
+    showSuccessMessage("Your item has been added to the Wish list!","bottom-right")
+}
 
   useEffect(()=>{
     dispatch(ProductData())
@@ -147,9 +160,9 @@ const ShopNow = () => {
                                 <div className='absolute left-[25px] top-[20px] max-sm:left-1 max-sm:top-1 max-lg: z-1 shop-icon'>
                                     <div className=''>
                                         <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
-                                            <NavLink to="" className='p-[12px]'>
+                                            <button onClick={()=>Wish_Data(item)}  className='p-[12px]'>
                                                 <img src={heart} alt="" loading='lazy' />
-                                            </NavLink>
+                                            </button>
                                         </div>
                                         <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
                                             <button className='p-[12px]'>
@@ -157,7 +170,7 @@ const ShopNow = () => {
                                             </button>
                                         </div>
                                         <div className=' flex justify-center bg-white rounded-full icon-1 mb-3'>
-                                            <button  onClick={()=> dispatch(addToCart(item))} className='p-[12px]'>
+                                            <button  onClick={()=> Cart_Data(item)} className='p-[12px]'>
                                                 <img src={cart} alt="" loading='lazy' />
                                             </button>
                                         </div>
@@ -179,6 +192,7 @@ const ShopNow = () => {
         </div>
 
       </div>
+      <ToastContainer transition={Zoom} />
     </div>
   )
 }
