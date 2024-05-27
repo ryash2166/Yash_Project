@@ -13,6 +13,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer , Zoom } from 'react-toastify';
 
 const ShopNow = () => {
+
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
   
@@ -138,17 +139,13 @@ const Wish_Data = (item) =>{
                   </g>
                 </svg>
               </button>
-
               </div>
-
             </div>
           </section>
-
           <div  className='flex row flex-wrap mt-2'>
                 {data.flat().map((item) =>{
                   return(
-                    <>
-                      <div  key={item.id} className='col-6 col-md-4 col-lg-3 relative '>
+                      <div className='col-6 col-md-4 col-lg-3 relative' key={item.id}>
                             <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
                                 <span className='text-white bg-black px-2'>{item.discount}</span>
                             </div>
@@ -163,11 +160,13 @@ const Wish_Data = (item) =>{
                                                 <img src={heart} alt="" loading='lazy' />
                                             </button>
                                         </div>
-                                        <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
-                                            <button className='p-[12px]'>
-                                                <img src={eye} alt="" loading='lazy' />
-                                            </button>
-                                        </div>
+                                        <NavLink to='/eye'>
+                                          <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
+                                              <button className='p-[12px]'>
+                                                  <img src={eye} alt="" loading='lazy' />
+                                              </button>
+                                          </div>
+                                        </NavLink>
                                         <div className=' flex justify-center bg-white rounded-full icon-1 mb-3'>
                                             <button  onClick={()=> Cart_Data(item)} className='p-[12px]'>
                                                 <img src={cart} alt="" loading='lazy' />
@@ -184,7 +183,6 @@ const Wish_Data = (item) =>{
                               </div>
                             </div>
                         </div>
-                    </>
                   )
                 })}
           </div>

@@ -16,7 +16,7 @@ import Dress from '../assets/dress.png'
 import Chair from '../assets/chair-1.png'
 import { useAuth0 } from "@auth0/auth0-react";
 import { MdLogout } from "react-icons/md";
-
+import Logo from '../assets/emart.webp'
 
 function Navbar1() {
   const { loginWithRedirect , logout , isAuthenticated , user } = useAuth0();
@@ -104,7 +104,7 @@ function Navbar1() {
               <img
                 alt="logo"
                 className="h-9 w-auto max-md:h-7"
-                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/emart-011.webp"
+                src={Logo}
                 width="147"
                 height="31"
               ></img>
@@ -707,17 +707,16 @@ function Navbar1() {
                   </svg>
                 </NavLink>
               </div>
-              <div className="menu-mobile-icon cart-icon flex pr-[20px] max-md:pr-3 max-lg:block">
-                <p className="mr-2 ">{ isAuthenticated && <span>{user.name}</span>}</p>
+              <div className="menu-mobile-icon cart-icon flex items-center  justify-center  relative max-lg:top-1 pr-[20px] max-md:pr-3 max-lg:block">
+                <p className="mr-2 max-lg:hidden">{ isAuthenticated && <span className="font-[500]">{user.nickname}</span>}</p>
                 {
                   isAuthenticated ?  ( <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                  <MdLogout className="w-[20px] h-[20px] align-middle"/>
+                  <MdLogout className="w-[22px] h-[22px]"/>
                 </button> ):(<button onClick={() => loginWithRedirect()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
+                    width="22"
+                    height="22"
                     fill="none"
                     stroke="currentColor"
                     strokeWidth="1.5"

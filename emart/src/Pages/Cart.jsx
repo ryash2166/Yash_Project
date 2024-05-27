@@ -16,7 +16,7 @@ const Cart = () => {
   const amount = CartData.length && CartData.map((item) => item.d_price * item.quantity).reduce((prev, next) => prev += next)
   const Remove_cart = (item) => {
     dispatch(removeToCart(item.id))
-    showErrorMessage('a quick reminder that you have an item that removed from the list','bottom-right')
+    showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
   }
 
   return (
@@ -85,7 +85,7 @@ const Cart = () => {
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[15px] max-md:block'>
                               <div className=''>
-                                $ {item.d_price}
+                                $ {item.d_price}.00
                               </div>
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[20px]  max-md:block'>
@@ -105,7 +105,7 @@ const Cart = () => {
                             </td>
                             <td className='border-t-[1px] py-[25px] max-md:block'>
                               <div className='text-right max-md:text-left'>
-                                $ {item.quantity * item.d_price}
+                                $ {item.quantity * item.d_price}.00
                               </div>
                             </td>
                           </tr>
@@ -128,14 +128,14 @@ const Cart = () => {
                   <h4 className="py-[10px] font-[Jost] ">Cart Totals</h4>
                   <div className="flex justify-between items-center pt-[30px] pb-[20px] border-t-[1px] border-[#d3ced2]">
                     <span>Subtotal</span>
-                    <span>$ {amount}</span>
+                    <span>$ {amount}.00</span>
                   </div>
                   
                   <div className="leading-10 py-[15px] border-t-[1px] border-[#d3ced2]">
                     <h1>Shipping</h1>
                     <div className="flex justify-between">
                       <span>Flat Rate :</span>
-                      <span>$ 10</span>
+                      <span>$ 10.00</span>
                     </div>
                     <div>
                       Shipping to <span className="font-bold">CA</span>
@@ -145,7 +145,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between py-[15px] border-t-[1px] border-[#d3ced2] leading-10 items-center">
                   <span className='text-[18px] font-[500]'>Total </span>
-                  <span>$ {amount + 10}</span>
+                  <span>$ {amount + 10}.00</span>
                 </div>
                 <div className='flex justify-center pb-2 mt-4'> 
                   <NavLink to="/checkout" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Proceed To Checkout</NavLink>

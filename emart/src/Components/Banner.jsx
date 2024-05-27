@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import banner1 from '../assets/banner1.webp'
+import banner2 from '../assets/banner2.webp'
 
 function Banner() {
   return (
@@ -37,7 +39,7 @@ function Banner() {
                 <div className="BannerImg1">
                   <img
                     decoding="async"
-                    src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-first.webp"
+                    src={banner1}
                     className="hover:translate-x-5 duration-400 ease-in-out "
                     loading="lazy"
                     alt="plants-banner-first "
@@ -52,7 +54,7 @@ function Banner() {
                 <div className="ml-[15px] max-lg:ml-[20px] max-md:ml-0 max-xl:ml-2 BannerImg2 ">
                   <img
                     decoding="async"
-                    src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plants-banner-2nd.webp"
+                    src={banner2}
                     className="w-[850px] max-lg:w-[450px] max-xl:w-[600px] max-md:w-auto hover:translate-x-5 duration-400 ease-in-out"
                     loading="lazy"
                   />

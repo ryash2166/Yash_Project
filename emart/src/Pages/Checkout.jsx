@@ -4,8 +4,6 @@ import Footer_1 from '../Components/Footer_1'
 import { NavLink } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-
-
 const Checkout = () => {
   const CartData = useSelector((state) => state.Reducer)
   const CheckOut = useRef()
@@ -15,6 +13,7 @@ const Checkout = () => {
       form.reset();
     }
   }
+
   return (
     <div>
         {CartData.length === 0 ? (

@@ -8,6 +8,7 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
+import { NavLink } from "react-router-dom";
 
 const Arrival = () => {
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ const Arrival = () => {
           <div className="flex flex-wrap row justify-evenly g-0">
             {data
               .flat()
-              .slice(0, 5)
+              .slice(5 , 10)
               .map((item) => {
                 return (
                     <div className="col-5 col-lg-2 relative" key={item.id}>
@@ -73,16 +74,15 @@ const Arrival = () => {
                                 <img src={heart} alt="" loading="lazy" />
                               </button>
                             </div>
-                            <div className=" bg-white rounded-full flex justify-center icon-1 mb-3">
-                              <button className="p-[12px]">
-                                <img src={eye} alt="" loading="lazy" />
-                              </button>
-                            </div>
+                            <NavLink to='eye'>
+                              <div className=" bg-white rounded-full flex justify-center icon-1 mb-3">
+                                <button className="p-[12px]">
+                                  <img src={eye} alt="" loading="lazy" />
+                                </button>
+                              </div>
+                            </NavLink>
                             <div className=" flex justify-center bg-white rounded-full icon-1 mb-3">
-                              <button
-                                onClick={() => Cart_Data(item)}
-                                className="p-[12px]"
-                              >
+                              <button onClick={() => Cart_Data(item)} className="p-[12px]">
                                 <img src={cart} alt="" loading="lazy" />
                               </button>
                             </div>

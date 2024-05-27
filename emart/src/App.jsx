@@ -10,6 +10,7 @@ import ShopNow from './Pages/ShopNow'
 import Style_Four from './Pages/StyleFour'
 import GridStyle from './Pages/GridStyle'
 // import Profile from './Pages/Profile'
+import Eye from './Pages/Eye'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
       {path:'stylefour',element:<Style_Four/>},
       {path:'shopnow',element:<ShopNow/>},
       {path:'gridstyle',element:<GridStyle/>},
+      {path:'eye', element:<Eye/>}
       // {path:'profile',element:<RequireAuth><Profile/></RequireAuth>},
     ]
 

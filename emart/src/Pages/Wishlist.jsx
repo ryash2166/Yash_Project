@@ -19,12 +19,12 @@ const Wishlist = () => {
 
   const Remove_list = (item) => {
     dispatch(removeToWishList(item.id))
-    showErrorMessage('a quick reminder that you have an item that removed from the list','bottom-right')
+    showErrorMessage('Your item has been removed from the Wishlist!','bottom-right')
   }
   const ADD_cart = (item) => {
     dispatch(addToCart(item))
     dispatch(removeToWishList(item.id))
-    showSuccessMessage('Your item has been added to the cart list!','bottom-right')
+    showSuccessMessage('Your item has been added to the Cart list!','bottom-right')
   }
   
   return (
@@ -37,9 +37,14 @@ const Wishlist = () => {
                 <div>
                     <div className=''>
                         <p className='px-[20px] text-[16px] text-[#515151] py-[15px] mb-[35px] bg-[#fff] shadow-lg shadow-slate-100'>Your Wishlist is currently empty.</p>
-                        <p className='mb-[40px] hover:-translate-y-1 duration-300 ease-in-out'>
-                            <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</NavLink>
-                        </p>
+                        <div className='flex gap-x-2 max-md:block '>
+                          <p className='mb-[30px] hover:-translate-y-1 duration-300 ease-in-out'>
+                              <NavLink to="/cart" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Go to Cart</NavLink>
+                          </p>
+                          <p className='hover:-translate-y-1 duration-300 ease-in-out'>
+                              <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</NavLink>
+                          </p>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,10 +8,9 @@ import Mail from '../Components/Mail'
 import Footer_1 from '../Components/Footer_1'
 import Arrival from '../Components/Arrival'
 
-
 const Main = () => {
   return (
-    <div>
+    <div>      
       <Banner/>
       <Categories/>
       <Interior/>

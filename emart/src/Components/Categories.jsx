@@ -5,7 +5,6 @@ import img3 from "../assets/3.webp";
 import img4 from "../assets/4.webp";
 import { NavLink } from "react-router-dom";
 
-
 const Categories = () => {
   return (
     <div className="mx-[30px] max-lg:mx-[15px] pb-[50px] max-md:pb-0">

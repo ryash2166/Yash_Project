@@ -215,7 +215,7 @@ h1 {
 @media (min-width:1440px) {
   .center{
     inset: 0px auto auto 0px;
-    transform: translate3d(-500px,7px, 0px);
+    transform: translate3d(-500px,6px, 0px);
     width: max-content;
   }
 }

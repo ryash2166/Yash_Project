@@ -8,6 +8,7 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
+import { NavLink } from "react-router-dom";
 
 const Interior = () => {
     const dispatch = useDispatch();
@@ -57,7 +58,7 @@ const Interior = () => {
 
           <section className="w-[57%] pl-5 max-md:px-1 max-md:block max-md:w-[100%] max-md:p-0">
             <div className="flex flex-wrap row">
-                {data.flat().slice(2 , 8).map((item) => {
+                {data.flat().slice(5 , 11).map((item) => {
                     return(
                         <div className="col-6 col-md-4 px-2 relative" key={item.id}>
                             <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
@@ -74,11 +75,14 @@ const Interior = () => {
                                                 <img src={heart} alt="" loading="lazy" />
                                             </button>
                                         </div>
-                                        <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
-                                            <button className='p-[12px]'>
-                                                <img src={eye} alt="" loading='lazy' />
+                                        <NavLink to='eye'>
+                                          <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
+                                            <button className='p-[12px] '>
+                                            
+                                                  <img src={eye} alt="" loading='lazy' />
                                             </button>
-                                        </div>
+                                          </div>
+                                        </NavLink>
                                         <div className=' flex justify-center bg-white rounded-full icon-1 mb-3'>
                                             <button onClick={() => Cart_Data(item)} className="p-[12px]">
                                                 <img src={cart} alt="" loading="lazy" />
