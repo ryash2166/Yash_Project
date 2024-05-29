@@ -42,7 +42,7 @@ const Checkout = () => {
                 </div>
                 <div className=''>
                   <form action="https://formspree.io/f/xqkrodla" method="POST" className='flex justify-between max-[1024px]:block' ref={CheckOut}>
-                    <div className='bg-[#fff] w-[65%] px-[25px] py-[30px] shadow-lg max-[1024px]:w-auto max-[1024px]:mb-[20px]'>
+                    <div className='bg-[#fff] w-[65%] h-full px-[25px] py-[30px] shadow-lg max-[1024px]:w-auto max-[1024px]:mb-[20px]'>
                       <div className="">
                         <h4 className='text-[25px] font-[Jost] text-[#00a12] mb-[20px] '>Billing Details</h4>
                         <div className=''>
@@ -158,14 +158,14 @@ const Checkout = () => {
                             <td className='pt-[25px] pr-[12px] align-middle text-right font-[600]'>$10.00</td>
                           </tr>
                           <tr>
-                            <td className='border-t-1 py-[30px] pr-[12px]'>Total</td>
-                            <td className='border-t-1 py-[30px] pr-[12px]'></td>
-                            <td className='border-t-1 py-[30px] pr-[12px] text-right font-[600]'>${amount + 10}.00</td>
+                            <td className='border-t-1 pt-[30px] pb-[20px] pr-[12px]'>Total</td>
+                            <td className='border-t-1 pt-[30px] pb-[20px] pr-[12px]'></td>
+                            <td className='border-t-1 pt-[30px] pb-[20px] pr-[12px] text-right font-[600]'>${amount + 10}.00</td>
                           </tr>
                         </tfoot>
                       </table>
                       <div>
-                        <p className='py-[15px] text-[#515151]'>
+                        <p className='pb-[10px] text-[#515151]'>
                           Sorry, it seems that there are no available payment methods for your state. Please contact us if you require assistance or wish to make alternate arrangements.
                         </p>
                       </div>
