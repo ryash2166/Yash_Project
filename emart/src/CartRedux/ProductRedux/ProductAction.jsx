@@ -1,6 +1,6 @@
 import { PRODUCT_LIST } from "../Redux/Constant";
 
-export const ProductData =  (data) => {
+export const ProductData =  () => {
  
     return{
         type: PRODUCT_LIST,

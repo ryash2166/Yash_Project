@@ -21,13 +21,13 @@ function Banner() {
                   </div>
                 </div>
               </div>
-              <div className="mb-[56px]  max-md:mb-[45px] ">
               <AnimationOnScroll animateIn="animate__fadeInUp">
-                <p className="text-[16px] font-light max-md:text-[15px] text-muted max-lg:text-left max-md:text-center">
-                  Rectangle follower distribute device layer. Library hand ellipse device strikethrough.
-                </p>
-                </AnimationOnScroll>
-              </div>
+                <div className="mb-[56px]  max-md:mb-[45px] ">
+                  <p className="text-[16px] font-light max-md:text-[15px] text-muted max-lg:text-left max-md:text-center">
+                    Rectangle follower distribute device layer. Library hand ellipse device strikethrough.
+                  </p>
+                </div>
+              </AnimationOnScroll>
               <div className="">
                 <div className="max-lg:text-left max-md:text-center">
                   <AnimationOnScroll animateIn="animate__fadeInUp">

@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import Container from 'react-bootstrap/esm/Container'
 import Form from 'react-bootstrap/Form';
 import {useDispatch , useSelector} from 'react-redux'
 import {addToCart, addToWishList} from '../CartRedux/Redux/Action'

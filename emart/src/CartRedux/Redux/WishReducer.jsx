@@ -17,7 +17,7 @@ const WishReducer = (state = getWishDataFromLocalStorage(), action) =>{
             
             if(existingProduct >= 0 ) {
                 updatedWishData = state.map((item) => item.id === action.data.id ? {...item, quantity:item.quantity += 1}: item)
-                localStorage.setItem('wish' , JSON.stringify(updatedwishData))
+                localStorage.setItem('wish' , JSON.stringify(updatedWishData))
             }else{
                 updatedWishData = [{...action.data, quantity : 1}, ...state]
             }

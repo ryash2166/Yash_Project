@@ -14,9 +14,20 @@ const Cart = () => {
   const CartData = useSelector((state) => state.Reducer)
   const dispatch = useDispatch()
   const amount = CartData.length && CartData.map((item) => item.d_price * item.quantity).reduce((prev, next) => prev += next)
+  const total = amount + 10 
+ 
   const Remove_cart = (item) => {
     dispatch(removeToCart(item.id))
     showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
+  }
+  const pluse = (item) => {
+    dispatch(IncreaseCartCount(item.id))
+    // showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
+  }
+
+  const minus = (item) => {
+    dispatch(DecreaseCartCount(item.id))
+    // showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
   }
 
   return (
@@ -43,7 +54,7 @@ const Cart = () => {
               <div className='col-lg-8 col-md-12 col-sm-12 col-xs-12 bg-white shadow-lg shadow-slate-100 p-[30px] mr-[15px] max-lg:mr-0'>
                 <div className='p-[20px] mb-[50px] border-dashed border-[2px] border-[#e9e9e9]'>
                   <span>
-                    Buy <span className='text-red-600'>$ 1,451</span> more for get <strong>Free Shipping!!</strong> 
+                    Buy <span className='text-red-600'>$ 1451</span> more for get <strong>Free Shipping!!</strong> 
                   </span>
                   <div className=''>
                     <span className='bg-red-500 h-3 w-full'></span>
@@ -90,17 +101,9 @@ const Cart = () => {
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[20px]  max-md:block'>
                               <div className='flex items-center border-[1px] justify-between p-2 '>
-                               <button onClick={() => dispatch(DecreaseCartCount(item.id))}>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                 <line x1="5" y1="12" x2="19" y2="12"></line>
-                                </svg>
-                                </button> <p>{item.quantity}</p>
-                                <button onClick={() => dispatch(IncreaseCartCount(item.id))}>
-                                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="12" y1="5" x2="12" y2="19"></line>
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                  </svg>
-                                </button>
+                               <a onClick={() => minus(item)} className='cursor-pointer'> - </a> 
+                                <p>{item.quantity}</p>
+                                <a onClick={() => pluse(item)} className='cursor-pointer'> + </a>
                               </div>
                             </td>
                             <td className='border-t-[1px] py-[25px] max-md:block'>
@@ -145,7 +148,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between py-[15px] border-t-[1px] border-[#d3ced2] leading-10 items-center">
                   <span className='text-[18px] font-[500]'>Total </span>
-                  <span>$ {amount + 10}.00</span>
+                  <span>$ {total}.00</span>
                 </div>
                 <div className='flex justify-center pb-2 mt-4'> 
                   <NavLink to="/checkout" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Proceed To Checkout</NavLink>
