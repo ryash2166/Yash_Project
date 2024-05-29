@@ -8,6 +8,7 @@ import { addToCart, removeToWishList } from '../CartRedux/Redux/Action'
 import "react-toastify/dist/ReactToastify.css";
 import { showErrorMessage, showSuccessMessage } from '../Components/Alerts'
 import { ToastContainer , Zoom } from 'react-toastify';
+import { IoCartOutline } from "react-icons/io5";
 
 const Wishlist = () => {
   
@@ -39,10 +40,10 @@ const Wishlist = () => {
                         <p className='px-[20px] text-[16px] text-[#515151] py-[15px] mb-[35px] bg-[#fff] shadow-lg shadow-slate-100'>Your Wishlist is currently empty.</p>
                         <div className='flex gap-x-2 max-md:block '>
                           <p className='mb-[30px] hover:-translate-y-1 duration-300 ease-in-out'>
-                              <NavLink to="/cart" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Go to Cart</NavLink>
+                              <NavLink to="/cart" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black shadow-lg'>Go to Cart</NavLink>
                           </p>
                           <p className='hover:-translate-y-1 duration-300 ease-in-out'>
-                              <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black'>Return to shop</NavLink>
+                              <NavLink to="/shopnow" className='border-[1px] px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black shadow-lg'>Return to shop</NavLink>
                           </p>
                         </div>
                     </div>
@@ -84,7 +85,7 @@ const Wishlist = () => {
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
                             <img src={item.img} alt="" className='max-w-[100px] h-[100px] w-[100px] object-cover' />
                           </td>
-                          <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle text-[#666666] max-md:block'>
+                          <td className='border-t-[1px] max-md:border-0 px-[16px]  py-[16px] align-middle text-[#666666] max-md:block'>
                             <p className='ml-2 max-md:ml-0'>{item.name}</p>
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
@@ -103,9 +104,11 @@ const Wishlist = () => {
                               </span>
                             <h1 className='text-[16px] text-[#666666]'>{item.description}</h1>
                           </td>
-                          <td className=' border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
-                              <button className='border-[1px] border-black max-md:w-full max-md:text-center px-[20px] py-[11px] bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-500 ease-in-out' onClick={() => ADD_cart(item)}>
-                                <span className='mx-auto text-center tracking-[2px]  font-[Jost] text-[18px] font-[500]'>Add to Cart </span>
+                          <td className=' border-t-[1px] max-md:border-0 px-[10px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
+                              <button className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-500 ease-in-out' onClick={() => ADD_cart(item)}>
+                                <span className='mx-auto text-center tracking-[2px]  font-[Jost]  font-[500] max-lg:hidden max-md:block'>Add to Cart </span>
+                                <span className='mx-auto text-center tracking-[2px] px-[25px]  font-[Jost] text-[20px] max-md:hidden max-lg:block max-xl:hidden hidden'><IoCartOutline /></span>
+
                               </button>
                           </td>
                         </tr>

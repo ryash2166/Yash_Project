@@ -17,12 +17,12 @@ const ShopNow = () => {
   const dispatch = useDispatch()
   const data = useSelector((state) => state.ProductReducer)
   
-  const Cart_Data = (item) =>{
+  const CartData = (item) =>{
     dispatch(addToCart(item))
     showSuccessMessage("Your item has been added to the Cart list!","bottom-right")
 }
 
-const Wish_Data = (item) =>{
+const WishData = (item) =>{
     dispatch(addToWishList(item))
     showSuccessMessage("Your item has been added to the Wish list!","bottom-right")
 }
@@ -156,7 +156,7 @@ const Wish_Data = (item) =>{
                                 <div className='absolute left-[25px] top-[20px] max-sm:left-1 max-sm:top-1 max-lg: z-1 shop-icon'>
                                     <div className=''>
                                         <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
-                                            <button onClick={()=>Wish_Data(item)}  className='p-[12px]'>
+                                            <button onClick={ ()=> WishData(item) } className='p-[12px]'>
                                                 <img src={heart} alt="" loading='lazy' />
                                             </button>
                                         </div>
@@ -168,7 +168,7 @@ const Wish_Data = (item) =>{
                                           </div>
                                         </NavLink>
                                         <div className=' flex justify-center bg-white rounded-full icon-1 mb-3'>
-                                            <button  onClick={()=> Cart_Data(item)} className='p-[12px]'>
+                                            <button  onClick={ ()=> CartData(item) } className='p-[12px]'>
                                                 <img src={cart} alt="" loading='lazy' />
                                             </button>
                                         </div>

@@ -6,7 +6,6 @@ import store from './CartRedux/Store.jsx'
 import {Provider} from 'react-redux'
 import { Auth0Provider } from '@auth0/auth0-react';
 
-
 ReactDOM.createRoot(document.getElementById('root')).render(
 
     <Auth0Provider
@@ -17,7 +16,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     }}
   >
     <Provider store={store}>
-      <App/>
+        <App/>
     </Provider>
   </Auth0Provider>
 

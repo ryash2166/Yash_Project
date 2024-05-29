@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
 import { NavLink } from "react-router-dom";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Interior = () => {
     const dispatch = useDispatch();
@@ -39,21 +40,27 @@ const Interior = () => {
       <div className="px-[15px] pb-[73px] max-md:pb-0">
         <div className="px-[15px] pb-[36px] max-md:pb-0 ">
           <div className="text-center text-[45px] font-[Jost] max-md:text-[32px] pb-[11px]">
-            <h1 className="mb-[8px]">Best Interior Plants</h1>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+              <h1 className="mb-[8px]">Best Interior Plants</h1>
+            </AnimationOnScroll>
           </div>
           <div className="text-[16px] text-center text-muted font-[Poppins] ">
-            <p>Rectangle follower library hand ellipse device strikethrough.</p>
+            <AnimationOnScroll animateIn="animate__fadeInUp">
+              <p>Rectangle follower library hand ellipse device strikethrough.</p>
+            </AnimationOnScroll>
           </div>
         </div>
         <section className="py-[50px] flex max-md:block mb-[50px] max-md:mb-0 overflow-hidden">
           <section className="w-[43%] max-md:w-[100%] mb-3 px-[30px] max-xl:px-0 overflow-hidden">
-            <img
-              decoding="async"
-              src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp"
-              className="hover:-translate-x-5 duration-[250ms] ease-in-out"
-              alt="plant-gallery-left-img"
-              loading="lazy"
-            />
+           <AnimationOnScroll animateIn="animate__fadeInUp">
+              <img
+                decoding="async"
+                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp"
+                className=""
+                alt="plant-gallery-left-img"
+                loading="lazy"
+              />
+            </AnimationOnScroll>
           </section>
 
           <section className="w-[57%] pl-5 max-md:px-1 max-md:block max-md:w-[100%] max-md:p-0">

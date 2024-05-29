@@ -4,7 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useSelector } from 'react-redux';
 import Demo from '../assets/demo.webp'
@@ -152,8 +152,8 @@ function Navbar1() {
                     onMouseEnter={demoDropdown}
                     onMouseLeave={DemoDropdown}
                   >
-                    <div className="center -ml-[137px] absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
-                      <div className="h-[1px] bg-[#e5e7eb] w-[1800px]  max-xl:hidden"></div>
+                    <div className="center -ml-[142px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
+                      <div className="h-[1px] bg-[#e5e7eb] -ml-5 w-[1840px]  max-xl:hidden"></div>
                       <section className="flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto">
                         <div className="flex max-xl:block py-[50px] max-xl:py-0">
                           <div className="max-xl:hidden max-xl:ml-0">
@@ -399,15 +399,15 @@ function Navbar1() {
                               Vertical Carousel
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="carousel">Carousel</NavLink>
+                              Carousel
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               
                               Horizontal Style
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               <NavLink to="gridstyle">Grid Style</NavLink>
-                            </NavDropdown.Item>
+                            </div>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0">
@@ -688,8 +688,7 @@ function Navbar1() {
               </Offcanvas.Body>
             </Navbar.Offcanvas>
             <nav className="flex items-center pr-[20px] order-3">
-              <div className="max-xl:hidden">
-                <NavLink to="" className="flex pr-[20px]">
+              <div className="max-xl:hidden pr-[15px] ">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -705,13 +704,12 @@ function Navbar1() {
                     <circle cx="11" cy="11" r="8"></circle>
                     <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                   </svg>
-                </NavLink>
               </div>
-              <div className="menu-mobile-icon cart-icon flex items-center  justify-center  relative max-lg:top-1 pr-[20px] max-md:pr-3 max-lg:block">
+              <div className="menu-mobile-icon cart-icon flex items-center  justify-center pr-[20px] max-md:pr-3 max-lg:block">
                 <p className="mr-2 max-lg:hidden">{ isAuthenticated && <span className="font-[500]">{user.nickname}</span>}</p>
                 {
                   isAuthenticated ?  ( <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                  <MdLogout className="w-[22px] h-[22px]"/>
+                  <MdLogout className="w-[22px] h-[22px] relative max-lg:top-[3px]"/>
                 </button> ):(<button onClick={() => loginWithRedirect()}>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

@@ -4,17 +4,21 @@ import img2 from "../assets/2.webp";
 import img3 from "../assets/3.webp";
 import img4 from "../assets/4.webp";
 import { NavLink } from "react-router-dom";
+import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Categories = () => {
   return (
     <div className="mx-[30px] max-lg:mx-[15px] pb-[50px] max-md:pb-0">
       <div className="flex justify-end text-[45px] font-[Jost] px-[15px] pb-[19px] max-xl:justify-start max-md:justify-center max-md:text-[30px] ">
+      <AnimationOnScroll animateIn="animate__fadeInUp">
         <h1 className="tracking-normal">Shop by categories</h1>
+      </AnimationOnScroll>
       </div>
       <div className=" pb-[108px] max-md:pb-[50px]">
         <div className="flex gap-4 max-xl:block overflow-hidden ">
           <div className="row  max-md:block max-xl:mb-6 max-md:mb-0">
             <div className="col image-container max-md:mb-2 up">
+            <AnimationOnScroll animateIn="animate__fadeIn">
               <img src={img1} alt="Your Image" />
               <div className="overlay pr-[25px] max-lg:px-0 max-lg:pr-[25px]">
                 <p className="font-[Jost] text-[25px]">Aloe Vera</p>
@@ -26,8 +30,10 @@ const Categories = () => {
                     </svg>
                 </NavLink>
               </div>
+            </AnimationOnScroll>
             </div>
             <div className="col image-container max-md:mb-2 up">
+            <AnimationOnScroll animateIn="animate__fadeIn">
               <img src={img2}  alt="Your Image" />
               <div className="overlay pr-[25px] max-lg:px-0 max-lg:pr-[25px]">
                 <p className="font-[Jost] text-[25px]">Old Lady Cactus</p>
@@ -39,10 +45,12 @@ const Categories = () => {
                     </svg>
                 </NavLink>
               </div>
+              </AnimationOnScroll>
             </div>
           </div>
           <div className="row max-md:block overflow-hidden">
             <div className="col image-container max-md:mb-2 up">
+            <AnimationOnScroll animateIn="animate__fadeIn">
               <img src={img3} alt="Your Image"/>
               <div className="overlay pr-[25px] max-lg:px-0 max-lg:pr-[25px]">
                 <p className="font-[Jost] text-[25px]">Calathea Ornata</p>
@@ -54,8 +62,11 @@ const Categories = () => {
                     </svg>
                 </NavLink>
               </div>
+              </AnimationOnScroll>
             </div>
             <div className="col image-container max-md:mb-2 up">
+            <AnimationOnScroll animateIn="animate__fadeIn">
+
               <img src={img4} alt="Your Image" />
               <div className="overlay pr-[25px] max-lg:px-0 max-lg:pr-[25px]">
                 <p className="font-[Jost] text-[25px]">Green Aloevera</p>
@@ -67,6 +78,7 @@ const Categories = () => {
                     </svg>
                 </NavLink>
               </div>
+              </AnimationOnScroll>
             </div>
           </div>
         </div>

@@ -1,5 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-
+@import "animate.css/animate.min.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -176,6 +176,7 @@ h1 {
     &:before { 
       content: '-';
       font: inherit;
+      
       vertical-align: 0.1em;
       display: inline-block;
       text-align: center;
@@ -215,7 +216,7 @@ h1 {
 @media (min-width:1440px) {
   .center{
     inset: 0px auto auto 0px;
-    transform: translate3d(-500px,6px, 0px);
+    transform: translate3d(-454px,6px, 0px);
     width: max-content;
   }
 }
@@ -367,23 +368,9 @@ h1 {
   transition: opacity 350ms ease-in-out;
 }
 
-.BannerText {
-  animation: side 1s ease-in-out forwards;
-}
 
-@keyframes side {
-  0% {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .BannerImg1 {
-  animation: fade 2s ease-in-out forwards;
+  animation: fade 1.5s ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -405,7 +392,7 @@ h1 {
 }
 
 .BannerImg2 {
-  animation: fade 2s ease-in-out forwards;
+  animation: fade 1.5s ease-in-out forwards;
 }
 
 @keyframes fade {
@@ -423,38 +410,6 @@ h1 {
   }
   100% {
     opacity: 1;
-  }
-}
-
-.BannerSub {
-  animation: sideup 1.75s ease-in-out forwards;
-}
-
-@keyframes sideup {
-  0% {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.BannerShop {
-  animation: sideup 2s ease-in-out forwards;
-}
-
-@keyframes sideup {
-  0% {
-    opacity: 0;
-    transform: translateY(300px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }
 
