@@ -10,7 +10,7 @@ import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
 import { NavLink } from "react-router-dom";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
-
+import interior from '../assets/Interior.webp'
 const Interior = () => {
     const dispatch = useDispatch();
     const data = useSelector((state) => state.ProductReducer);
@@ -55,7 +55,7 @@ const Interior = () => {
            <AnimationOnScroll animateIn="animate__fadeInUp">
               <img
                 decoding="async"
-                src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/plant-gallery-left-img.webp"
+                src={interior}
                 className=""
                 alt="plant-gallery-left-img"
                 loading="lazy"

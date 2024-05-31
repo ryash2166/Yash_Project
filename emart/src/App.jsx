@@ -7,9 +7,6 @@ import Main from './Pages/Main'
 import Wishlist from './Pages/Wishlist'
 import Router from './Router/Router'
 import ShopNow from './Pages/ShopNow'
-import Style_Four from './Pages/StyleFour'
-import GridStyle from './Pages/GridStyle'
-// import Profile from './Pages/Profile'
 import Eye from './Pages/Eye'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
@@ -24,41 +21,15 @@ function App() {
       {path:'contacttwo',element:<ContactTwo/>},
       {path:'checkout',element:<Checkout/>},
       {path:'blogthree',element:<BlogThree/>},
-      {path:'stylefour',element:<Style_Four/>},
       {path:'shopnow',element:<ShopNow/>},
-      {path:'gridstyle',element:<GridStyle/>},
       {path:'eye', element:<Eye/>}
-      // {path:'profile',element:<RequireAuth><Profile/></RequireAuth>},
     ]
 
   }
  ])
   return (
     <>
-    <RouterProvider router={router}> </RouterProvider>
-{/* <Style_Four/> */}
-    {/* <BrowserRouter>
-    <Navbar1/>
-      <Routes>
-        <Route path='/' element={<Main/>}></Route>
-        <Route path='cart' element={<Cart/>}></Route>
-        <Route path='wishlist' element={<Wishlist/>}></Route>
-        <Route path='defaultblog' element={<DefaultBlog/>}></Route>
-        <Route path='contacttwo' element={<ContactTwo/>}></Route>
-        <Route path='checkout' element={<Checkout/>}></Route>
-        <Route path='blogthree' element={<BlogThree/>}></Route>
-      </Routes>
-      <Mail/>
-      <Footer_1/>
-    </BrowserRouter> */}
-
-      {/* <Main/> */}
-      {/* <ContactTwo/> */}
-      {/* <BlogThree/> */}
-      {/* <Wishlist/> */}
-      {/* <Checkout/> */}
-      {/* <Cart/> */}
-      {/* <Profile/> */}
+      <RouterProvider router={router}> </RouterProvider>
     </>
   )
 }

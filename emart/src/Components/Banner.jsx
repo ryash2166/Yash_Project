@@ -2,7 +2,6 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import banner1 from '../assets/banner1.webp'
 import banner2 from '../assets/banner2.webp'
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 function Banner() {
   return (
@@ -14,29 +13,23 @@ function Banner() {
               <div className="">
                 <div className="">
                   
-                  <div className="max-md:text-[50px] max-lg:text-[66px] max-lg:text-left max-md:text-center text-[88px] mb-[25px]">
-                  <AnimationOnScroll animateIn="animate__fadeInUp">
+                  <div className="max-md:text-[50px] max-lg:text-[66px] max-lg:text-left max-md:text-center text-[88px] mb-[25px] BannerText">
                     <h1 className=" ">Plant a tree for better world</h1>
-                  </AnimationOnScroll>
                   </div>
                 </div>
               </div>
-              <AnimationOnScroll animateIn="animate__fadeInUp">
-                <div className="mb-[56px]  max-md:mb-[45px] ">
+                <div className="mb-[56px]  max-md:mb-[45px] BannerSub">
                   <p className="text-[16px] font-light max-md:text-[15px] text-muted max-lg:text-left max-md:text-center">
                     Rectangle follower distribute device layer. Library hand ellipse device strikethrough.
                   </p>
                 </div>
-              </AnimationOnScroll>
               <div className="">
                 <div className="max-lg:text-left max-md:text-center">
-                  <AnimationOnScroll animateIn="animate__fadeInUp">
-                  <div className="shop ">
+                  <div className="shop BannerShop">
                     <NavLink to="shopnow" className="" role="button">
                       <button className='font-[Poppins] font-[500] text-[17px] py-[12px] px-[40px] border-1 border-black  hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>
                     </NavLink>
                   </div>
-                  </AnimationOnScroll>
                 </div>
               </div>
             </div>

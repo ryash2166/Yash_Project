@@ -152,7 +152,7 @@ function Navbar1() {
                     onMouseEnter={demoDropdown}
                     onMouseLeave={DemoDropdown}
                   >
-                    <div className="center -ml-[142px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
+                    <div className="center -ml-[185px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
                       <div className="h-[1px] bg-[#e5e7eb] -ml-5 w-[1840px]  max-xl:hidden"></div>
                       <section className="flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto">
                         <div className="flex max-xl:block py-[50px] max-xl:py-0">
@@ -376,9 +376,9 @@ function Navbar1() {
                               
                               Style Three
                             </NavDropdown.Item>
-                            <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="stylefour">Style Four</NavLink>
-                            </div>
+                            <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              Style Four
+                            </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0">
@@ -405,9 +405,9 @@ function Navbar1() {
                               
                               Horizontal Style
                             </NavDropdown.Item>
-                            <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="gridstyle">Grid Style</NavLink>
-                            </div>
+                            <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              Grid Style
+                            </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0">
@@ -480,7 +480,7 @@ function Navbar1() {
                     onMouseEnter={shopDropdown}
                     onMouseLeave={ShopDropdown}
                   >
-                    <div className="center -ml-[390px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
+                    <div className="center -ml-[400px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
                       <div className="h-[1px] bg-[#e5e7eb]  max-xl:hidden"></div>
                       <section className="ms-[400px] pr-[235px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6">
                         <section className="flex max-xl:block max-xl:p-0">

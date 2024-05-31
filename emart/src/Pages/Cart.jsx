@@ -20,15 +20,6 @@ const Cart = () => {
     dispatch(removeToCart(item.id))
     showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
   }
-  const pluse = (item) => {
-    dispatch(IncreaseCartCount(item.id))
-    // showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
-  }
-
-  const minus = (item) => {
-    dispatch(DecreaseCartCount(item.id))
-    // showErrorMessage('Your item has been removed from the Cart list!','bottom-right')
-  }
 
   return (
     <div className=''>
@@ -86,7 +77,7 @@ const Cart = () => {
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[10px] max-md:block'>
                               <div className=''>
-                                <img src={item.img} alt="" className='max-w-[102px] h-[102px] w-[102px] object-cover'/>
+                                <img src={item.img} alt="" className='max-w-[102px] h-[102px] w-[102px] object-cover '/>
                               </div>
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[50px] max-md:block'>
@@ -101,9 +92,9 @@ const Cart = () => {
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[20px]  max-md:block'>
                               <div className='flex items-center border-[1px] justify-between p-2 '>
-                               <a onClick={() => minus(item)} className='cursor-pointer'> - </a> 
-                                <p>{item.quantity}</p>
-                                <a onClick={() => pluse(item)} className='cursor-pointer'> + </a>
+                               <a onClick={() => dispatch(DecreaseCartCount(item.id))} className='cursor-pointer'> - </a> 
+                                <p className='text-[14px]'>{item.quantity}</p>
+                                <a onClick={() => dispatch(IncreaseCartCount(item.id))} className='cursor-pointer'> + </a>
                               </div>
                             </td>
                             <td className='border-t-[1px] py-[25px] max-md:block'>
@@ -119,7 +110,7 @@ const Cart = () => {
                     <div className=''>
                       <div colSpan={6} className='border-t-[1px] pt-[25px]'>
                         <div className='float-left text-center flex items-center max-md:block'>
-                          <input type="text" placeholder='Coupon Code' size={15} className='text-[18px] outline-none placeholder-black border-[1px] border-[#d3ced2] py-[11px] pl-[30px] pr-[15px] max-md:w-full' />
+                          <input type="search" placeholder='Coupon Code' size={15} className='text-[18px] outline-none placeholder-black border-[1px] border-[#d3ced2] py-[11px] pl-[30px] pr-[15px] max-md:w-full' />
                           <button type='submit' className='px-[33px] py-[11px] border-black border-[1px] bg-black text-white text-[18px] font-[500] font-[Jost] hover:!bg-white hover:!text-black duration-200 max-md:w-full max-md:mt-3'>Apply Coupon</button>
                         </div>
                       </div>

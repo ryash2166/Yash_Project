@@ -1,14 +1,50 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
+import { ErrorMessage, Field, Form, Formik } from "formik";
+import * as Yup from "yup";
+import axios from "axios";
+import { Alert } from "@mui/material";
+// import { useNavigate } from "react-router-dom";
+
+const formSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("* Email is Invalid.")
+    .required("* Email is Required."),
+  message: Yup.string().required("* Message is Required."),
+  name: Yup.string().required("* Name is Required."),
+  phone: Yup.string()
+    .required("* Contact Number is Required.")
+    .matches(/^[0-9]+$/, "* Contact Number must be only digits.")
+    .min(10, "* Contact Number must be at least 10 digits.")
+    .max(10, "* Contact Number must be at most 10 digits."),
+});
 
 const ContactTwo = () => {
-  const ContactTwo = useRef()
-  window.onbeforeunload = () => {
-    for(const form of document.getElementsByTagName('form')) {
-      form.reset();
-    }
-  }
+  // let navigate = useNavigate()
+  /* Server State Handling */
+  const [serverState, setServerState] = useState();
+  const handleServerResponse = (ok, msg) => {
+    setServerState({ ok, msg });
+  };
+
+  const handleOnSubmit = (values, actions) => {
+    axios({
+      method: "POST",
+      url: "https://formspree.io/f/xzbnqbzw",
+      data: values,
+    })
+      .then((response) => {
+        actions.setSubmitting(false);
+        actions.resetForm();
+        handleServerResponse(true, "Thanks! Your Request was sent.");
+      })
+      .catch((error) => {
+        actions.setSubmitting(false);
+        handleServerResponse(false, error.response.data.error);
+      });
+  };
+
   return (
     <div>
       <div className="pt-[70px] pb-3">
@@ -103,83 +139,141 @@ const ContactTwo = () => {
                         </div>
                       </div>
                       <div className="pl-[50px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
-                      <form action="https://formspree.io/f/xzbnqbzw" method="POST" ref={ContactTwo}>
-                        <div>
-                          <div className="col-lg-12 col-md-12 col-xs-12">
-                            <div className="form-row">
-                              <p>
-                                <span className="text-[#666]">
-                                  <input
-                                    size="40"
-                                    className="w-[100%] h-[50px] mb-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black"
-                                    aria-required="true"
-                                    aria-invalid="false"
-                                    placeholder="Name"
-                                    name="name"
-                                    type="text"
-                                  />
-                                </span>
-                              </p>
-                            </div>
-                          </div>
-                          <div className="col-lg-12 col-md-12 col-xs-12">
-                            <p>
-                              <span className="text-[#666]">
-                                <input
-                                  size="40"
-                                  className="w-[100%] h-[50px] mb-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black"
-                                  aria-required="true"
-                                  aria-invalid="false"
-                                  placeholder="Email Address"
-                                  type="email"
-                                  name="email"
-                                />
-                              </span>
-                            </p>
-                          </div>
-                          <div className="col-lg-12 col-md-12 col-xs-12">
-                            <p>
-                              <span className="text-[#666]">
-                                <input
-                                  size="40"
-                                  className="w-[100%] h-[50px] mb-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black"
-                                  aria-required="true"
-                                  aria-invalid="false"
-                                  placeholder="Phone"
-                                  type="text"
-                                  name="phone"
-                                />
-                              </span>
-                            </p>
-                          </div>
-                          <div className="col-lg-12 col-md-12 col-xs-12">
-                            <p>
-                              <span className="text-[#666]">
-                                <textarea
-                                  cols="40"
-                                  rows="10"
-                                  className="w-[100%] h-[150px] mb-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] pt-[20px] placeholder-black"
-                                  aria-required="true"
-                                  aria-invalid="false"
-                                  placeholder="Massage"
-                                  name="message"
-                                ></textarea>
-                              </span>
-                            </p>
-                          </div>
-                          <div className="col-lg-12 col-md-12 col-xs-12 ">
-                            <p className="bg-black mb-[20px]">
-                              <span className="text-[#fff]">
-                                <input
-                                  className="w-[100%] h-[50px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px]  placeholder-black"
-                                  type="submit"
-                                  value="Send Massage"
-                                />
-                              </span>
-                            </p>
-                          </div>
-                        </div>
-                        </form>
+                        <Formik
+                          initialValues={{
+                            email: "",
+                            message: "",
+                            name: "",
+                            phone: "",
+                          }}
+                          onSubmit={handleOnSubmit}
+                          validationSchema={formSchema}
+                        >
+                          {({ isSubmitting }) => (
+                            <Form id="fs-frm" noValidate>
+                              <div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                  <div className="form-row">
+                                    <p>
+                                      <span className="text-[#666]">
+                                        <label htmlFor="name"></label>
+                                        <Field
+                                          size="40"
+                                          className="w-[100%] h-[50px]  border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
+                                          aria-required="true"
+                                          aria-invalid="false"
+                                          placeholder="Name"
+                                          name="name"
+                                          id="name"
+                                          type="text"
+                                        />
+                                        <ErrorMessage
+                                          name="name"
+                                          className="text-red-500 errorMsg"
+                                          component="span"
+                                        />
+                                      </span>
+                                    </p>
+                                  </div>
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                  <p>
+                                    <span className="text-[#666]">
+                                      <label htmlFor="email"></label>
+                                      <Field
+                                        size="40"
+                                        className="w-[100%] h-[50px] mt-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Email Address"
+                                        type="email"
+                                        id="email"
+                                        name="email"
+                                      />
+                                      <ErrorMessage
+                                        name="email"
+                                        className="text-red-500 errorMsg"
+                                        component="span"
+                                      />
+                                    </span>
+                                  </p>
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                  <p>
+                                    <span className="text-[#666]">
+                                      <label htmlFor="phone"></label>
+                                      <Field
+                                        size="40"
+                                        className="w-[100%] h-[50px] mt-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Phone"
+                                        type="text"
+                                        name="phone"
+                                        id="phone"
+                                      />
+                                      <ErrorMessage
+                                        name="phone"
+                                        className="text-red-500 errorMsg"
+                                        component="span"
+                                      />
+                                    </span>
+                                  </p>
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12">
+                                  <p>
+                                    <span className="text-[#666]">
+                                      <label htmlFor="message"></label>
+                                      <Field
+                                        cols="40"
+                                        rows="10"
+                                        className="w-[100%] h-[150px] mt-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] pt-[20px] placeholder-black outline-none"
+                                        aria-required="true"
+                                        aria-invalid="false"
+                                        placeholder="Message"
+                                        name="message"
+                                        id="message"
+                                        component="textarea"
+                                      ></Field>
+                                      <ErrorMessage
+                                        name="message"
+                                        className="text-red-500 errorMsg"
+                                        component="span"
+                                      />
+                                    </span>
+                                  </p>
+                                </div>
+                                <div className="col-lg-12 col-md-12 col-xs-12 ">
+                                  <p className="bg-black mt-[20px]">
+                                    <span className="text-[#fff]">
+                                      <button
+                                        className="w-[100%] h-[50px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px]  placeholder-black outline-none"
+                                        type="submit"
+                                      >
+                                        Send Message
+                                      </button>
+                                    </span>
+                                  </p>
+                                  {serverState && (
+                                    <p
+                                      className={
+                                        !serverState.ok ? "errorMsg" : ""
+                                      }
+                                      style={{ marginTop: "10px" }}
+                                    >
+                                      <Alert
+                                        variant="filled"
+                                        severity="success"
+                                      >
+                                        {serverState.msg}
+                                      </Alert>
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </Form>
+                          )}
+                        </Formik>
                       </div>
                     </div>
                   </section>
