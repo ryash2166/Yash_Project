@@ -26,9 +26,10 @@ const WishData = (item) =>{
     showSuccessMessage("Your item has been added to the Wish list!","bottom-right")
 }
 
-  useEffect(()=>{
-    dispatch(ProductData())
-  }, [])
+useEffect(()=>{
+  dispatch(ProductData())
+}, [])
+
   return (
     <div className='pt-[70px]'>
       <div className='mx-[272px] max-xl:mx-[100px] max-lg:mx-[50px] max-md:mx-5 '>

@@ -40,8 +40,7 @@ const formSchema = Yup.object().shape({
     .max(10, "* Contact Number must be at most 10 digits."),
   Email: Yup.string()
     .email("* Email is Invalid.")
-    .required("* Email is Required."),
-  Message: Yup.string().required("* Message is Required."),
+    .required("* Email is Required.")
 });
 
 const Checkout = () => {
@@ -375,11 +374,6 @@ const Checkout = () => {
                                 id="Message"
                                 component="textarea"
                               ></Field>
-                              <ErrorMessage
-                                name="Message"
-                                className="text-red-500 errorMsg"
-                                component="span"
-                              />
                             </span>
                           </p>
                         </div>

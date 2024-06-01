@@ -247,7 +247,7 @@ const ContactTwo = () => {
                                   <p className="bg-black mt-[20px]">
                                     <span className="text-[#fff]">
                                       <button
-                                        className="w-[100%] h-[50px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px]  placeholder-black outline-none"
+                                        className="w-[100%] h-[50px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] outline-none"
                                         type="submit"
                                       >
                                         Send Message

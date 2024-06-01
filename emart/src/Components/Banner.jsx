@@ -13,18 +13,18 @@ function Banner() {
               <div className="">
                 <div className="">
                   
-                  <div className="max-md:text-[50px] max-lg:text-[66px] max-lg:text-left max-md:text-center text-[88px] mb-[25px] BannerText">
+                  <div className="max-md:text-[50px] max-lg:text-[66px] max-[1025px]:text-left max-md:text-center text-[88px] mb-[25px] BannerText">
                     <h1 className=" ">Plant a tree for better world</h1>
                   </div>
                 </div>
               </div>
                 <div className="mb-[56px]  max-md:mb-[45px] BannerSub">
-                  <p className="text-[16px] font-light max-md:text-[15px] text-muted max-lg:text-left max-md:text-center">
+                  <p className="text-[16px] font-light max-md:text-[15px] text-muted max-[1025px]:text-left max-md:text-center">
                     Rectangle follower distribute device layer. Library hand ellipse device strikethrough.
                   </p>
                 </div>
               <div className="">
-                <div className="max-lg:text-left max-md:text-center">
+                <div className="max-[1025px]:text-left max-md:text-center">
                   <div className="shop BannerShop">
                     <NavLink to="shopnow" className="" role="button">
                       <button className='font-[Poppins] font-[500] text-[17px] py-[12px] px-[40px] border-1 border-black  hover:bg-black hover:text-white hover:-translate-y-[20px] duration-300 ease-in-out'>Shop Now</button>

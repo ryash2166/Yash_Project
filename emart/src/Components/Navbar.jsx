@@ -6,20 +6,20 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { useSelector } from 'react-redux';
-import Demo from '../assets/demo.webp'
-import Product1 from '../assets/product1.webp'
-import Product2 from '../assets/product2.webp'
-import Shop from '../assets/shop.webp'
-import SchoolBag from '../assets/school-bag.png'
-import Dress from '../assets/dress.png'
-import Chair from '../assets/chair-1.png'
+import { useSelector } from "react-redux";
+import Demo from "../assets/demo.webp";
+import Product1 from "../assets/product1.webp";
+import Product2 from "../assets/product2.webp";
+import Shop from "../assets/shop.webp";
+import SchoolBag from "../assets/school-bag.png";
+import Dress from "../assets/dress.png";
+import Chair from "../assets/chair-1.png";
 import { useAuth0 } from "@auth0/auth0-react";
 import { MdLogout } from "react-icons/md";
-import Logo from '../assets/emart.webp'
+import Logo from "../assets/emart.webp";
 
 function Navbar1() {
-  const { loginWithRedirect , logout , isAuthenticated , user } = useAuth0();
+  const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   const result = useSelector((state) => state.Reducer);
   const WishList = useSelector((state) => state.WishReducer);
@@ -87,47 +87,45 @@ function Navbar1() {
     }
   }
 
-
   return (
-    
     <>
       {/* <div className=' bg-black h-10'></div> */}
       {["xl"].map((expand) => (
         <Navbar
           key={expand}
           expand={expand}
-          className="z-10 w-full fixed block bg-white px-[20px] pr-[7px] max-lg:pr-0 max-lg:px-0 border-b-[1px]"
+          className="z-10 w-full fixed block bg-white px-[20px] py-[10px] pr-[7px] max-lg:pr-0 max-lg:px-0 border-b-[1px] "
           id="navbar"
         >
           <Container fluid>
-            <Link to="/" className="max-xl:order-2 max-md:ml-6">
+            <Link to="/" className="max-[1201px]:order-2 max-md:ml-6">
               <img
                 alt="logo"
                 className="h-9 w-auto max-md:h-7"
                 src={Logo}
                 width="147"
                 height="31"
-              ></img>
+              />
             </Link>
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              className="max-xl:order-1 border-0"
+              className="max-[1201px]:order-1 border-0 "
             />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="start"
             >
-              <Offcanvas.Header closeButton>
+              <Offcanvas.Header closeButton className="mr-2">
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Offcanvas
+                  <img src={Logo} alt="" className="h-9 w-auto "/>
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="bg-white">
-                <Nav className=" justify-content-center flex-grow-1 pe-5 m-0 bg-white">
+                <Nav className=" justify-content-center flex-grow-1 pe-3 m-0 bg-white ">
                   <NavDropdown
                     title={
-                      <div className="flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2  max-xl:border-b-[1px] max-xl:px-0">
+                      <div className="flex justify-between items-center gap-2 mx-2 max-xl:w-full drop text-dark max-xl:pb-2  max-[1200px]:border-b-[1px] max-xl:px-0 ">
                         Demo
                         <span>
                           <svg
@@ -171,71 +169,54 @@ function Navbar1() {
                           </div>
                           <div className="pl-[50px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0  leading-8 max-xl:leading-6">
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Fashion Hub
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Kids Wear
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Women Fashion
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Big Fashion
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Handicraft
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Interior
                             </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
                             <div className="text-muted py-[8px] pl-[15px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <Link to='/'>
-
-                                Plant Garden
-                              </Link>
+                              <Link to="/">Plant Garden</Link>
                             </div>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Kids Toys
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Electronic Gadget
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Bathroom
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Bicycle
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Shoes
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Bags
                             </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className=" py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Soap
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Grocery Outlet
                               <Badge
                                 className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
@@ -246,7 +227,6 @@ function Navbar1() {
                               </Badge>
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Hiking Heaven
                               <Badge
                                 className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
@@ -257,7 +237,6 @@ function Navbar1() {
                               </Badge>
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Exotic Fragrance
                               <Badge
                                 className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
@@ -276,7 +255,10 @@ function Navbar1() {
                           <p className="text-danger flex">
                             Summer Sale 65% Off
                             <span className="hover:translate-x-2 duration-300 ease-in-out">
-                              <NavLink to="shopnow" className="text-muted ml-3 add ">
+                              <NavLink
+                                to="shopnow"
+                                className="text-muted ml-3 add "
+                              >
                                 Shop Now
                               </NavLink>
                             </span>
@@ -288,7 +270,7 @@ function Navbar1() {
                   </NavDropdown>
                   <NavDropdown
                     title={
-                      <div className="flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0">
+                      <div className="flex justify-between items-center max-xl:w-full gap-2 mx-2 drop text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0">
                         Product
                         <span>
                           <svg
@@ -361,19 +343,15 @@ function Navbar1() {
                               />
                             </div>
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
-                              
                               Product Styles
                             </p>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Style One
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Style Two
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Style Three
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
@@ -391,18 +369,15 @@ function Navbar1() {
                               />
                             </div>
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
-                              
                               Product Gallery
                             </p>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Vertical Carousel
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               Carousel
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Horizontal Style
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
@@ -420,15 +395,12 @@ function Navbar1() {
                               />
                             </div>
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
-                              
                               Product Style
                             </p>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Simple Product
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Variable Product
                             </NavDropdown.Item>
                           </div>
@@ -455,7 +427,7 @@ function Navbar1() {
                   </NavDropdown>
                   <NavDropdown
                     title={
-                      <div className="flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2  max-xl:border-b-[1px] max-xl:px-0">
+                      <div className="flex justify-between items-center max-xl:w-full gap-2 mx-2 drop text-dark max-xl:pb-2  max-[1200px]:border-b-[1px] max-xl:px-0">
                         Shop
                         <span>
                           <svg
@@ -486,27 +458,22 @@ function Navbar1() {
                         <section className="flex max-xl:block max-xl:p-0">
                           <div className="pt-[60px] pb-[50px] max-xl:p-0">
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
-                              
                               Listing Layouts
                             </p>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               4 Column
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                               4 Column + Side bar
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               5 Column
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               5 Column + Side bar
                             </NavDropdown.Item>
                             <div className="mt-[20px]">
                               <p className="font-bold text-[18px] py-[8px] bg-transparent">
-                                
                                 Shop Pages
                               </p>
                               <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
@@ -523,42 +490,33 @@ function Navbar1() {
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="pl-[40px] pt-[60px] pb-[50px] max-xl:p-0">
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
-                              
                               Sidebar Widgets
                             </p>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Product Filter at Top
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Product Filter at Left
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Product Filter at Right
                             </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] ml-10 max-xl:hidden"></div>
                           <div className="pl-[40px] pt-[60px] pb-[50px] max-xl:p-0">
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
-                              
                               Shop Box Styles
                             </p>
                             <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Shop Style One
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Shop Style Two
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Shop Style Three
                             </NavDropdown.Item>
                             <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                              
                               Shop Style Four
                             </NavDropdown.Item>
                           </div>
@@ -598,10 +556,10 @@ function Navbar1() {
                     </div>
                   </NavDropdown>
 
-                  <div className="flex max-[1024px]:block">
+                  <div className="flex max-[1200px]:block">
                     <NavDropdown
                       title={
-                        <div className="flex justify-between items-center drop mx-2 gap-2 text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0 ">
+                        <div className="flex justify-between items-center max-xl:w-full drop mx-2 gap-2 text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0 ">
                           Blog
                           <span>
                             <svg
@@ -646,7 +604,7 @@ function Navbar1() {
 
                     <NavDropdown
                       title={
-                        <div className="flex justify-between items-center gap-2 mx-2 drop text-dark max-xl:pb-2 max-xl:border-b-[1px] max-xl:px-0">
+                        <div className="flex justify-between items-center max-xl:w-full gap-2 mx-2 drop text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0">
                           Contact
                           <span>
                             <svg
@@ -674,7 +632,6 @@ function Navbar1() {
                       <div className="overflow-hidden pr-[50px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-56 max-2xl:w-auto">
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
-                            
                             Contact One
                           </NavDropdown.Item>
                           <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
@@ -684,49 +641,64 @@ function Navbar1() {
                       </div>
                     </NavDropdown>
                   </div>
+                  {/* <div className="xl:hidden pl-[10px]">
+                    <NavLink to="wishlist">Wishlist</NavLink>
+                  </div> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
             <nav className="flex items-center pr-[20px] order-3">
               <div className="max-xl:hidden pr-[15px] ">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-search"
-                  >
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-                  </svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="feather feather-search"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
               </div>
               <div className="menu-mobile-icon cart-icon flex items-center  justify-center pr-[20px] max-md:pr-3 max-lg:block">
-                <p className="mr-2 max-lg:hidden">{ isAuthenticated && <span className="font-[500]">{user.nickname}</span>}</p>
-                {
-                  isAuthenticated ?  ( <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
-                  <MdLogout className="w-[22px] h-[22px] relative max-lg:top-[3px]"/>
-                </button> ):(<button onClick={() => loginWithRedirect()}>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="22"
-                    height="22"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1.5"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="feather feather-user"
+                <p className="mr-2 max-lg:hidden">
+                  {isAuthenticated && (
+                    <span className="font-[500]">{user.nickname}</span>
+                  )}
+                </p>
+                {isAuthenticated ? (
+                  <button
+                    onClick={() =>
+                      logout({
+                        logoutParams: { returnTo: window.location.origin },
+                      })
+                    }
                   >
-                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
-                    <circle cx="12" cy="7" r="4"></circle>
-                  </svg>
-              </button>) 
-                }
+                    <MdLogout className="w-[22px] h-[22px] relative max-lg:top-[3px]" />
+                  </button>
+                ) : (
+                  <button onClick={() => loginWithRedirect()}>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="22"
+                      height="22"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-user"
+                    >
+                      <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </button>
+                )}
 
                 {/* <NavLink to='profile'>
                   <svg
@@ -756,7 +728,7 @@ function Navbar1() {
                   </div>
                 </NavLink>
               </div>
-                
+
               <div className="menu-mobile-icon cart-icon flex max-md:-mr-4">
                 <NavLink to="cart">
                   <div className="flex">

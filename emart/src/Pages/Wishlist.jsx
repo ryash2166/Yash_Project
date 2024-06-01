@@ -53,7 +53,7 @@ const Wishlist = () => {
       </div>
        ) : (
         <div className='py-[120px] px-[15px] ' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
-          <div className='mx-[272px] max-2xl:mx-0'>
+          <div className='mx-[272px] max-2xl:mx-3 max-lg:mx-0'>
             <div className='p-[30px] flex justify-center bg-white shadow-lg shadow-slate-100 align-middle '>
               <form className="">
                 <table className='table-fixed w-full'>
@@ -89,9 +89,9 @@ const Wishlist = () => {
                             <p className='ml-2 max-md:ml-0'>{item.name}</p>
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
-                            <p className='flex justify-between items-center text-[#666666] max-lg:block'>
-                              <del className='pr-[10px]'>${item.price}</del>
-                              <span> ${item.d_price} </span>
+                            <p className='flex  items-center text-[#666666] max-lg:block'>
+                              <span><del className='pr-[10px]'>${item.price}</del>&nbsp;&nbsp;</span>
+                              <span className=''> ${item.d_price}&nbsp;&nbsp; </span>
                               <span className=''>{item.discount}</span>
                               </p>
                           </td>
@@ -105,7 +105,7 @@ const Wishlist = () => {
                             <h1 className='text-[16px] text-[#666666]'>{item.description}</h1>
                           </td>
                           <td className=' border-t-[1px] max-md:border-0 px-[10px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
-                              <button className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-500 ease-in-out' onClick={() => ADD_cart(item)}>
+                              <button className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
                                 <span className='mx-auto text-center tracking-[2px]  font-[Jost]  font-[500] max-lg:hidden max-md:block'>Add to Cart </span>
                                 <span className='mx-auto text-center tracking-[2px] px-[25px]  font-[Jost] text-[20px] max-md:hidden max-lg:block max-xl:hidden hidden'><IoCartOutline /></span>
 
