@@ -31,8 +31,8 @@ useEffect(()=>{
 }, [])
 
   return (
-    <div className='pt-[70px]'>
-      <div className='mx-[272px] max-xl:mx-[100px] max-lg:mx-[50px] max-md:mx-5 '>
+    <div className='pt-[70px] '>
+      <div className='container'>
         <div>
           <div className='text-[20px]'>
             <span><NavLink to="/">Home</NavLink></span>

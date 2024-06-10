@@ -150,7 +150,7 @@ function Navbar1() {
                     onMouseEnter={demoDropdown}
                     onMouseLeave={DemoDropdown}
                   >
-                    <div className="center -ml-[185px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
+                    <div className="center -ml-[200px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
                       <div className="h-[1px] bg-[#e5e7eb] -ml-5 w-[1840px]  max-xl:hidden"></div>
                       <section className="flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto">
                         <div className="flex max-xl:block py-[50px] max-xl:py-0">
@@ -452,7 +452,7 @@ function Navbar1() {
                     onMouseEnter={shopDropdown}
                     onMouseLeave={ShopDropdown}
                   >
-                    <div className="center -ml-[400px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
+                    <div className="center -ml-[420px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
                       <div className="h-[1px] bg-[#e5e7eb]  max-xl:hidden"></div>
                       <section className="ms-[400px] pr-[235px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6">
                         <section className="flex max-xl:block max-xl:p-0">

@@ -23,11 +23,17 @@ const formSchema = Yup.object().shape({
     .required("* Company Name is Required.")
     .min(5, "* Company Name must be at least 5 character.")
     .max(20, "* Company Name must be at most 10 character."),
-  Country: Yup.string().required("* Country Name is Required."),
+  Country: Yup.string()
+    .required("* Country Name is Required.")
+    .matches(/^[a-zA-Z]+$/, "* Name must be only characters."),
   AddressLine1: Yup.string().required("* Address Line 1 is Required."),
   AddressLine2: Yup.string().required("* Address Line 2 Name is Required."),
-  City: Yup.string().required("* City Name is Required."),
-  State: Yup.string().required("* State Name is Required."),
+  City: Yup.string()
+    .required("* City Name is Required.")
+    .matches(/^[a-zA-Z]+$/, "* Name must be only characters."),
+  State: Yup.string()
+    .required("* State Name is Required.")
+    .matches(/^[a-zA-Z]+$/, "* Name must be only characters."),
   Postcode: Yup.string()
     .required("* Postcode / ZIP is Required.")
     .matches(/^[0-9]+$/, "* Postcode / ZIP must be only digits.")
@@ -40,7 +46,7 @@ const formSchema = Yup.object().shape({
     .max(10, "* Contact Number must be at most 10 digits."),
   Email: Yup.string()
     .email("* Email is Invalid.")
-    .required("* Email is Required.")
+    .required("* Email is Required."),
 });
 
 const Checkout = () => {
@@ -68,7 +74,7 @@ const Checkout = () => {
         actions.setSubmitting(false);
         actions.resetForm();
         handleServerResponse(true, "Your Order was placed!");
-        //  navigate('/')
+         navigate('success')
       })
       .catch((error) => {
         actions.setSubmitting(false);

@@ -22,6 +22,7 @@ const formSchema = Yup.object().shape({
 
 const ContactTwo = () => {
   // let navigate = useNavigate()
+  const Contact = useRef()
   /* Server State Handling */
   const [serverState, setServerState] = useState();
   const handleServerResponse = (ok, msg) => {
@@ -46,7 +47,7 @@ const ContactTwo = () => {
   };
 
   return (
-    <div>
+    <div ref={Contact}>
       <div className="pt-[70px] pb-3">
         <div>
           <section>
