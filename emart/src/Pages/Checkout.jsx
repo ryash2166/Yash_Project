@@ -120,7 +120,7 @@ const Checkout = () => {
               "linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)",
           }}
         >
-          <div className="mx-[272px] max-2xl:mx-[50px] max-lg:mx-0">
+          <div className="container">
             <div>
               <div className="mb-[25px] bg-[#fff] shadow-lg">
                 <div className="px-[25px] py-[15px] text-[#565656]">

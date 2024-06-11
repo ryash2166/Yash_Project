@@ -50,8 +50,8 @@ useEffect(()=>{
                 </button>
               </div>
               <span className='h-[32px] bg-slate-400 w-[1px]'></span>
-              <div className='flex justify-center items-center w-[220px]'>
-                <Form.Select aria-label="Default sorting" style={{border: 0, outline: 'none'}} className='text-muted text-[15px]'>
+              <div className='flex justify-center items-center w-[200px] cursor-pointer'>
+                <Form.Select aria-label="Default sorting" style={{border: 0, outline: 'none'}} className='text-muted text-[15px] cursor-pointer'>
                   <option value="1">Default sorting</option>
                   <option value="2">Sort by popularity</option>
                   <option value="3">Sort by average rating</option>
@@ -65,15 +65,15 @@ useEffect(()=>{
               </div>
               <span className='h-[32px] bg-slate-400 w-[1px] max-lg:hidden'></span>
               <div className='flex gap-x-2 items-center justify-center max-lg:hidden'>
-              <button className=''>
+              <p>
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.4" y="0.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
                   <rect x="9.4" y="0.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
                   <rect x="0.4" y="9.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
                   <rect x="9.4" y="9.4" width="6.2" height="6.2" fill="white" stroke="black" strokeWidth="0.8"></rect>
                 </svg>
-              </button>
-              <button>
+              </p>
+              <p>
                 <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect x="0.4" y="0.4" width="5.2" height="5.2" fill="white" stroke="gray" strokeWidth="0.8"></rect>
                   <rect x="0.4" y="5.4" width="5.2" height="5.2" fill="white" stroke="gray" strokeWidth="0.8"></rect>
@@ -85,8 +85,8 @@ useEffect(()=>{
                   <rect x="10.4" y="5.4" width="5.2" height="5.2" fill="white" stroke="gray" strokeWidth="0.8"></rect>
                   <rect x="10.4" y="10.4" width="5.2" height="5.2" fill="white" stroke="gray" strokeWidth="0.8"></rect>
                 </svg>
-              </button>
-              <button className=''>
+              </p>
+              <p className=''>
                 <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <g transform="matrix(1.09896,0,0,1.09896,-2.28125,-0.09375)">
                   <rect x="2.842" y="0.947" width="5.053" height="5.053" style={{fill:'white',stroke:'gray',strokeWidth:'0.63px'}}></rect>
@@ -137,7 +137,7 @@ useEffect(()=>{
                   <rect x="18" y="16.105" width="5.053" height="5.053" style={{fill:'white',stroke:'gray',strokeWidth:'0.63px'}}></rect>
                   </g>
                 </svg>
-              </button>
+              </p>
               </div>
             </div>
           </section>

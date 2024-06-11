@@ -8,16 +8,11 @@ const getCartDataFromLocalStorage = () => {
 const Reducer = (state = getCartDataFromLocalStorage(), action) =>{
     switch(action.type){
         case ADD_TO_CART : 
-            // const updatedCartAdd = [action.data , ...state]
-            // localStorage.setItem('cart' , JSON.stringify(updatedCartAdd))
-            // return updatedCartAdd
-
             const existingProduct = state.findIndex(item => item.id === action.data.id)
             let updatedCartData;
             
             if(existingProduct >= 0 ) {
                 updatedCartData = state.map((item) => item.id === action.data.id ? {...item, quantity:item.quantity += 1}: item)
-                // localStorage.setItem('cart' , JSON.stringify(updatedCartData))
             }else{
                 updatedCartData = [{...action.data, quantity : 1}, ...state]
             }
@@ -25,9 +20,6 @@ const Reducer = (state = getCartDataFromLocalStorage(), action) =>{
             return updatedCartData
 
             case INCREASE_CART_COUNT :
-        // console.log("payload",action.payload.quantity);
-            // state.cartList = state.cartList.map((item) => item.quantity = item.quantity + 1 )
-            // console.log("map",state.cartList);
             const updatedCartIncrement = state.map(item =>
                 item.id === action.data ? { ...item , quantity: item.quantity + 1 } : item
             );
@@ -42,10 +34,8 @@ const Reducer = (state = getCartDataFromLocalStorage(), action) =>{
             return updatedCartDecrement;
             
         case REMOVE_TO_CART : 
-            // data.length = data.length - 1
             const updatedCartRemove = state.filter(item => item.id !== action.data)
             localStorage.setItem('cart' , JSON.stringify(updatedCartRemove))
-            // data.length = data.length ? data.length - 1 : []
             return updatedCartRemove
             
         default : return state

@@ -39,8 +39,8 @@ const Cart = () => {
           </section>
         </div>
       ) : (
-        <div className='py-[120px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
-          <div className='mx-[272px] max-xl:mx-0'>
+        <div className='py-[120px] px-[15px]  ' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
+          <div className='container'>
             <div className='flex max-lg:block'>
               <div className='col-lg-8 col-md-12 col-sm-12 col-xs-12 bg-white shadow-lg shadow-slate-100 p-[30px] mr-[15px] max-lg:mr-0'>
                 <div className='p-[20px] mb-[50px] border-dashed border-[2px] border-[#e9e9e9]'>
@@ -110,14 +110,14 @@ const Cart = () => {
                     <div className=''>
                       <div colSpan={6} className='border-t-[1px] pt-[25px]'>
                         <div className='float-left text-center flex items-center max-md:block'>
-                          <input type="search" placeholder='Coupon Code' size={15} className='text-[18px] outline-none placeholder-black border-[1px] border-[#d3ced2] py-[11px] pl-[30px] pr-[15px] max-md:w-full' />
-                          <button type='submit' className='px-[33px] py-[11px] border-black border-[1px] bg-black text-white text-[18px] font-[500] font-[Jost] hover:!bg-white hover:!text-black duration-200 max-md:w-full max-md:mt-3'>Apply Coupon</button>
+                          <input type="search" placeholder='Coupon Code' size={15} className='text-[18px] max-sm:text-[16px] outline-none placeholder-black border-[1px] border-[#d3ced2] py-[11px] pl-[30px] pr-[15px] max-md:w-full' />
+                          <button type='submit' className='px-[33px] py-[11px] border-black border-[1px] bg-black text-white text-[18px] max-sm:text-[16px] font-[500] font-[Jost] hover:!bg-white hover:!text-black duration-200 max-md:w-full max-md:mt-3'>Apply Coupon</button>
                         </div>
                       </div>
                     </div>
                 </form>
               </div>
-              <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12 p-[30px] ml-[15px] max-lg:ml-0 max-lg:mt-5 bg-white shadow-lg shadow-slate-100'>
+              <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12 p-[30px] h-full ml-[15px] max-xl:ml-0 max-lg:mt-5 bg-white shadow-lg shadow-slate-100'>
                 <div className="">
                   <h4 className="py-[10px] font-[Jost] ">Cart Totals</h4>
                   <div className="flex justify-between items-center pt-[30px] pb-[20px] border-t-[1px] border-[#d3ced2]">
@@ -142,10 +142,10 @@ const Cart = () => {
                   <span>$ {total}.00</span>
                 </div>
                 <div className='flex justify-center pb-2 mt-4'> 
-                  <NavLink to="/checkout" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Proceed To Checkout</NavLink>
+                  <NavLink to="/checkout" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] max-sm:text-[16px] bg-black hover:-translate-y-2 ease-in-out'>Proceed To Checkout</NavLink>
                 </div>
                 <div className='flex justify-center mt-2'> 
-                  <NavLink to="/shopnow" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] bg-black hover:-translate-y-2 ease-in-out'>Return to shop</NavLink>
+                  <NavLink to="/shopnow" className='border-[1px] border-black font-[500] duration-300 w-full text-center hover:!bg-white hover:!text-black px-[33px] py-[12px] text-white font-[Jost] text-[18px] max-sm:text-[16px] bg-black hover:-translate-y-2 ease-in-out'>Return to shop</NavLink>
                 </div>
                 
               </div>

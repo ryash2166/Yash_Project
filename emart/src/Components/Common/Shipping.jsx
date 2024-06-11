@@ -13,13 +13,11 @@ const Shipping = (props) => {
             <div className='pl-[30px] pr-[15px] max-md:p-0'>
                 <div className='max-md:flex max-md:justify-center max-md:items-center'>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-
                     <p className='text-[20px] font-[Jost] mb-[8px] font-[500]'>{title}</p>
                 </AnimationOnScroll>
                 </div>
                 <div className='max-md:flex max-md:justify-center max-md:items-center'>
                 <AnimationOnScroll animateIn="animate__fadeInUp">
-
                     <p className='text-muted text-[16px] tracking-wider'>{subtitle}</p>
                 </AnimationOnScroll>
                 </div>

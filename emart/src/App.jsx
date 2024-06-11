@@ -10,6 +10,7 @@ import ShopNow from './Pages/ShopNow'
 import Eye from './Pages/Eye'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Success from './Pages/Success'
+import BlogOne from './Components/BlogOne'
 
 function App() {
  const router = createBrowserRouter([
@@ -24,6 +25,7 @@ function App() {
       {path:'blogthree',element:<BlogThree/>},
       {path:'shopnow',element:<ShopNow/>},
       {path:'success',element:<Success/>},
+      {path:'blogone',element:<BlogOne/>},
       {path:'eye', element:<Eye/>}
     ]
 
