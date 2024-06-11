@@ -11,6 +11,7 @@ import Eye from './Pages/Eye'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Success from './Pages/Success'
 import BlogOne from './Components/BlogOne'
+import ErrorPage from './Pages/ErrorPage'
 
 function App() {
  const router = createBrowserRouter([
@@ -26,6 +27,7 @@ function App() {
       {path:'shopnow',element:<ShopNow/>},
       {path:'success',element:<Success/>},
       {path:'blogone',element:<BlogOne/>},
+      {path:'*',element:<ErrorPage/>},
       {path:'eye', element:<Eye/>}
     ]
 
