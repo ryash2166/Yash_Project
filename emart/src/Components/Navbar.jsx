@@ -87,9 +87,9 @@ function Navbar1() {
     }
   }
 
+
   return (
     <>
-      {/* <div className=' bg-black h-10'></div> */}
       {["xl"].map((expand) => (
         <Navbar
           key={expand}
@@ -559,7 +559,7 @@ function Navbar1() {
                   <div className="flex max-[1200px]:block">
                     <NavDropdown
                       title={
-                        <div className="flex justify-between items-center max-xl:w-full drop mx-2 gap-2 text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0 ">
+                        <div className="flex justify-between items-center max-xl:w-full drop mx-2 gap-2 text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0  ">
                           Blog
                           <span>
                             <svg
@@ -595,7 +595,7 @@ function Navbar1() {
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                             Blog Two
                           </NavDropdown.Item>
-                          <div className="text-muted  text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <div className="text-muted  text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out" id="hide">
                             <NavLink to="blogthree">Blog Three</NavLink>
                           </div>
                         </div>

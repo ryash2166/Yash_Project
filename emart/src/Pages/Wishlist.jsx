@@ -50,6 +50,7 @@ const Wishlist = () => {
                 </div>
             </div>
         </section>
+        <ToastContainer transition={Zoom} />
       </div>
        ) : (
         <div className='py-[120px] px-[15px] ' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>

@@ -124,10 +124,9 @@ const Checkout = () => {
             <div>
               <div className="mb-[25px] bg-[#fff] shadow-lg">
                 <div className="px-[25px] py-[15px] text-[#565656]">
-                  Have a coupon? &nbsp;{" "}
+                  Have a coupon? &nbsp;
                   <span className="hover:text-black cursor-pointer">
-                    {" "}
-                    Click here to enter your code{" "}
+                    Click here to enter your code
                   </span>
                 </div>
               </div>
@@ -468,15 +467,15 @@ const Checkout = () => {
                           <p className="mb-[20px] text-[13px] text-[#666666]">
                             Your personal data will be used to process your
                             order, support your experience throughout this
-                            website, and for other purposes described in our{" "}
+                            website, and for other purposes described in our
                             <span className="text-black">privacy policy.</span>
                           </p>
                           <button
                             className="h-[50px] bg-black text-white px-[33px] py-[11px] border-[1px] border-black hover:!bg-white hover:!text-black hover:-translate-y-2 duration-300 ease-in-out w-full font-[500] "
                             type="submit"
                           >
-                            {" "}
-                            Place Order{" "}
+                            
+                            Place Order
                           </button>
                           {serverState && (
                             <p
