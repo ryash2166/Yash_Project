@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
 
 export default function ErrorPage() {
   return (
@@ -10,22 +10,21 @@ export default function ErrorPage() {
             Oops! Something went wrong.
           </h1>
           <p className="mt-2 text-gray-600 dark:text-gray-400">
-            We're sorry, but the page you were trying to access is not available. Please try again later or navigate
-            back to the homepage.
+            We're sorry, but the page you were trying to access is not
+            available. Please try again later or navigate back to the homepage.
           </p>
         </div>
         <div className="">
-      <Link
+          <Link
             to="/"
-            className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:!bg-white hover:!text-black focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 duration-300 ease-in-out"
-            prefetch={false}
+            className="inline-flex items-center justify-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:!bg-white hover:!text-black focus:outline-none duration-300 ease-in-out"
           >
             Go back home
           </Link>
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 function TriangleAlertIcon(props) {
@@ -46,5 +45,5 @@ function TriangleAlertIcon(props) {
       <path d="M12 9v4" />
       <path d="M12 17h.01" />
     </svg>
-  )
+  );
 }
