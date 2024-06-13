@@ -64,6 +64,7 @@ const Checkout = () => {
   };
 
   let navigate = useNavigate();
+
   const handleOnSubmit = (values, actions) => {
     axios({
       method: "POST",
@@ -74,7 +75,7 @@ const Checkout = () => {
         actions.setSubmitting(false);
         actions.resetForm();
         handleServerResponse(true, "Your Order was placed!");
-         navigate('/success')
+        navigate("/success");
       })
       .catch((error) => {
         actions.setSubmitting(false);
@@ -474,7 +475,6 @@ const Checkout = () => {
                             className="h-[50px] bg-black text-white px-[33px] py-[11px] border-[1px] border-black hover:!bg-white hover:!text-black hover:-translate-y-2 duration-300 ease-in-out w-full font-[500] "
                             type="submit"
                           >
-                            
                             Place Order
                           </button>
                           {serverState && (
