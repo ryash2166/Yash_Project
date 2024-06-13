@@ -61,8 +61,8 @@ const ContactTwo = () => {
                       height="603"
                       src="https://emart.wpthemedemos.com/wp-content/uploads/2023/03/contact-img-1.jpg"
                       className="w-full h-[100vh] max-[1024px]:h-[40vh] object-cover"
-                      alt=""
-                      loading="lazy"
+                      alt="Contact_picture"
+                      // loading="lazy"
                     />
                   </div>
                 </section>
