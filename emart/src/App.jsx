@@ -14,14 +14,13 @@ import ErrorPage from './Pages/ErrorPage'
 import { AuthenticationGuard } from "./Components/AuthenticationGuard";
 
 function App() {
-
   const router = createBrowserRouter([
     {
       path: '/', element: <Router />,
       children: [
         { path: '/', element: <Main /> },
-        { path: 'cart', element: <AuthenticationGuard component={Cart} /> },
-        { path: 'wishlist', element: <AuthenticationGuard component={Wishlist} /> },
+        { path: 'cart', element: <Cart /> },
+        { path: 'wishlist', element: <Wishlist/> },
         { path: 'contacttwo', element: <ContactTwo /> },
         { path: 'checkout', element: <AuthenticationGuard component={Checkout} /> },
         { path: 'blogthree', element: <BlogThree /> },

@@ -3,13 +3,10 @@ import React from "react";
 import { PageLoader } from "./PageLoader";
 
 export const AuthenticationGuard = ({ component }) => {
-  const Component = withAuthenticationRequired(component, {
+  const Component =  withAuthenticationRequired(component, {
     onRedirecting: () => (
-      <div className="">
         <PageLoader  />
-      </div>
     ),
   });
-
-  return <Component />;
-};
+  return <Component />
+}
