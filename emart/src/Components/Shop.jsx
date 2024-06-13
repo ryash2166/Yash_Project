@@ -3,9 +3,9 @@ import Form from 'react-bootstrap/Form';
 import {useDispatch , useSelector} from 'react-redux'
 import {addToCart, addToWishList} from '../CartRedux/Redux/Action'
 import {ProductData} from '../CartRedux/ProductRedux/ProductAction'
-import heart from '../assets/heart.svg'
-import eye from '../assets/Eyes.svg'
-import cart from '../assets/Cart.svg'
+import heart from '../assets/SVG/heart.svg'
+import eye from '../assets/SVG/Eyes.svg'
+import cart from '../assets/SVG/Cart.svg'
 import { NavLink } from 'react-router-dom';
 import { showSuccessMessage } from '../Components/Alerts';
 import "react-toastify/dist/ReactToastify.css";

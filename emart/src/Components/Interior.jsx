@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import heart from '../assets/heart.svg'
-import eye from '../assets/Eyes.svg'
-import cart from '../assets/Cart.svg'
+import heart from '../assets/SVG/heart.svg'
+import eye from '../assets/SVG/Eyes.svg'
+import cart from '../assets/SVG/Cart.svg'
 import { showSuccessMessage } from "../Components/Alerts";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Zoom } from "react-toastify";

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import logo1 from '../assets/sh1.svg'
-import logo2 from '../assets/sh2.svg'
-import logo3 from '../assets/sh3.svg'
-import logo4 from '../assets/sh4.svg'
+import logo1 from '../assets/SVG/sh1.svg'
+import logo2 from '../assets/SVG/sh2.svg'
+import logo3 from '../assets/SVG/sh3.svg'
+import logo4 from '../assets/SVG/sh4.svg'
 import Shipping from './Common/Shipping';
 
 const ShippingLable = (props) => {

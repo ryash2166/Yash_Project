@@ -2,11 +2,11 @@ import React, { useEffect } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
 import Fern from "../assets/Birds-nest-fern-01.webp";
-import heart from "../assets/heart.svg";
+import heart from "../assets/SVG/heart.svg";
 import { RxStar } from "react-icons/rx";
 import { RxStarFilled } from "react-icons/rx";
-import fire from "../assets/fire.svg";
-import tick from "../assets/tick.svg";
+import fire from "../assets/SVG/fire.svg";
+import tick from "../assets/SVG/tick.svg";
 import { NavLink } from "react-router-dom";
 const Eye = () => {
   return (
