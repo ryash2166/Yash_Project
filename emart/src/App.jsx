@@ -12,8 +12,20 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Success from './Pages/Success'
 import ErrorPage from './Pages/ErrorPage'
 import { AuthenticationGuard } from "./Components/AuthenticationGuard";
+import { PageLoader } from './Components/PageLoader'
+import { useAuth0 } from '@auth0/auth0-react'
 
 function App() {
+  const { isLoading } = useAuth0();
+
+  if (isLoading) {
+    return (
+      <div className="page-layout">
+        <PageLoader />
+      </div>
+    );
+  }
+  
   const router = createBrowserRouter([
     {
       path: '/', element: <Router />,
