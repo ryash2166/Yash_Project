@@ -74,7 +74,7 @@ const Checkout = () => {
         actions.setSubmitting(false);
         actions.resetForm();
         handleServerResponse(true, "Your Order was placed!");
-         navigate('success')
+         navigate('/success')
       })
       .catch((error) => {
         actions.setSubmitting(false);
