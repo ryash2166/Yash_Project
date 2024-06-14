@@ -692,7 +692,7 @@ function Navbar1() {
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="feather feather-user"
+                      className="hover:scale-110"
                     >
                       <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
                       <circle cx="12" cy="7" r="4"></circle>
@@ -720,9 +720,9 @@ function Navbar1() {
               </div>
               <div className="max-xl:hidden">
                 <NavLink to="wishlist">
-                  <div className="flex pr-[20px]">
+                  <div className="flex  pr-[20px]">
                     <span className="wishlist_products_counter_text">
-                      <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" />
+                      <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" className="hover:scale-110" />
                     </span>
                     <span className="-mt-3 text-black">{WishList.length}</span>
                   </div>
@@ -742,7 +742,7 @@ function Navbar1() {
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="feather feather-shopping-bag"
+                      className="hover:scale-110"
                     >
                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                       <line x1="3" y1="6" x2="21" y2="6"></line>
