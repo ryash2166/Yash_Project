@@ -150,8 +150,8 @@ function Navbar1() {
                     onMouseEnter={demoDropdown}
                     onMouseLeave={DemoDropdown}
                   >
-                    <div className="center -ml-[200px]  absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
-                      <div className="h-[1px] bg-[#e5e7eb] -ml-5 w-[1840px]  max-xl:hidden"></div>
+                    <div className="center -ml-[200px] -mt-[6px] absolute bg-white px-[20px]  max-2xl:p-0 max-xl:-ms-[320px]  max-xl:relative">
+                      <div className="h-[1px] bg-[#e5e7eb] -ml-5 w-[1900px]  max-xl:hidden"></div>
                       <section className="flex items-center ms-[300px]  h-[500px]  max-xl:block max-xl:h-auto">
                         <div className="flex max-xl:block py-[50px] max-xl:py-0">
                           <div className="max-xl:hidden max-xl:ml-0">
@@ -295,7 +295,7 @@ function Navbar1() {
                     onMouseEnter={productDropdown}
                     onMouseLeave={ProductDropdown}
                   >
-                    <div className="center -ml-[300px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
+                    <div className="center -ml-[300px] -mt-[6px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
                       <div className="h-[1px] bg-[#e5e7eb]  max-xl:hidden"></div>
                       <section className=" ms-[400px] pr-[230px] justify-center  item-center max-xl:m-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6">
                         <section className="flex max-xl:block">
@@ -452,8 +452,8 @@ function Navbar1() {
                     onMouseEnter={shopDropdown}
                     onMouseLeave={ShopDropdown}
                   >
-                    <div className="center -ml-[420px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
-                      <div className="h-[1px] bg-[#e5e7eb]  max-xl:hidden"></div>
+                    <div className="center -ml-[420px] -mt-[6px] absolute bg-white max-xl:p-0 max-xl:ms-0  max-xl:relative">
+                      <div className="h-[1px] bg-[#e5e7eb] w-[1950px] max-xl:hidden"></div>
                       <section className="ms-[400px] pr-[235px] justify-center max-xl:m-0 max-xl:p-0 max-xl:w-auto flex max-xl:block leading-8 max-xl:leading-6">
                         <section className="flex max-xl:block max-xl:p-0">
                           <div className="pt-[60px] pb-[50px] max-xl:p-0">
@@ -584,7 +584,7 @@ function Navbar1() {
                       onMouseEnter={blogDropdown}
                       onMouseLeave={BlogDropdown}
                     >
-                      <div className="overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white">
+                      <div className="overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6 border-[1px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-36 max-2xl:w-auto">
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                             Default Blog
@@ -629,7 +629,7 @@ function Navbar1() {
                       onMouseEnter={contactDropdown}
                       onMouseLeave={ContactDropdown}
                     >
-                      <div className="overflow-hidden pr-[50px] py-[10px] max-xl:-ml-6 border-[2px] border-[#e5e7eb] max-xl:border-0 bg-white">
+                      <div className="overflow-hidden  pr-[50px] py-[10px] max-xl:-ml-6 border-[1px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-56 max-2xl:w-auto">
                           <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
                             Contact One
