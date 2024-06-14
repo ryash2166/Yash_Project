@@ -40,7 +40,7 @@ const Cart = () => {
           <ToastContainer transition={Zoom} />
         </div>
       ) : (
-        <div className='py-[120px] px-[15px]  ' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
+        <div className='py-[120px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
           <div className='container'>
             <div className='flex max-lg:block'>
               <div className='col-lg-8 col-md-12 col-sm-12 col-xs-12 bg-white shadow-lg shadow-slate-100 p-[30px] mr-[15px] max-lg:mr-0'>
@@ -48,6 +48,9 @@ const Cart = () => {
                   <span>
                     Buy <span className='text-red-600'>$ 1451</span> more for get <strong>Free Shipping!!</strong> 
                   </span>
+                  <div className="progress h-[6px]  mt-3 max-sm:hidden " role="progressbar">
+                    <div className="progress-bar progress-bar-striped bg-danger w-full"></div>
+                  </div>
                   <div className=''>
                     <span className='bg-red-500 h-3 w-full'></span>
                   </div>
@@ -118,7 +121,7 @@ const Cart = () => {
                     </div>
                 </form>
               </div>
-              <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12 p-[30px] h-full ml-[15px] max-xl:ml-0 max-lg:mt-5 bg-white shadow-lg shadow-slate-100'>
+              <div className='col-lg-4 col-md-12 col-sm-12 col-xs-12 p-[30px] xl:ml-2 h-full  max-lg:mt-5 bg-white shadow-lg shadow-slate-100'>
                 <div className="">
                   <h4 className="py-[10px] font-[Jost] ">Cart Totals</h4>
                   <div className="flex justify-between items-center pt-[30px] pb-[20px] border-t-[1px] border-[#d3ced2]">
