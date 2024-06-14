@@ -12,8 +12,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Success from './Pages/Success'
 import ErrorPage from './Pages/ErrorPage'
 import { AuthenticationGuard } from "./Components/AuthenticationGuard";
-import { PageLoader } from './Components/PageLoader'
+
 import { useAuth0 } from '@auth0/auth0-react'
+import PlaceHolder  from './Components/PlaceHolder'
 
 function App() {
   const { isLoading } = useAuth0();
@@ -21,7 +22,7 @@ function App() {
   if (isLoading) {
     return (
       <div className="page-layout">
-        <PageLoader />
+        <PlaceHolder />
       </div>
     );
   }
