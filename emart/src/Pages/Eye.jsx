@@ -83,7 +83,7 @@ const Eye = () => {
                     -21%
                   </span>
                 </p>
-                <p className="flex items-center">
+                <div className="flex items-center">
                   <div className="bg-green-600 rounded-full  mr-[7px] p-[2px]">
                     <img src={tick} alt="" className="w-[16px] h-[16px] " />
                   </div>
@@ -91,7 +91,7 @@ const Eye = () => {
                     Hurry Up!! only <span className="text-green-600">15</span>{" "}
                     items left
                   </span>
-                </p>
+                </div>
                 <button className="mt-[20px] border-[1px] border-black px-[33px] py-[11px] w-full font-[500] hover:-translate-y-2 duration-300 ease-in-out">
                   Add To Cart
                 </button>
