@@ -30,11 +30,10 @@ const Wishlist = () => {
   
   return (
     <div>
-        {/* <Navbar1/> */}
     {wishData.length === 0 ? (
       <div className=''>
         <section className='py-[185px] px-[15px]' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
-            <div className='mx-[272px] max-2xl:mx-[50px] max-md:mx-2'>
+            <div className='container'>
                 <div>
                     <div className=''>
                         <p className='px-[20px] text-[16px] text-[#515151] py-[15px] mb-[35px] bg-[#fff] shadow-lg shadow-slate-100'>Your Wishlist is currently empty.</p>
@@ -54,7 +53,7 @@ const Wishlist = () => {
       </div>
        ) : (
         <div className='py-[120px] px-[15px] ' style={{backgroundImage: 'linear-gradient(226.69deg, #E5F8FF8C 38.63%, #F9E0B014 82.88%)'}}>
-          <div className='mx-[272px] max-2xl:mx-3 max-lg:mx-0'>
+          <div className='container'>
             <div className='p-[30px] flex justify-center bg-white shadow-lg shadow-slate-100 align-middle '>
               <form className="">
                 <table className='table-fixed w-full'>
@@ -75,7 +74,7 @@ const Wishlist = () => {
                     return(
                       <tbody key={item.id}>
                         <tr>
-                          <td className='border-t-[1px] px-[8px] py-[16px] max-md:block'>
+                          <td className='border-t-[1px] px-[16px] py-[16px] max-md:block'>
                             <button onClick={() => Remove_list(item)}>
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -91,8 +90,8 @@ const Wishlist = () => {
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
                             <p className='flex  items-center text-[#666666] max-lg:block'>
-                              <span><del className='pr-[10px]'>${item.price}</del>&nbsp;&nbsp;</span>
-                              <span className=''> ${item.d_price}&nbsp;&nbsp; </span>
+                              <span><del className='pr-[10px] max-md:pr-0'>${item.price}</del>&nbsp;</span>
+                              <span className=''> ${item.d_price}&nbsp;</span>
                               <span className=''>{item.discount}</span>
                               </p>
                           </td>

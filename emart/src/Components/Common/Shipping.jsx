@@ -7,7 +7,7 @@ const Shipping = (props) => {
         <div className='flex items-center justify-center max-md:block '>
             <div className='max-md:flex max-md:justify-center max-md:items-center cursor-pointer max-md:mb-3'>
             <AnimationOnScroll animateIn="animate__fadeInUp">
-                <img decoding="async" src={logo} title="" alt="" loading="lazy" className='max-md:w-[60px] w-[35px] hover:-translate-x-3 duration-300 ease-out'/>
+                <img decoding="async" src={logo} title="" alt="Shipping_Logo" loading="lazy" className='max-md:w-[60px] w-[35px] hover:-translate-x-3 duration-300 ease-out'/>
             </AnimationOnScroll>
             </div>
             <div className='pl-[30px] pr-[15px] max-md:p-0'>

@@ -149,9 +149,11 @@ useEffect(()=>{
                                 <span className='text-white bg-black px-2'>{item.discount}</span>
                             </div>
                             <div className='relative primary-img'>
+                              <NavLink to='/eye'>
                                 <div className='overflow-hidden relative '>
                                     <img  src={item.img} loading='lazy' className='hover:scale-110 duration-[2000ms] ease-in-out' />
                                 </div>
+                              </NavLink>
                                 <div className='absolute left-[25px] top-[20px] max-sm:left-1 max-sm:top-1 max-lg: z-1 shop-icon'>
                                     <div className=''>
                                         <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>

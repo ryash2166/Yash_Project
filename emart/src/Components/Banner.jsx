@@ -58,6 +58,7 @@ function Banner() {
                     src={banner2}
                     className="w-[850px] max-lg:w-[450px] max-xl:w-[600px] max-md:w-auto hover:translate-x-5 duration-400 ease-in-out"
                     loading="lazy"
+                    alt="plants-banner-second"
                   />
                 </div>
               </div>

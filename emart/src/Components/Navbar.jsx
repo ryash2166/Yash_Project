@@ -122,10 +122,14 @@ function Navbar1() {
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="bg-white">
-                <Nav className=" justify-content-center flex-grow-1 pe-3 m-0 bg-white ">
+                <Nav className=" justify-content-center flex-grow-1 pr-3 m-0 bg-white ">
+                  <form action="" className="flex nav-search border w-full lg:hidden mb-[20px] ml-2">
+                  <input type="search" name="" id="" placeholder="Search..." className=" w-full px-[12px] py-[10px] outline-none" />
+                  <button type="nosubmit" className=""></button>
+                  </form>
                   <NavDropdown
                     title={
-                      <div className="flex justify-between items-center gap-2 mx-2 max-xl:w-full drop text-dark max-xl:pb-2  max-[1200px]:border-b-[1px] max-xl:px-0 ">
+                      <div className="flex justify-between items-center gap-2 mx-2 max-xl:w-full drop text-dark max-xl:pb-2 max-[1200px]:border-b-[1px] max-xl:px-0 ">
                         Demo
                         <span>
                           <svg
@@ -640,10 +644,18 @@ function Navbar1() {
                         </div>
                       </div>
                     </NavDropdown>
+                      <NavLink to="wishlist">
+                        <div className="flex justify-between pl-2 mt-2 xl:hidden">
+                          <p className="">Wishlist</p>
+                            <div className="flex">
+                              <span className="wishlist_products_counter_text">
+                                <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" className="" />
+                              </span>
+                              <span className="-mt-3 ml-1 text-black">{WishList.length}</span>
+                            </div>
+                        </div>
+                      </NavLink>
                   </div>
-                  {/* <div className="xl:hidden pl-[10px]">
-                    <NavLink to="wishlist">Wishlist</NavLink>
-                  </div> */}
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>

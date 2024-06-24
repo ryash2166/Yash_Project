@@ -72,27 +72,29 @@ const Interior = () => {
                                 <span className='text-white bg-black px-2'>{item.discount}</span>
                             </div>
                             <div className='relative primary-img'>
+                              <NavLink to='eye'>
                                 <div className='overflow-hidden relative '>
-                                    <img  src={item.img} loading='lazy' className='hover:scale-110 duration-[2000ms] ease-in-out' />
+                                    <img  src={item.img} loading='lazy' alt='ProductImg' className='hover:scale-110 duration-[2000ms] ease-in-out' />
                                 </div>
+                              </NavLink>
                                 <div className='absolute left-[25px] top-[20px] max-sm:left-1 max-sm:top-1 max-lg: z-1 shop-icon'>
                                     <div className=''>
                                         <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
                                             <button onClick={() => Wish_Data(item)} className="p-[12px]">
-                                                <img src={heart} alt="" loading="lazy" />
+                                                <img src={heart} alt="AddToWishlist" loading="lazy" />
                                             </button>
                                         </div>
                                         <NavLink to='eye'>
                                           <div className=' bg-white rounded-full flex justify-center icon-1 mb-3'>
                                             <button className='p-[12px] '>
                                             
-                                                  <img src={eye} alt="" loading='lazy' />
+                                                  <img src={eye} alt="ProductDetails" loading='lazy' />
                                             </button>
                                           </div>
                                         </NavLink>
                                         <div className=' flex justify-center bg-white rounded-full icon-1 mb-3'>
                                             <button onClick={() => Cart_Data(item)} className="p-[12px]">
-                                                <img src={cart} alt="" loading="lazy" />
+                                                <img src={cart} alt="AddToCart" loading="lazy" />
                                             </button>
                                         </div>
                                     </div>

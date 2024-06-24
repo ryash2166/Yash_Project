@@ -42,22 +42,22 @@ const Footer_1 = () => {
                 </div>
                 <div className='flex  items-center gap-3 justify-center w-[300px] max-md:w-[250px]'>
                     <div className='w-[45px]'>
-                        <img src={visa} alt="" />
+                        <img src={visa} alt="PaymentLogo" />
                     </div>
                     <div className='w-[45px]'>
-                        <img src={web} alt="" />
+                        <img src={web} alt="PaymentLogo" />
                     </div>
                     <div className='w-[45px]'>
-                        <img src={maestro} alt="" />
+                        <img src={maestro} alt="MPaymentLogo" />
                     </div>
                     <div className='w-[45px]'>
-                        <img src={jcb} alt="" />
+                        <img src={jcb} alt="PaymentLogo" />
                     </div>
                     <div className='w-[45px]'>
-                        <img src={discover} alt="" />
+                        <img src={discover} alt="PaymentLogo" />
                     </div>
                     <div className='w-[45px]'>
-                        <img src={american} alt="" />
+                        <img src={american} alt="PaymentLogo" />
                     </div>
                 </div>
             </div>
