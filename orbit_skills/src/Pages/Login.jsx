@@ -104,10 +104,10 @@ const Login = () => {
               >
                 {t("main.log")}
               </button>
-              <p class="text-sm text-center">{t('main.have')} <NavLink to='/register' className="text-[#40b5e8] hover:underline">{t('main.register')}</NavLink></p>
+              <p className="text-sm text-center">{t('main.have')} <NavLink to='/register' className="text-[#40b5e8] hover:underline">{t('main.register')}</NavLink></p>
             </form>
           </div>
-          <di className="flex flex-col sm:flex-row items-center  flex-wrap justify-center sm:justify-between gap-4 text-sm py-4">
+          <div className="flex flex-col sm:flex-row items-center  flex-wrap justify-center sm:justify-between gap-4 text-sm py-4">
             <div className="relative flex items-center order-2 sm:order-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -150,7 +150,7 @@ const Login = () => {
                 {t("main.terms")}
               </p>
             </div>
-          </di>
+          </div>
         </div>
       </div>
     </div>
