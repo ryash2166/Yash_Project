@@ -10,6 +10,7 @@ import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
 import { NavLink } from "react-router-dom";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+import Card from "./Common/Card";
 
 const Arrival = () => {
   const dispatch = useDispatch();
@@ -53,11 +54,11 @@ const Arrival = () => {
             {data
               .flat()
               .slice(5 , 10)
-              .map((item) => {
+              .map((item , ind) => {
                 return (
-                    <div className="col-5 col-lg-2 relative" key={item.id}>
+                    <div className="col-5 col-lg-2 relative" key={ind}>
                       <AnimationOnScroll animateIn="animate__fadeIn">
-                        <div className="absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden">
+                        {/* <div className="absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden">
                           <span className="text-white bg-black px-2">{item.discount}</span>
                         </div>
                         <div className="relative primary-img">
@@ -101,7 +102,8 @@ const Arrival = () => {
                               <span>${item.d_price}</span>
                             </p>
                           </div>
-                        </div>
+                        </div> */}
+                            <Card  id={item.id} img={item.img} discount={item.discount} d_price={item.d_price} price={item.price} name={item.name} />
                       </AnimationOnScroll>
                     </div>
                 );

@@ -38,7 +38,7 @@ function App() {
         { path: 'blogthree', element: <BlogThree /> },
         { path: 'shopnow', element: <ShopNow /> },
         { path: 'success', element: <Success /> },
-        { path: 'eye', element: <Eye /> },
+        { path: 'eye/:id', element: <Eye /> },
         { path: '*', element: <ErrorPage /> },
       ]
     }

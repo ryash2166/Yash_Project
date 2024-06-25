@@ -1,36 +1,16 @@
 import React, { useEffect } from "react";
-import heart from '../assets/SVG/heart.svg'
-import eye from '../assets/SVG/Eyes.svg'
-import cart from '../assets/SVG/Cart.svg'
-import { showSuccessMessage } from "../Components/Alerts";
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Zoom } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
-import { NavLink } from "react-router-dom";
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 import interior from '../assets/Interior.webp'
+import Card from "./Common/Card";
+
 const Interior = () => {
+
     const dispatch = useDispatch();
     const data = useSelector((state) => state.ProductReducer);
-
-  
-    const Cart_Data = (item) => {
-      dispatch(addToCart(item));
-      showSuccessMessage(
-        "Your item has been added to the Cart list!",
-        "bottom-right"
-      );
-    };
-  
-    const Wish_Data = (item) => {
-      dispatch(addToWishList(item));
-      showSuccessMessage(
-        "Your item has been added to the Wish list!",
-        "bottom-right"
-      );
-    };
   
     useEffect(() => {
       dispatch(ProductData());
@@ -65,10 +45,10 @@ const Interior = () => {
 
           <section className="w-[57%] pl-5 max-md:px-1 max-md:block max-md:w-[100%] max-md:p-0">
             <div className="flex flex-wrap row">
-                {data.flat().slice(5 , 11).map((item) => {
+                {data.flat().slice(5 , 11).map((item , ind) => {
                     return(
-                        <div className="col-6 col-md-4 px-2 relative" key={item.id}>
-                            <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
+                        <div   className="col-6 col-md-4 px-2 relative" key={ind}>
+                            {/* <div className='absolute right-[25px] text-[13px] top-[20px] flex items-center justify-center  z-1 max-md:hidden'>
                                 <span className='text-white bg-black px-2'>{item.discount}</span>
                             </div>
                             <div className='relative primary-img'>
@@ -106,7 +86,8 @@ const Interior = () => {
                                     <span>${item.d_price}</span>
                                 </p>
                             </div>
-                            </div>
+                            </div> */}
+                            <Card  id={item.id} img={item.img} discount={item.discount} d_price={item.d_price} price={item.price} name={item.name} />
                         </div>
                     )
                 })}

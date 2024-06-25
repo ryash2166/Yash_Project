@@ -67,17 +67,17 @@ const Cart = () => {
                         <th className='font-[400] align-middle pr-0 pb-[9px] !pl-0 text-[#000a12] text-[16px] !leading-[28px] text-right'>Total</th>
                       </tr>
                     </thead>
-                    {CartData.map((item) => {
+                    {CartData.map((item , ind) => {
                       return(
-                        <tbody key={item.id}>
+                        <tbody key={ind}>
                           <tr className=''>
                             <td className='border-t-[1px] py-[25px] pr-[8px] max-md:block'>
-                              <button onClick={() => Remove_cart(item)}>
+                              <a className='cursor-pointer' onClick={() => Remove_cart(item)}>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                   <circle cx="12" cy="12" r="10"></circle>
                                   <line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>
                                 </svg>
-                              </button>
+                              </a>
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[10px] max-md:block'>
                               <div className=''>

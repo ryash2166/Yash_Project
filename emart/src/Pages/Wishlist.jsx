@@ -70,17 +70,17 @@ const Wishlist = () => {
                       <th className='border-t-[1px] max-md:hidden px-[16px] py-[16px] text-[#000a12] text-[16px] text-left align-middle font-[500]'>&nbsp;</th>
                     </tr>
                   </thead>
-                  {wishData.map((item) => {
+                  {wishData.map((item , ind) => {
                     return(
-                      <tbody key={item.id}>
+                      <tbody key={ind}>
                         <tr>
                           <td className='border-t-[1px] px-[16px] py-[16px] max-md:block'>
-                            <button onClick={() => Remove_list(item)}>
+                            <a className='cursor-pointer' onClick={() => Remove_list(item)}>
                               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                                 <circle cx="12" cy="12" r="10"></circle>
                                 <line x1="15" y1="9" x2="9" y2="15"></line><line x1="9" y1="9" x2="15" y2="15"></line>
                               </svg>
-                            </button>
+                            </a>
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
                             <img src={item.img} alt="" className='max-w-[100px] h-[100px] w-[100px] object-cover' />
@@ -105,11 +105,11 @@ const Wishlist = () => {
                             <h1 className='text-[16px] text-[#666666]'>{item.description}</h1>
                           </td>
                           <td className=' border-t-[1px] max-md:border-0 px-[10px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
-                              <button className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
+                              <a className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
                                 <span className='mx-auto text-center tracking-[2px]  font-[Jost]  font-[500] max-lg:hidden max-md:block'>Add to Cart </span>
                                 <span className='mx-auto text-center tracking-[2px] px-[25px]  font-[Jost] text-[20px] max-md:hidden max-lg:block max-xl:hidden hidden'><IoCartOutline /></span>
 
-                              </button>
+                              </a>
                           </td>
                         </tr>
                       </tbody>
