@@ -1,10 +1,11 @@
-import { Visibility, VisibilityOff } from "@mui/icons-material";
-import { IconButton, Input, InputAdornment } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
-import { Link, NavLink } from "react-router-dom";
-
+import { NavLink } from "react-router-dom";
+import { Formik, Field, Form, ErrorMessage } from "formik";
+import eye from "../assets/SVG/eye.svg";
+import eyeoff from "../assets/SVG/eyeoff.svg";
+import * as Yup from 'yup'
 const Login = () => {
   const { t, i18n } = useTranslation();
 
@@ -13,28 +14,8 @@ const Login = () => {
     in: { title: "Indonesian" },
   };
 
-  const [values, setValues] = React.useState({
-    password: "",
-    showPassword: false,
-  });
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-
-  const handlePasswordChange = (prop) => (event) => {
-    setValues({
-      ...values,
-      [prop]: event.target.value,
-    });
-  };
+  const [password, setPassword] = useState("");
+  const [isRevealPassword, setIsRevealPassword] = useState(false);
 
   return (
     <div className="flex flex-col item-center justify-center  min-h-screen bg-[#f2f6f9]">
@@ -52,60 +33,69 @@ const Login = () => {
             </h3>
             <p className="mx-auto mt-3 text-xs font-normal text-center sm:text-sm text-gray-400 md:max-w-xs">
               {t("main.to")}
-              <span className="font-semibold">Orbit SSO</span>{" "}
-              {t("main.details")}{" "}
+              <span className="font-semibold">Orbit SSO</span>
+              {t("main.details")}
               <span className="font-semibold">{t("main.in")}</span>.
             </p>
-            <form action="" autoComplete="off" className="grid gap-4 mt-6 px-4">
-              <div className="w-full text-left ">
-                <label className="relative block mb-2 text-sm font-medium text-black">
-                  {t("main.email")} <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  type="text"
-                  placeholder={t("main.PE")}
-                  className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
-                />
-              </div>
-              <div className="w-full text-left">
-                <label className="relative block mb-2 text-sm font-medium text-black">
-                  {t("main.Password")} <span className="text-red-500">*</span>
-                </label>
-                <Input
-                  type={values.showPassword ? "text" : "password"}
-                  placeholder={t("main.PP")}
-                  className=" bg-white focus:outline-none px-5 py-2.5  text-sm placeholder:text-mute w-full outline-none focus:border focus:border-primary transition border border-gray rounded-md "
-                  onChange={handlePasswordChange("password")}
-                  value={values.password}
-                  endAdornment={
-                    <InputAdornment position="end">
-                      <IconButton
-                        onClick={handleClickShowPassword}
-                        onMouseDown={handleMouseDownPassword}
-                      >
-                        {values.showPassword ? (
-                          <Visibility />
-                        ) : (
-                          <VisibilityOff />
-                        )}
-                      </IconButton>
-                    </InputAdornment>
-                  }
-                />
-              </div>
-              <div className="text-right w-full">
-                <p className="px-0 py-0.5 text-sm  text-[#40b5e8] hover:!text-sky-500 hover:underline">
-                  {t("main.password")}
+            <Formik>
+              <Form className="grid gap-4 mt-6 px-4">
+                <div className="w-full text-left ">
+                  <label className="relative block mb-2 text-sm font-medium text-black">
+                    {t("main.email")} <span className="text-red-500">*</span>
+                  </label>
+                  <Field
+                    type="email"
+                    name="email"
+                    placeholder={t("main.PE")}
+                    className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
+                  />
+                </div>
+                <div className="w-full text-left">
+                  <label className="relative block mb-2 text-sm font-medium text-black">
+                    {t("main.Password")} <span className="text-red-500">*</span>
+                  </label>
+                  <Field
+                    type={isRevealPassword ? "text" : "password"}
+                    placeholder={t("main.PP")}
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    autoComplete="current-password"
+                    className=" bg-white focus:outline-none px-5 py-2.5  text-sm placeholder:text-mute w-full outline-none focus:border focus:border-primary transition border border-gray rounded-md "
+                  />
+                  <span className="flex justify-end items-center">
+                    <img
+                      src={isRevealPassword ? eye : eyeoff}
+                      alt=""
+                      onClick={() =>
+                        setIsRevealPassword((prevState) => !prevState)
+                      }
+                      className="h-[20px] mb-10 absolute mr-4"
+                    />
+                  </span>
+                </div>
+                <div className="text-right w-full">
+                  <p className="px-0 py-0.5 text-sm  text-[#40b5e8] hover:!text-sky-500 hover:underline">
+                    {t("main.password")}
+                  </p>
+                </div>
+                <button
+                  type="submit"
+                  className="inline-flex items-center justify-center gap-1.5 rounded-md py-2.5 px-4 transition text-sm undefined text-white bg-[#40b5e8] hover:bg-sky-500 hover:text-white"
+                >
+                  {t("main.log")}
+                </button>
+                <p className="text-sm text-center">
+                  {t("main.have")}
+                  <NavLink
+                    to="/register"
+                    className="text-[#40b5e8] hover:underline"
+                  >
+                    {t("main.register")}
+                  </NavLink>
                 </p>
-              </div>
-              <button
-                type="button"
-                className="inline-flex items-center justify-center gap-1.5 rounded-md py-2.5 px-4 transition text-sm undefined text-white bg-[#40b5e8] hover:bg-sky-500 hover:text-white"
-              >
-                {t("main.log")}
-              </button>
-              <p className="text-sm text-center">{t('main.have')} <NavLink to='/register' className="text-[#40b5e8] hover:underline">{t('main.register')}</NavLink></p>
-            </form>
+              </Form>
+            </Formik>
           </div>
           <div className="flex flex-col sm:flex-row items-center  flex-wrap justify-center sm:justify-between gap-4 text-sm py-4">
             <div className="relative flex items-center order-2 sm:order-1">

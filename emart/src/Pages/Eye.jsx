@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
 import Tab from "react-bootstrap/Tab";
@@ -20,19 +20,19 @@ import { ToastContainer, Zoom } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, addToWishList } from "../CartRedux/Redux/Action";
 import { CiHeart } from "react-icons/ci";
+import Card from "../Components/Common/Card";
+import data from '../CartRedux/ProductRedux/Data/Emart.json'
 
 const Eye = () => {
-  const data = useSelector((state) => state.ProductReducer);
+
+  const dispatch = useDispatch();
 
   const ID = useParams();
   const ProductInfo = data.filter((ProductsData) => {
     return ProductsData.id === Number(ID.id);
   });
 
-  const { name, img, id, d_price } = ProductInfo[0]
-
-  console.log("hii",ProductInfo);
-  const dispatch = useDispatch();
+  const { name, img, id, d_price , type} = ProductInfo[0] 
 
   const CartData = useSelector((state) => state.Reducer);
   const WishData = useSelector((state) => state.WishReducer);
@@ -50,22 +50,16 @@ const Eye = () => {
           "bottom-right"
         );
   };
-
+  
   const Wish_Data = (ProductInfo) => {
     dispatch(addToWishList(ProductInfo));
-    let find = WishData.findIndex((item) => item.id === ProductInfo.id);
-    find === -1
-      ? showSuccessMessage(
-          "Your item has been added to the Wish list!",
-          "bottom-right"
-        )
-      : showErrorMessage(
-          "Item already in Wish List. Please review and checkout promptly.",
-          "bottom-right"
-        );
+    let find = WishData.findIndex(item => item.id === ProductInfo.id)
+    find === -1 ? showSuccessMessage(
+      "Your item has been added to the Wish list!",
+      "bottom-right"
+    ) : showErrorMessage("Item already in Wish List. Please review and checkout promptly.","bottom-right")
   };
-
-
+  
   return (
     <div>
       <div className="container py-[80px] max-lg:py-0">
@@ -73,7 +67,7 @@ const Eye = () => {
           <div className="pt-[90px] pb-[20px] pr-[15px]">
             <section>
               <p>
-                Home / Indoor Plants{" "}
+                Home / {type}&nbsp;
                 <span className="max-sm:hidden">/ {name}</span>
               </p>
             </section>
@@ -109,7 +103,7 @@ const Eye = () => {
                 </h4>
                 <div className="absolute top-0 right-0">
                   <button
-                    onClick={() => Wish_Data(ProductInfo)}
+                    onClick={() => Wish_Data(ProductInfo[0])}
                     className=""
                   >
                     <div className="border-[1px] rounded-full flex justify-center items-center w-[50px] h-[50px] relative  hover:bg-[#d51243] hover:text-[#CFCFCF] transition-all">
@@ -166,14 +160,14 @@ const Eye = () => {
                       <span className="pl-3 text-gray-500">
                         <strong className="text-black">
                           Estimated Delivery:
-                        </strong>{" "}
+                        </strong>
                         Within 5 - 7 days
                       </span>
                     </li>
                     <li className="flex items-center pb-[5px]">
                       <IoCartOutline className="text-[30px]" />
                       <span className="pl-3 text-gray-500">
-                        <strong className="text-black">Free Shipping:</strong>{" "}
+                        <strong className="text-black">Free Shipping:</strong>
                         On orders over $1499 and above
                       </span>
                     </li>
@@ -181,12 +175,12 @@ const Eye = () => {
                 </div>
                 <div className="mb-[20px] flex justify-between">
                   <span className="pl-2">
-                    <strong className="text-black font-[600]">SKU:</strong>{" "}
+                    <strong className="text-black font-[600]">SKU:</strong>
                     MPP50020
                   </span>
                   <span className="pr-2">
-                    <strong className="text-black font-[600]">Category:</strong>{" "}
-                    Indoor Plants
+                    <strong className="text-black font-[600]">Category:</strong>
+                    &nbsp;{type}
                   </span>
                 </div>
                 <div className="bg-[#efefef] text-center p-[30px] w-full ">
@@ -258,7 +252,7 @@ const Eye = () => {
                             Commitment are by world across ui first charts. 2
                             unit live whatever diarize when closing all know.
                             Now anomalies shelf-ware you win-win-win me close
-                            plane. Don’t stop then tomorrow work. Creep
+                            plane. Don't stop then tomorrow work. Creep
                             procrastinating break support sky.
                           </p>
                         </div>
@@ -324,6 +318,21 @@ const Eye = () => {
             </div>
           </div>
         </div>
+        <section className="px-[15px] max-md:px-0 pb-[65px] mt-[40px] ">
+          <div className="font-[Jost] text-[21px] text-[#000A12] pb-[10px] max-md:pl-6 max-sm:pl-4">Related Products</div>
+          <div className="flex row justify-between g-0 max-md:justify-around ">
+            {data
+              .flat()
+              .slice(2 , 7)
+              .map((item , ind) => {
+                return (
+                    <div className="col-5 col-lg-2 relative" key={ind}>
+                      <Card id={item.id} img={item.img} discount={item.discount} d_price={item.d_price} price={item.price} name={item.name} />
+                    </div>
+                );
+              })}
+        </div>
+      </section>
       </div>
       <ToastContainer transition={Zoom} />
       <Mail />

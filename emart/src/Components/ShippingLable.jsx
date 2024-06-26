@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import logo1 from '../assets/SVG/sh1.svg'
 import logo2 from '../assets/SVG/sh2.svg'
 import logo3 from '../assets/SVG/sh3.svg'
 import logo4 from '../assets/SVG/sh4.svg'
 import Shipping from './Common/Shipping';
 
-const ShippingLable = (props) => {
+const ShippingLable = () => {
     return (
         <section className='py-[40px] border-1 bg-[#e7e2dd]'>
             <div className='row mx-[42px] max-lg:gap-y-10 max-xl:m-0'>

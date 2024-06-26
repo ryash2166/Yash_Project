@@ -83,7 +83,9 @@ const Wishlist = () => {
                             </a>
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px] py-[16px] align-middle max-md:block'>
-                            <img src={item.img} alt="" className='max-w-[100px] h-[100px] w-[100px] object-cover' />
+                            <NavLink to={`/eye/${item.id}`}>
+                              <img src={item.img} alt="" className='max-w-[100px] h-[100px] w-[100px] object-cover' />
+                            </NavLink>
                           </td>
                           <td className='border-t-[1px] max-md:border-0 px-[16px]  py-[16px] align-middle text-[#666666] max-md:block'>
                             <p className='ml-2 max-md:ml-0'>{item.name}</p>
@@ -105,10 +107,9 @@ const Wishlist = () => {
                             <h1 className='text-[16px] text-[#666666]'>{item.description}</h1>
                           </td>
                           <td className=' border-t-[1px] max-md:border-0 px-[10px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
-                              <a className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
+                              <a className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black cursor-pointer hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
                                 <span className='mx-auto text-center tracking-[2px]  font-[Jost]  font-[500] max-lg:hidden max-md:block'>Add to Cart </span>
                                 <span className='mx-auto text-center tracking-[2px] px-[25px]  font-[Jost] text-[20px] max-md:hidden max-lg:block max-xl:hidden hidden'><IoCartOutline /></span>
-
                               </a>
                           </td>
                         </tr>

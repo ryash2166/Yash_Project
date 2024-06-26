@@ -1,11 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import { Alert } from "@mui/material";
-// import { useNavigate } from "react-router-dom";
 
 const formSchema = Yup.object().shape({
   email: Yup.string()
@@ -21,8 +20,7 @@ const formSchema = Yup.object().shape({
 });
 
 const ContactTwo = () => {
-  // let navigate = useNavigate()
-  const Contact = useRef()
+
   /* Server State Handling */
   const [serverState, setServerState] = useState();
   const handleServerResponse = (ok, msg) => {
@@ -47,7 +45,7 @@ const ContactTwo = () => {
   };
 
   return (
-    <div ref={Contact}>
+    <div>
       <div className="pt-[70px] pb-3">
         <div>
           <section>

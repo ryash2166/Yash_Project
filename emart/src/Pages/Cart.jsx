@@ -48,7 +48,7 @@ const Cart = () => {
                   <span>
                     Buy <span className='text-red-600'>$ 1451</span> more for get <strong>Free Shipping!!</strong> 
                   </span>
-                  <div className="progress h-[6px]  mt-3 max-sm:hidden " role="progressbar">
+                  <div className="progress h-[6px]  mt-3 max-sm:hidden" role="progressbar">
                     <div className="progress-bar progress-bar-striped bg-danger w-full"></div>
                   </div>
                   <div className=''>
@@ -80,8 +80,10 @@ const Cart = () => {
                               </a>
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[10px] max-md:block'>
-                              <div className=''>
-                                <img src={item.img} alt="" className='max-w-[102px] h-[102px] w-[102px] object-cover '/>
+                              <div>
+                                <NavLink to={`/eye/${item.id}`}>
+                                  <img src={item.img} alt="" className='max-w-[102px] h-[102px] w-[102px] object-cover '/>
+                                </NavLink>
                               </div>
                             </td>
                             <td className='border-t-[1px] py-[25px] pr-[50px] max-md:block'>

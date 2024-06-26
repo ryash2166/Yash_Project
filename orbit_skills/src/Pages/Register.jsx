@@ -1,9 +1,10 @@
-import React, { useRef } from "react";
-import { Visibility, VisibilityOff, Watch } from "@mui/icons-material";
-import { IconButton, Input, InputAdornment, InputLabel } from "@mui/material";
+import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Suspense } from "react";
 import { NavLink } from "react-router-dom";
+import eye from "../assets/SVG/eye.svg";
+import eyeoff from "../assets/SVG/eyeoff.svg";
+import { Formik, Field, Form, ErrorMessage } from "formik";
 
 const Register = () => {
   const { t, i18n } = useTranslation();
@@ -12,29 +13,8 @@ const Register = () => {
     en: { title: "English" },
     in: { title: "Indonesian" },
   };
-
-  const [values, setValues] = React.useState({
-    password: "",
-    showPassword: false,
-  });
-
-  const handleClickShowPassword = () => {
-    setValues({
-      ...values,
-      showPassword: !values.showPassword,
-    });
-  };
-
-  const handleMouseDownPassword = (event) => {
-    event.preventDefault();
-  };
-
-  const handlePasswordChange = (prop) => (event) => {
-    setValues({
-      ...values,
-      [prop]: event.target.value,
-    });
-  };
+  const [password, setPassword] = useState("");
+  const [isRevealPassword, setIsRevealPassword] = useState(false);
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-[##f2f6f9] py-10">
@@ -54,14 +34,16 @@ const Register = () => {
               To create account, please enter your details below and click on
               <b>Continue</b>.
             </p>
-            <form action="">
+            <Formik>
+
+            <Form action="">
               <div className="grid gap-4 mt-6">
                 <div className="w-full text-left">
                   <label className="relative block mb-2 text-sm font-medium text-black">
                     {t("main.first_name")}
                     <span className="text-red-500">*</span>
                   </label>
-                  <Input
+                  <Field
                     type="text"
                     placeholder={t("main.PF")}
                     className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
@@ -69,23 +51,21 @@ const Register = () => {
                 </div>
                 <div className="w-full text-left">
                   <label className="relative block mb-2 text-sm font-medium text-black">
-                    {t('main.last_name')}
+                    {t("main.last_name")}
                     <span className="text-red-500">*</span>
                   </label>
-                  <Input
+                  <Field
                     type="text"
                     placeholder={t("main.PL")}
                     className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
                   />
                 </div>
                 <div className="w-full text-left">
-                  <label
-                    className="relative block mb-2 text-sm font-medium text-black"
-                  >
-                    {t('main.Phone')}
+                  <label className="relative block mb-2 text-sm font-medium text-black">
+                    {t("main.Phone")}
                     <span className="text-red-500">*</span>
                   </label>
-                  <Input
+                  <Field
                     type="number"
                     placeholder={t("main.Phone_holder")}
                     className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
@@ -95,7 +75,7 @@ const Register = () => {
                   <label className="relative block mb-2 text-sm font-medium text-black">
                     {t("main.email")} <span className="text-red-500">*</span>
                   </label>
-                  <Input
+                  <Field
                     type="text"
                     placeholder={t("main.PE")}
                     className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
@@ -104,48 +84,40 @@ const Register = () => {
                 <div>
                   <div className="w-full text-left">
                     <label className="relative block mb-2 text-sm font-medium text-black">
-                      {t("main.Password")}
+                      {t("main.Password")}{" "}
                       <span className="text-red-500">*</span>
                     </label>
-                    <Input
-                      type={values.showPassword ? "text" : "password"}
+                    <Field
+                      type={isRevealPassword ? "text" : "password"}
                       placeholder={t("main.PP")}
+                      name="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                      autoComplete="current-password"
                       className=" bg-white focus:outline-none px-5 py-2.5  text-sm placeholder:text-mute w-full outline-none focus:border focus:border-primary transition border border-gray rounded-md "
-                      onChange={handlePasswordChange("password")}
-                      value={values.password}
-                      endAdornment={
-                        <InputAdornment position="end">
-                          <IconButton
-                            onClick={handleClickShowPassword}
-                            onMouseDown={handleMouseDownPassword}
-                          >
-                            {values.showPassword ? (
-                              <Visibility />
-                            ) : (
-                              <VisibilityOff />
-                            )}
-                          </IconButton>
-                        </InputAdornment>
-                      }
                     />
+                    <span className="flex justify-end items-center ">
+                      <img
+                        src={isRevealPassword ? eye : eyeoff}
+                        alt=""
+                        onClick={() =>
+                          setIsRevealPassword((prevState) => !prevState)
+                        }
+                        className="h-[20px] mb-10 absolute mr-4"
+                      />
+                    </span>
                   </div>
-                  <ul className="text-[10px] mt-2 mb-2 ml-5 text-left list-disc">
-                    <li className="text-xs text-gray-400">
-                      {t('main.P1')}
-                    </li>
-                    <li className="text-xs text-gray-400">
-                      {t('main.P2')}
-                    </li>
-                    <li className="text-xs text-gray-400">
-                      {t('main.P3')}
-                    </li>
+                  <ul className="text-[10px] mt-2  ml-5 text-left list-disc">
+                    <li className="text-xs text-gray-400">{t("main.P1")}</li>
+                    <li className="text-xs text-gray-400">{t("main.P2")}</li>
+                    <li className="text-xs text-gray-400">{t("main.P3")}</li>
                   </ul>
                 </div>
                 <div className="w-full text-left">
                   <label className="relative block mb-2 text-sm font-medium text-black">
                     {t("main.Confirm")} <span className="text-red-500">*</span>
                   </label>
-                  <Input
+                  <Field
                     type="text"
                     placeholder={t("main.PCP")}
                     className=" bg-white focus:outline-none px-5 py-2.5  text-sm placeholder:text-mute w-full outline-none focus:border focus:border-primary transition border border-gray rounded-md "
@@ -164,7 +136,8 @@ const Register = () => {
                   {t("main.in")}
                 </NavLink>
               </p>
-            </form>
+            </Form>
+            </Formik>
           </div>
           <div className="flex flex-col sm:flex-row items-center  flex-wrap justify-center sm:justify-between gap-4 text-sm py-4">
             <div className="relative flex items-center order-2 sm:order-1">
