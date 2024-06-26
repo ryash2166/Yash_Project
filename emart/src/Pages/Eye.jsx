@@ -161,14 +161,14 @@ const Eye = () => {
                         <strong className="text-black">
                           Estimated Delivery:
                         </strong>
-                        Within 5 - 7 days
+                        &nbsp;Within 5 - 7 days
                       </span>
                     </li>
                     <li className="flex items-center pb-[5px]">
                       <IoCartOutline className="text-[30px]" />
                       <span className="pl-3 text-gray-500">
                         <strong className="text-black">Free Shipping:</strong>
-                        On orders over $1499 and above
+                        &nbsp;On orders over $1499 and above
                       </span>
                     </li>
                   </ul>
@@ -184,7 +184,7 @@ const Eye = () => {
                   </span>
                 </div>
                 <div className="bg-[#efefef] text-center p-[30px] w-full ">
-                  <p className="pb-[8px]">Online payment option</p>
+                  <p className="pb-[8px] font-[500]">Online payment option</p>
                   <div className="flex justify-center gap-x-3">
                     <img
                       src={visa}
