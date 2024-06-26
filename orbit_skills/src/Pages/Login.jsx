@@ -6,6 +6,20 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import eye from "../assets/SVG/eye.svg";
 import eyeoff from "../assets/SVG/eyeoff.svg";
 import * as Yup from 'yup'
+import axios from "axios";
+
+const formSchema = Yup.object().shape({
+  email: Yup.string()
+    .email("* Email is Invalid.")
+    .required("* Email is Required."),
+  password: Yup.string()
+    // .required("* Password is Required.")
+    .min(8, 'Password must be 8 characters long')
+    .matches(/[0-9]/, 'Password requires a number')
+    .matches(/[a-z]/, 'Password requires a lowercase letter')
+    .matches(/[A-Z]/, 'Password requires an uppercase letter')
+    .matches(/[^\w]/, 'Password requires a symbol'),
+});
 const Login = () => {
   const { t, i18n } = useTranslation();
 
@@ -14,6 +28,9 @@ const Login = () => {
     in: { title: "Indonesian" },
   };
 
+  const handleOnSubmit = () => {
+    console.log('em');
+  }
   const [password, setPassword] = useState("");
   const [isRevealPassword, setIsRevealPassword] = useState(false);
 
@@ -37,7 +54,13 @@ const Login = () => {
               {t("main.details")}
               <span className="font-semibold">{t("main.in")}</span>.
             </p>
-            <Formik>
+            <Formik
+            initialValues={{
+              email: "",
+              password: "",
+            }}
+            onSubmit={handleOnSubmit}
+            validationSchema={formSchema}>
               <Form className="grid gap-4 mt-6 px-4">
                 <div className="w-full text-left ">
                   <label className="relative block mb-2 text-sm font-medium text-black">
@@ -49,6 +72,7 @@ const Login = () => {
                     placeholder={t("main.PE")}
                     className="bg-white focus:outline-none px-5 py-2.5 text-sm placeholder:text-mute w-full outline-none focus:border focus:border-[#40b5e8] transition border border-gray rounded-md undefined"
                   />
+                  <ErrorMessage name="email" component="p"/>
                 </div>
                 <div className="w-full text-left">
                   <label className="relative block mb-2 text-sm font-medium text-black">
@@ -73,6 +97,8 @@ const Login = () => {
                       className="h-[20px] mb-10 absolute mr-4"
                     />
                   </span>
+                  <ErrorMessage name="password" component="p"/>
+
                 </div>
                 <div className="text-right w-full">
                   <p className="px-0 py-0.5 text-sm  text-[#40b5e8] hover:!text-sky-500 hover:underline">
