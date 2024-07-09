@@ -7,12 +7,12 @@ import axios from "axios";
 import { Alert } from "@mui/material";
 
 const formSchema = Yup.object().shape({
-  email: Yup.string()
+  Email: Yup.string()
     .email("* Email is Invalid.")
     .required("* Email is Required."),
-  message: Yup.string().required("* Message is Required."),
-  name: Yup.string().required("* Name is Required."),
-  phone: Yup.string()
+  Message: Yup.string().required("* Message is Required."),
+  Name: Yup.string().required("* Name is Required."),
+  Phone: Yup.string()
     .required("* Contact Number is Required.")
     .matches(/^[0-9]+$/, "* Contact Number must be only digits.")
     .min(10, "* Contact Number must be at least 10 digits.")
@@ -140,10 +140,10 @@ const ContactTwo = () => {
                       <div className="pl-[50px] pr-[30px] max-xl:pl-[20px] max-md:pr-[20px]">
                         <Formik
                           initialValues={{
-                            email: "",
-                            message: "",
-                            name: "",
-                            phone: "",
+                            Email: "",
+                            Message: "",
+                            Name: "",
+                            Phone: "",
                           }}
                           onSubmit={handleOnSubmit}
                           validationSchema={formSchema}
@@ -155,19 +155,19 @@ const ContactTwo = () => {
                                   <div className="form-row">
                                     <p>
                                       <span className="text-[#666]">
-                                        <label htmlFor="name"></label>
+                                        <label htmlFor="Name"></label>
                                         <Field
                                           size="40"
                                           className="w-[100%] h-[50px]  border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
                                           aria-required="true"
                                           aria-invalid="false"
                                           placeholder="Name"
-                                          name="name"
-                                          id="name"
+                                          name="Name"
+                                          id="Name"
                                           type="text"
                                         />
                                         <ErrorMessage
-                                          name="name"
+                                          name="Name"
                                           className="text-red-500 errorMsg"
                                           component="span"
                                         />
@@ -178,19 +178,19 @@ const ContactTwo = () => {
                                 <div className="col-lg-12 col-md-12 col-xs-12">
                                   <p>
                                     <span className="text-[#666]">
-                                      <label htmlFor="email"></label>
+                                      <label htmlFor="Email"></label>
                                       <Field
                                         size="40"
                                         className="w-[100%] h-[50px] mt-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
                                         aria-required="true"
                                         aria-invalid="false"
                                         placeholder="Email Address"
-                                        type="email"
-                                        id="email"
-                                        name="email"
+                                        type="Email"
+                                        id="Email"
+                                        name="Email"
                                       />
                                       <ErrorMessage
-                                        name="email"
+                                        name="Email"
                                         className="text-red-500 errorMsg"
                                         component="span"
                                       />
@@ -200,7 +200,7 @@ const ContactTwo = () => {
                                 <div className="col-lg-12 col-md-12 col-xs-12">
                                   <p>
                                     <span className="text-[#666]">
-                                      <label htmlFor="phone"></label>
+                                      <label htmlFor="Phone"></label>
                                       <Field
                                         size="40"
                                         className="w-[100%] h-[50px] mt-[20px] border-[1px] border-solid border-[#d9d9d9] leading-[28px] text-[16px] pl-[20px] placeholder-black outline-none"
@@ -208,11 +208,11 @@ const ContactTwo = () => {
                                         aria-invalid="false"
                                         placeholder="Phone"
                                         type="text"
-                                        name="phone"
-                                        id="phone"
+                                        name="Phone"
+                                        id="Phone"
                                       />
                                       <ErrorMessage
-                                        name="phone"
+                                        name="Phone"
                                         className="text-red-500 errorMsg"
                                         component="span"
                                       />
@@ -222,7 +222,7 @@ const ContactTwo = () => {
                                 <div className="col-lg-12 col-md-12 col-xs-12">
                                   <p>
                                     <span className="text-[#666]">
-                                      <label htmlFor="message"></label>
+                                      <label htmlFor="Message"></label>
                                       <Field
                                         cols="40"
                                         rows="10"
@@ -230,12 +230,12 @@ const ContactTwo = () => {
                                         aria-required="true"
                                         aria-invalid="false"
                                         placeholder="Message"
-                                        name="message"
-                                        id="message"
+                                        name="Message"
+                                        id="Message"
                                         component="textarea"
                                       ></Field>
                                       <ErrorMessage
-                                        name="message"
+                                        name="Message"
                                         className="text-red-500 errorMsg"
                                         component="span"
                                       />

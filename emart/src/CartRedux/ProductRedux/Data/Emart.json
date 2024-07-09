@@ -6,7 +6,7 @@
     "d_price": 30.00,
     "discount": "-33%",
     "type": "Indoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/LzGYJQw/Birds-Nest-Leslie-Fern.webp"
   },
   {
@@ -16,7 +16,7 @@
     "d_price": 48.00,
     "discount": "-20%",
     "type": "Outdoor Plants",
-    "description": "Hurry up only 13 items left",
+    "stoke": "Hurry up only 13 items left",
     "img": "https://i.ibb.co/hVJx4HS/Monstera.webp"
   },
   {
@@ -26,7 +26,7 @@
     "d_price": 70.00,
     "discount": "-20%",
     "type": "Outdoor Plants",
-    "description": "Hurry up only 11 items left",
+    "stoke": "Hurry up only 11 items left",
     "img": "https://i.ibb.co/GvBFP62/Haworthia.webp"
   },
   {
@@ -35,7 +35,7 @@
     "price": 60.00,
     "d_price": 60.00,
     "type": "Indoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/hVJx4HS/Monstera.webp"
   },
   {
@@ -45,7 +45,7 @@
     "d_price": 54.00,
     "discount": "-21%",
     "type": "Outdoor Plants",
-    "description": "Hurry up only 15 items left",
+    "stoke": "Hurry up only 15 items left",
     "img": "https://i.ibb.co/23gBcS0/Birds-nest-fern-01.webp"
   },
   {
@@ -54,7 +54,7 @@
     "price": 57.00,
     "d_price": 57.00,
     "type": "Indoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/wL597sr/Rubber-Plant.webp"
   },
   {
@@ -64,7 +64,7 @@
     "d_price": 64.00,
     "discount": "-11%",
     "type": "Outdoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/jJXmFHP/peace-lily-02.webp"
   },
   {
@@ -73,7 +73,7 @@
     "price": 67.00,
     "d_price": 67.00,
     "type": "Indoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/JxxhhVW/Succulent-Plant.webp"
   },
   {
@@ -82,7 +82,7 @@
     "price": 67.00,
     "d_price": 67.00,
     "type": "Outdoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/qpd8w5v/barrel-cactus-01.webp"
   },
   {
@@ -91,7 +91,7 @@
     "price": 63.00,
     "d_price": 63.00,
     "type": "Indoor Plants",
-    "description": "In stock",
+    "stoke": "In stock",
     "img": "https://i.ibb.co/8dDdB4B/Philodendron-Birkin-Plant.webp"
   },
   {
@@ -101,7 +101,7 @@
     "d_price": 40.00,
     "discount": "-26%",
     "type": "Outdoor Plants",
-    "description": "Hurry up only 9 items left",
+    "stoke": "Hurry up only 9 items left",
     "img": "https://i.ibb.co/9nJ82Lw/Snake-Plant.webp"
   }
 ]

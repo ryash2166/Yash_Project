@@ -104,7 +104,7 @@ const Wishlist = () => {
                               <span className='mr-[15px] ml-auto'>
                                 <FaCheck />
                               </span>
-                            <h1 className='text-[16px] text-[#666666]'>{item.description}</h1>
+                            <h1 className='text-[16px] text-[#666666]'>{item.stoke}</h1>
                           </td>
                           <td className=' border-t-[1px] max-md:border-0 px-[10px] py-[16px] align-middle text-[#666666] overflow-hidden max-md:block'>
                               <a className='border-[1px] border-black max-md:w-full max-md:text-center px-[15px] py-[11px] max-lg:px-3 bg-black cursor-pointer hover:!bg-white hover:!text-black text-white hover:-translate-y-2 duration-400 ease-in-out' onClick={() => ADD_cart(item)}>
