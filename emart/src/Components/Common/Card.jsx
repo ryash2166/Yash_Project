@@ -1,14 +1,22 @@
 import React, { useEffect } from "react";
+
+// Logo
 import heart from '../../assets/SVG/heart.svg'
 import eye from '../../assets/SVG/Eyes.svg'
 import cart from '../../assets/SVG/Cart.svg'
+
 import { NavLink } from "react-router-dom";
+
 import { addToCart, addToWishList } from "../../CartRedux/Redux/Action";
+
 import { showErrorMessage, showSuccessMessage } from "../Alerts";
+
 import { useDispatch, useSelector } from "react-redux";
+
 import { ProductData } from "../../CartRedux/ProductRedux/ProductAction";
 
 const Card = (product_data) => {
+  
     const dispatch = useDispatch();
 
     const CartData = useSelector((state) => state.Reducer)

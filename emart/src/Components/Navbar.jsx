@@ -1,12 +1,14 @@
+import { useState } from "react";
+
+// Bootstrap NavBar
 import Container from "react-bootstrap/Container";
 import Badge from "react-bootstrap/Badge";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+
+// Images
 import Demo from "../assets/demo.webp";
 import Product1 from "../assets/product1.webp";
 import Product2 from "../assets/product2.webp";
@@ -14,11 +16,22 @@ import Shop from "../assets/shop.webp";
 import SchoolBag from "../assets/school-bag.png";
 import Dress from "../assets/dress.png";
 import Chair from "../assets/chair-1.png";
-import { useAuth0 } from "@auth0/auth0-react";
-import { MdLogout } from "react-icons/md";
 import Logo from "../assets/emart.webp";
 
+// Router-Dom
+import { Link, NavLink } from "react-router-dom";
+
+// Redux
+import { useSelector } from "react-redux";
+
+// Authentication
+import { useAuth0 } from "@auth0/auth0-react";
+
+// Logo
+import { MdLogout } from "react-icons/md";
+
 function Navbar1() {
+  
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   const result = useSelector((state) => state.Reducer);
@@ -87,7 +100,6 @@ function Navbar1() {
     }
   }
 
-
   return (
     <>
       {["xl"].map((expand) => (
@@ -118,14 +130,23 @@ function Navbar1() {
             >
               <Offcanvas.Header closeButton className="mr-2">
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  <img src={Logo} alt="" className="h-9 w-auto "/>
+                  <img src={Logo} alt="" className="h-9 w-auto " />
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="bg-white">
                 <Nav className=" justify-content-center flex-grow-1 pr-3 m-0 bg-white ">
-                  <form action="" className="flex nav-search border w-full lg:hidden mb-[20px] ml-2">
-                  <input type="search" name="" id="" placeholder="Search..." className=" w-full px-[12px] py-[10px] outline-none" />
-                  <button type="nosubmit" className=""></button>
+                  <form
+                    action=""
+                    className="flex nav-search border w-full lg:hidden mb-[20px] ml-2"
+                  >
+                    <input
+                      type="search"
+                      name=""
+                      id=""
+                      placeholder="Search..."
+                      className=" w-full px-[12px] py-[10px] outline-none"
+                    />
+                    <button type="nosubmit" className=""></button>
                   </form>
                   <NavDropdown
                     title={
@@ -165,87 +186,140 @@ function Navbar1() {
                                 <p className="mb-[8px] font-[jost] text-[21px] pt-[20px] pb-[10px]">
                                   New Product on the market
                                 </p>
-                                <p className="font-bold text-[16px] text-muted add hover:translate-x-2 duration-300 ease-in-out">
+                                <p
+                                  onClick={() => setDemo(false)}
+                                  className="font-bold text-[16px] text-muted add hover:translate-x-2 -ml-3 duration-300 ease-in-out"
+                                >
                                   <NavLink to="shopnow">Shop Now</NavLink>
                                 </p>
                               </div>
                             </div>
                           </div>
                           <div className="pl-[50px] pr-2 max-xl:m-0 max-xl:my-0 max-xl:border-0 py-[50px] max-xl:p-0  leading-8 max-xl:leading-6">
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Fashion Hub
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Kids Wear
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Women Fashion
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Big Fashion
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Handicraft
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Interior
                             </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className="py-[50px] pl-[50px] pr-[1px] max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
                             <div className="text-muted py-[8px] pl-[15px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
-                              <Link to="/">Plant Garden</Link>
+                              <Link to="/" onClick={() => setDemo(false)}>
+                                Plant Garden
+                              </Link>
                             </div>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Kids Toys
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Electronic Gadget
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Bathroom
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Bicycle
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Shoes
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Bags
                             </NavDropdown.Item>
                           </div>
                           <div className="bg-[#e5e7eb] w-[1px] -my-[16px] ml-10 max-xl:hidden"></div>
                           <div className=" py-[50px] pl-[50px]  max-xl:p-0 leading-8 max-xl:leading-6 overflow-hidden">
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Soap
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Grocery Outlet
                               <Badge
-                                className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
+                                className="ml-[6px] px-[10px] text-center  font-medium py-[2px]"
                                 pill
-                                bg=""
+                                bg="danger"
                               >
                                 new
                               </Badge>
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Hiking Heaven
                               <Badge
-                                className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
+                                className="ml-[6px] px-[10px] text-center  font-medium py-[2px]"
                                 pill
-                                bg=""
+                                bg="danger"
                               >
                                 new
                               </Badge>
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setDemo(false)}
+                              className="text-muted py-[8px] text-[17px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Exotic Fragrance
                               <Badge
-                                className="ml-[6px] px-[10px] bg-[#eb5a49] text-center  font-medium py-[2px]"
+                                className="ml-[6px] px-[10px] text-center  font-medium py-[2px]"
                                 pill
-                                bg=""
+                                bg="danger"
                               >
                                 new
                               </Badge>
@@ -258,7 +332,10 @@ function Navbar1() {
                         <div className="flex items-center  py-[15px] pl-[1100px]">
                           <p className="text-danger flex">
                             Summer Sale 65% Off
-                            <span className="hover:translate-x-2 duration-300 ease-in-out">
+                            <span
+                              className="hover:translate-x-2 duration-300 ease-in-out"
+                              onClick={() => setDemo(false)}
+                            >
                               <NavLink
                                 to="shopnow"
                                 className="text-muted ml-3 add "
@@ -349,16 +426,28 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
                               Product Styles
                             </p>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Style One
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Style Two
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Style Three
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Style Four
                             </NavDropdown.Item>
                           </div>
@@ -375,16 +464,28 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
                               Product Gallery
                             </p>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Vertical Carousel
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Carousel
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Horizontal Style
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px]  py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Grid Style
                             </NavDropdown.Item>
                           </div>
@@ -401,10 +502,16 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent max-xl:w-max">
                               Product Style
                             </p>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Simple Product
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setProduct(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Variable Product
                             </NavDropdown.Item>
                           </div>
@@ -415,7 +522,10 @@ function Navbar1() {
                         <div className="flex justify-center items-center py-[15px] pl-[1000px] ">
                           <p className="text-danger flex ">
                             Summer Sale 65% Off
-                            <span className="hover:translate-x-2 duration-300 ease-in-out ">
+                            <span
+                              className="hover:translate-x-2 duration-300 ease-in-out "
+                              onClick={() => setProduct(false)}
+                            >
                               <NavLink
                                 to="shopnow"
                                 className="text-muted ml-3 add text-center"
@@ -464,29 +574,50 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
                               Listing Layouts
                             </p>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               4 Column
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               4 Column + Side bar
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               5 Column
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               5 Column + Side bar
                             </NavDropdown.Item>
                             <div className="mt-[20px]">
                               <p className="font-bold text-[18px] py-[8px] bg-transparent">
                                 Shop Pages
                               </p>
-                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              <div
+                                onClick={() => setShop(false)}
+                                className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                              >
                                 <NavLink to="/wishlist">Wishlist</NavLink>
                               </div>
-                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              <div
+                                onClick={() => setShop(false)}
+                                className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                              >
                                 <NavLink to="/cart">Cart</NavLink>
                               </div>
-                              <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                              <div
+                                onClick={() => setShop(false)}
+                                className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                              >
                                 <NavLink to="/checkout">Checkout</NavLink>
                               </div>
                             </div>
@@ -496,13 +627,22 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
                               Sidebar Widgets
                             </p>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Product Filter at Top
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Product Filter at Left
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Product Filter at Right
                             </NavDropdown.Item>
                           </div>
@@ -511,16 +651,28 @@ function Navbar1() {
                             <p className="font-bold text-[18px] py-[8px] bg-transparent">
                               Shop Box Styles
                             </p>
-                            <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Shop Style One
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Shop Style Two
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Shop Style Three
                             </NavDropdown.Item>
-                            <NavDropdown.Item className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                            <NavDropdown.Item
+                              onClick={() => setShop(false)}
+                              className="text-muted text-[18px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            >
                               Shop Style Four
                             </NavDropdown.Item>
                           </div>
@@ -545,7 +697,10 @@ function Navbar1() {
                         <div className="flex justify-center items-center py-[15px]">
                           <p className="text-danger flex">
                             Summer Sale 65% Off
-                            <span className="hover:translate-x-2 duration-300 ease-in-out">
+                            <span
+                              className="hover:translate-x-2 duration-300 ease-in-out"
+                              onClick={() => setShop(false)}
+                            >
                               <NavLink
                                 to="shopnow"
                                 className="text-muted ml-3 add text-center"
@@ -590,16 +745,29 @@ function Navbar1() {
                     >
                       <div className="overflow-hidden pr-[100px] py-[10px] max-xl:-ml-6 border-[1px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-36 max-2xl:w-auto">
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <NavDropdown.Item
+                            onClick={() => setBlog(false)}
+                            className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                          >
                             Default Blog
                           </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <NavDropdown.Item
+                            onClick={() => setBlog(false)}
+                            className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                          >
                             Blog One
                           </NavDropdown.Item>
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <NavDropdown.Item
+                            onClick={() => setBlog(false)}
+                            className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                          >
                             Blog Two
                           </NavDropdown.Item>
-                          <div className="text-muted  text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out" id="hide">
+                          <div
+                            className="text-muted  text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                            id="hide"
+                            onClick={() => setBlog(false)}
+                          >
                             <NavLink to="blogthree">Blog Three</NavLink>
                           </div>
                         </div>
@@ -635,26 +803,37 @@ function Navbar1() {
                     >
                       <div className="overflow-hidden  pr-[50px] py-[10px] max-xl:-ml-6 border-[1px] border-[#e5e7eb] max-xl:border-0 bg-white">
                         <div className="w-56 max-2xl:w-auto">
-                          <NavDropdown.Item className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <NavDropdown.Item
+                            onClick={() => setContact(false)}
+                            className="text-muted text-[17px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                          >
                             Contact One
                           </NavDropdown.Item>
-                          <div className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out">
+                          <div
+                            onClick={() => setContact(false)}
+                            className="text-muted text-[17px] pl-[15px] py-[8px] add hover:translate-x-2 duration-300 ease-in-out"
+                          >
                             <NavLink to="contacttwo">Contact Two</NavLink>
                           </div>
                         </div>
                       </div>
                     </NavDropdown>
-                      <NavLink to="wishlist">
-                        <div className="flex justify-between pl-2 mt-2 xl:hidden">
-                          <p className="">Wishlist</p>
-                            <div className="flex">
-                              <span className="wishlist_products_counter_text">
-                                <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" className="" />
-                              </span>
-                              <span className="-mt-3 ml-1 text-black">{WishList.length}</span>
-                            </div>
+                    <NavLink to="wishlist">
+                      <div className="flex justify-between pl-2 mt-2 xl:hidden">
+                        <p className="">Wishlist</p>
+                        <div className="flex">
+                          <span className="wishlist_products_counter_text">
+                            <img
+                              src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg"
+                              className=""
+                            />
+                          </span>
+                          <span className="-mt-3 ml-1 text-black">
+                            {WishList.length}
+                          </span>
                         </div>
-                      </NavLink>
+                      </div>
+                    </NavLink>
                   </div>
                 </Nav>
               </Offcanvas.Body>
@@ -734,9 +913,11 @@ function Navbar1() {
                 <NavLink to="wishlist">
                   <div className="flex  pr-[20px]">
                     <span className="wishlist_products_counter_text">
-                      <img src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg" className="hover:scale-110" />
+                      <img
+                        src="https://emart.wpthemedemos.com/plant-garden/wp-content/uploads/sites/10/2022/12/heart-wishlist-icon.svg"
+                      />
                     </span>
-                    <span className="-mt-3 text-black">{WishList.length}</span>
+                    <span className="-mt-3 ml-[1px] text-black">{WishList.length}</span>
                   </div>
                 </NavLink>
               </div>
@@ -754,13 +935,12 @@ function Navbar1() {
                       strokeWidth="1.5"
                       strokeLinecap="round"
                       strokeLinejoin="round"
-                      className="hover:scale-110"
                     >
                       <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
                       <line x1="3" y1="6" x2="21" y2="6"></line>
                       <path d="M16 10a4 4 0 0 1-8 0"></path>
                     </svg>
-                    <span className="-mt-3">{result.length}</span>
+                    <span className="-mt-3 ml-[1px]">{result.length}</span>
                   </div>
                 </NavLink>
               </div>

@@ -1,10 +1,15 @@
 import React, { useEffect } from "react";
+
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Zoom } from "react-toastify";
+
 import { useDispatch, useSelector } from "react-redux";
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
+
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import interior from '../assets/Interior.webp'
+
 import Card from "./Common/Card";
 
 const Interior = () => {

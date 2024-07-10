@@ -4,13 +4,11 @@ import Footer_1 from "../Components/Footer_1";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import * as Yup from "yup";
 import axios from "axios";
 import { Alert } from "@mui/material";
+
+// Form Schema Validation
 import { schema } from '../Function/Schema'
-
-
-const formSchema = schema
 
 const Checkout = () => {
   const CartData = useSelector((state) => state.Reducer);
@@ -111,7 +109,7 @@ const Checkout = () => {
                     Postcode: "",
                   }}
                   onSubmit={handleOnSubmit}
-                  validationSchema={formSchema}
+                  validationSchema={schema}
                 >
                   {({ isSubmitting }) => (
                     <Form

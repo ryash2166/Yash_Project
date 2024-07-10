@@ -1,9 +1,18 @@
 import React, { useEffect } from "react";
+
+// ToastiFy
 import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer, Zoom } from "react-toastify";
+
+// Redux
 import { useDispatch, useSelector } from "react-redux";
+
+// ProductRedux
 import { ProductData } from "../CartRedux/ProductRedux/ProductAction";
+
+// Animation Scroll
 import { AnimationOnScroll } from 'react-animation-on-scroll';
+
 import Card from "./Common/Card";
 
 const Arrival = () => {

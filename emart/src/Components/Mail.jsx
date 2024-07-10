@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import * as Yup from "yup";
 import axios from "axios";
 import { Alert } from "@mui/material";
 
-const formSchema = Yup.object().shape({
-  email: Yup.string()
-    .email("* Email is Invalid.")
-    .required("* Email is Required."),
-});
+// From Schema Validation
+import { schema } from '../Function/Schema'
+
 
 const Mail = () => {
+
   const [serverState, setServerState] = useState();
   const handleServerResponse = (ok, msg) => {
     setServerState({ ok, msg });
@@ -76,23 +74,23 @@ const Mail = () => {
                       <div className="flex justify-center items-center gap-2 max-md:block">
                         <div className="max-md:mb-3 ">
                           <Formik
-                            initialValues={{ email: "" }}
+                            initialValues={{ Email: "" }}
                             onSubmit={handleOnSubmit}
-                            validationSchema={formSchema}
+                            validationSchema={schema}
                           >
                             {({ isSubmitting }) => (
                                 <Form className="fs-frm relative" noValidate>
-                                  <label htmlFor="email"></label>
+                                  <label htmlFor="Email"></label>
                                   <Field
                                     size="32"
                                     className="bg-[#f2f2f2]  text-[#666] py-3  pl-3 max-md:w-full outline-none "
                                     placeholder="Your email address..."
-                                    type="email"
-                                    name="email"
-                                    id="email"
+                                    type="Email"
+                                    name="Email"
+                                    id="Email"
                                   />
                                   <ErrorMessage
-                                    name="email"
+                                    name="Email"
                                     className=" text-red-500 errorMsg absolute block"
                                     component="span"
                                   />

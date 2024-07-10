@@ -2,22 +2,12 @@ import React, { useState } from "react";
 import Mail from "../Components/Mail";
 import Footer_1 from "../Components/Footer_1";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import * as Yup from "yup";
 import axios from "axios";
 import { Alert } from "@mui/material";
 
-const formSchema = Yup.object().shape({
-  Email: Yup.string()
-    .email("* Email is Invalid.")
-    .required("* Email is Required."),
-  Message: Yup.string().required("* Message is Required."),
-  Name: Yup.string().required("* Name is Required."),
-  Phone: Yup.string()
-    .required("* Contact Number is Required.")
-    .matches(/^[0-9]+$/, "* Contact Number must be only digits.")
-    .min(10, "* Contact Number must be at least 10 digits.")
-    .max(10, "* Contact Number must be at most 10 digits."),
-});
+// Form Schema Validation
+import { schema } from '../Function/Schema'
+
 
 const ContactTwo = () => {
 
@@ -146,7 +136,7 @@ const ContactTwo = () => {
                             Phone: "",
                           }}
                           onSubmit={handleOnSubmit}
-                          validationSchema={formSchema}
+                          validationSchema={schema}
                         >
                           {({ isSubmitting }) => (
                             <Form id="fs-frm" noValidate>
