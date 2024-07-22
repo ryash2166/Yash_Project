@@ -31,7 +31,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { MdLogout } from "react-icons/md";
 
 function Navbar1() {
-  
+
   const { loginWithRedirect, logout, isAuthenticated, user } = useAuth0();
 
   const result = useSelector((state) => state.Reducer);
@@ -121,7 +121,7 @@ function Navbar1() {
             </Link>
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-${expand}`}
-              className="max-[1201px]:order-1 border-0 "
+              className="max-[1201px]:order-1 border-0"
             />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
