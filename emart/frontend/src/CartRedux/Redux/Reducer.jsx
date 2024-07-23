@@ -5,7 +5,8 @@ const getCartDataFromLocalStorage = () => {
     return cartData ? JSON.parse(cartData) : []
 }
 
-const Reducer = (state = getCartDataFromLocalStorage(), action) =>{
+const Reducer = (state = getCartDataFromLocalStorage(), action ) =>{
+
     switch(action.type){
         case ADD_TO_CART : 
             const existingProduct = state.findIndex(item => item.id === action.data.id)
@@ -16,6 +17,9 @@ const Reducer = (state = getCartDataFromLocalStorage(), action) =>{
             }else{
                 updatedCartData = [{...action.data, quantity : 1}, ...state]
             }
+            // if (token) {
+            //     await axios.post(url + "/api/cart/add")
+            // }
             localStorage.setItem('cart' , JSON.stringify(updatedCartData))
             return updatedCartData
 

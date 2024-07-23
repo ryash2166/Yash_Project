@@ -32,7 +32,7 @@ const Eye = () => {
     return ProductsData.id === Number(ID.id);
   });
 
-  const { name, img, id, d_price , type} = ProductInfo[0] 
+  const { name, img, id, d_price , category} = ProductInfo[0] 
 
   const CartData = useSelector((state) => state.Reducer);
   const WishData = useSelector((state) => state.WishReducer);
@@ -67,7 +67,7 @@ const Eye = () => {
           <div className="pt-[90px] pb-[20px] pr-[15px]">
             <section>
               <p>
-                Home / {type}&nbsp;
+                Home / {category}&nbsp;
                 <span className="max-sm:hidden">/ {name}</span>
               </p>
             </section>
@@ -180,7 +180,7 @@ const Eye = () => {
                   </span>
                   <span className="pr-2">
                     <strong className="text-black font-[600]">Category:</strong>
-                    &nbsp;{type}
+                    &nbsp;{category}
                   </span>
                 </div>
                 <div className="bg-[#efefef] text-center p-[30px] w-full ">
