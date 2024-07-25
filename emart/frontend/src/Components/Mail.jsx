@@ -2,10 +2,14 @@ import React, { useState } from "react";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
 import { Alert } from "@mui/material";
+import * as Yup from "yup";
 
 // From Schema Validation
-import { schema } from '../Function/Schema'
-
+const schema = Yup.object().shape({
+  Email: Yup.string()
+    .email("* Email is Invalid.")
+    .required("* Email is Required."),
+});
 
 const Mail = () => {
 
@@ -96,16 +100,16 @@ const Mail = () => {
                                   />
                                 <button className="bg-black text-white py-3 px-[30px] ml-3 max-md:ml-0 max-md:mt-[26px]  max-sm:px-0 max-md:w-full " type="submit">Subscribe Now</button>
                                 {serverState && (
-                                  <p
+                                  <div
                                     className={
                                       !serverState.ok ? "errorMsg" : ""
                                     }
                                     style={{ marginTop: "25px" }}
                                   >
-                                    <Alert variant="filled" severity="success">
+                                    <Alert variant="outlined" severity="success">
                                       {serverState.msg}
                                     </Alert>
-                                  </p>
+                                  </div>
                                 )}
                                 </Form>
                             )}

@@ -4,9 +4,21 @@ import Footer_1 from "../Components/Footer_1";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import axios from "axios";
 import { Alert } from "@mui/material";
+import * as Yup from "yup";
 
 // Form Schema Validation
-import { schema } from '../Function/Schema'
+const schema = Yup.object().shape({
+  Phone: Yup.string()
+    .required("* Contact Number is Required.")
+    .matches(/^[0-9]+$/, "* Contact Number must be only digits.")
+    .min(10, "* Contact Number must be at least 10 digits.")
+    .max(10, "* Contact Number must be at most 10 digits."),
+  Email: Yup.string()
+    .email("* Email is Invalid.")
+    .required("* Email is Required."),
+  Name: Yup.string().required("* Name is Required."),
+  Message: Yup.string().required("*Message is Required.")
+});
 
 
 const ContactTwo = () => {

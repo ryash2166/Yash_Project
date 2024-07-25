@@ -1,6 +1,6 @@
 import * as Yup from "yup";
 
-export const schema = Yup.object().shape({
+const schema = Yup.object().shape({
     FirstName: Yup.string()
       .required("* First Name is Required.")
       .matches(/^[a-zA-Z]+$/, "* Name must be only characters.")
@@ -41,3 +41,5 @@ export const schema = Yup.object().shape({
       .required("* Email is Required."),
     Name: Yup.string().required("* Name is Required."),
   });
+
+export default schema
